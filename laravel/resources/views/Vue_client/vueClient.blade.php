@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--link rel="stylesheet" href="../../css/vueClient.css"-->
+    <!--link rel="stylesheet"  type="text/css" href="../../resources/css/vueClient.css"/-->
+    <link href="{{ URL::to('/css/vueClient.css')}}" rel="stylesheet" />
 
-<style>
-     body {
+<!-- Styles -->
+<!--style>
+body {
     color: #000;
     overflow-x: hidden;
     height: 100%;
@@ -99,7 +102,7 @@ button:focus {
     width: 100px;
 }
 
-   </style>
+   </style-->
 
     <title>client</title>
 </head>
