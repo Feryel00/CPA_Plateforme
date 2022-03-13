@@ -2,6 +2,7 @@ body {
     color: #000;
     overflow-x: hidden;
     height: 100%;
+    background-image: url("https://i.imgur.com/GMmCQHC.png");
     background-repeat: no-repeat;
     background-size: 100% 100%
 }
@@ -11,9 +12,7 @@ body {
     margin-top: 60px;
     margin-bottom: 60px;
     border: none !important;
-    box-shadow: 100px 64px 60px 100px rgba(14, 23, 138, 0.5);
-    margin-left: 20px;
-    margin-right: 20px;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
 }
 
 .blue-text {
@@ -21,8 +20,7 @@ body {
 }
 
 .form-control-label {
-    margin-bottom: 0;
-
+    margin-bottom: 0
 }
 
 input,
@@ -56,8 +54,7 @@ textarea:focus {
 }
 
 .btn-block:hover {
-    color: rgb(30, 45, 128) !important;
-    background-color: rgb(102, 102, 12);
+    color: #fff !important
 }
 
 button:focus {
@@ -65,27 +62,4 @@ button:focus {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     outline-width: 0
-}
-.form-card{
-    background-color: white;
-    align-items: center;
-    padding: 30px;
-
-}
-.form-group{
-    background-color: rgb(47, 142, 231);
-    display: grid;
-    grid-template-columns: repeat(2,1fr) 300px;
-    font-size: 20px;
-    padding: 20px;
-    border-radius: 30px;
-    margin-bottom: 5px;
-}
-.text-center{
-    text-align: center;
-    font-weight: 40px;
-}
-.btn-block {
-    background-color: #1b45ce;
-    width: 100px;
 }

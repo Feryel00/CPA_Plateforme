@@ -17,5 +17,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/client', function(){
-    return view('Vue_client/vueClient');
+    return view('Vue_client/vue1Client');
 });
+Route::get('/vue2', function(){
+    return view('Vue_client/vue2Client');
+});
+
+Route::get('/vue3', function(){
+    return view('Vue_client/vue3Client');
+});
+
+Route::get('/vue4', function(){
+    return view('Vue_client/vue4Client');
+});
+
+Route::get('/vue5', function(){
+    return view('Vue_client/vue5Client');
+});
+
+Route::get('/vue6', function(){
+    return view('Vue_client/vue6Client');
+});
+
