@@ -46,3 +46,6 @@ Route::get('/vue5', function(){
 Route::view('ajouterClient','Vue_client/vue6Client');
 Route::post('ajouterClient',[ClientController::class,'ajouterClient']);
 
+Route::get('/Vue', function(){
+    return view('Vue');
+});

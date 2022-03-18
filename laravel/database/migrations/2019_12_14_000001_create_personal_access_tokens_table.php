@@ -11,7 +11,7 @@ class CreatePersonalAccessTokensTable extends Migration
      *
      * @return void
      */
-    public function up()
+  /*  public function up()
     {
         Schema::create('personal_access_tokens', function (Blueprint $table) {
             $table->id();
@@ -23,7 +23,7 @@ class CreatePersonalAccessTokensTable extends Migration
             $table->timestamps();
         });
     }
-
+*/
     /**
      * Reverse the migrations.
      *
