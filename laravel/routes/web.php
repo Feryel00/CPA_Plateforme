@@ -39,3 +39,6 @@ Route::get('/vue6', function(){
     return view('Vue_client/vue6Client');
 });
 
+Route::get('/Vue', function(){
+    return view('Vue');
+});
