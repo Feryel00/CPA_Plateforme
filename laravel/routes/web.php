@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/client', function(){
-    return view('Vue_client/vue1Client');
-});
+ Route::get('/client', function(){
+     return view('Vue_client/vue1Client');
+ });
 Route::get('/vue2', function(){
     return view('Vue_client/vue2Client');
 });
@@ -35,7 +36,13 @@ Route::get('/vue5', function(){
     return view('Vue_client/vue5Client');
 });
 
-Route::get('/vue6', function(){
-    return view('Vue_client/vue6Client');
-});
+// Route::get('/vue6', function(){
+//     return view('Vue_client/vue6Client');
+// });
+
+// Route::view('ajouterClient','Vue_client/vue1Client');
+// Route::post('ajouterClient',[ClientController::class,'ajouterClient']);
+
+Route::view('ajouterClient','Vue_client/vue6Client');
+Route::post('ajouterClient',[ClientController::class,'ajouterClient']);
 

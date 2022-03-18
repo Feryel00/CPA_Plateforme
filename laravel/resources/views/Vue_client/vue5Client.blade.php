@@ -9,7 +9,9 @@
 
                     <form class="form-card" onsubmit="event.preventDefault()">
                         <div class="row justify-content-between text-left">
-                            <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Carte CPA cash<span class="text-danger"> *</span></label> <input type="text" id="fname" name="fname" placeholder="" onblur="validate(1)"> </div>
+                            <div class="form-group col-sm-6 flex-column d-flex">
+                                <label class="form-control-label px-3">Carte CPA cash<span class="text-danger"> *</span></label>
+                                <input type="text" id="fname" name="" placeholder="" onblur="validate(1)"> </div>
                             <div class="form-group col-sm-6 flex-column d-flex"> <label class="form-control-label px-3">Carte visa internal<span class="text-danger"> *</span></label> <input type="text" id="lname" name="lname" placeholder="" onblur="validate(2)"> </div>
                         </div>
                         <div class="row justify-content-between text-left">

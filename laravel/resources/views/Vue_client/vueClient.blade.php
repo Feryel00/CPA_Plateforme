@@ -11,7 +11,7 @@
     <link href="{{ URL::to('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css')}}" rel="stylesheet" />
     <link href="{{ URL::to('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')}}" rel="stylesheet" />
     <title>Fiche client</title>
-    
+
     <script type="text/javascript">
 
 
@@ -27,7 +27,7 @@ function horloge(el) {
     //var str = date.getHours();
     //str += ':'+(date.getMinutes()<10?'0':'')+date.getMinutes();
     //str += ':'+(date.getSeconds()<10?'0':'')+date.getSeconds();
-    
+
 
     el.innerHTML = date;
   }
@@ -41,8 +41,10 @@ function horloge(el) {
 </script>
 </head>
 <body>
+    <form action="ajouterClient" method="POST">
+        @csrf
     @yield('content')
-
+    </form>
 
 
 </body>
