@@ -16,19 +16,26 @@ class CreateClientsTable extends Migration
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-             $table->string("agence");
-            $table->string("nom");
-            $table->string("prenom");
-            $table->string("type");
-            $table->string("numero");
-            $table->date("delivre_à");
-            $table->string("passport_numero");
-            $table->date("delivre_a");
-            $table->string("identif_sociale");
-            $table->string("ind");
-            $table->string("ident_cent_Risq");
-            $table->string("casier");
-            // $table->string("nationalite");
+            $table->string("email");
+            $table->string("pass");
+            $table->string("cpass");
+            $table->string("fname");
+            $table->string("lname");
+            $table->string("phone");
+
+            //  $table->string("agence");
+            // $table->string("nom");
+            // $table->string("prenom");
+            // $table->string("type");
+            // $table->string("numero");
+            // $table->date("delivre_à");
+            // $table->string("passport_numero");
+            // $table->date("delivre_a");
+            // $table->string("identif_sociale");
+            // $table->string("ind");
+            // $table->string("ident_cent_Risq");
+            // $table->string("casier");
+            // // $table->string("nationalite");
             // $table->string("pays residence");
             // $table->string("carte interne");
             // $table->string("qualite client");
@@ -73,7 +80,7 @@ class CreateClientsTable extends Migration
             // $table->string("e-banking sce sms pers morale");
             // $table->string("e-banking sce fax pers physiq");
             // $table->string("e-banking sce fax pers morale");
-             $table->string("memo");
+            //  $table->string("memo");
 
         });
     }
