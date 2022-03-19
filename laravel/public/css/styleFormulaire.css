@@ -48,7 +48,7 @@
 * {margin: 0; padding: 0;}
 
 html {
-	height: auto;
+	height: 100%;
 	/*Image only BG fallback*/
 	
 	/*background = gradient + image pattern combo*/
@@ -56,6 +56,7 @@ html {
 		/*linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));*/
 		/*linear-gradient(#ffd500,  #0051a8);*/
 		linear-gradient(#0051a8,#ffd500);
+		position: relative;
 	}
 
 body {
@@ -66,23 +67,30 @@ body {
 /*form styles*/
 #msform {
 	width:auto;/*800*/
-	margin: 25px ;
+	margin: 5px ;/*25*/
+	text-align: center;
+	position: relative;
+	
+}
+
+fieldset {
+	display: table;/* 100%;*/
 	text-align: center;
 	position: relative;
 }
 
-fieldset {
-	display: table 100%;
-	text-align: center;
-}
 fieldset p {
     display: table-row;
 	text-align: center;
+	
 }
+
 fieldset input, fieldset select, fieldset label {
     display: table-cell ;
-    margin: 10px ;
+    margin: 0px ;/*10*/
+	position: relative;
 }
+
 fieldset label {
     text-align: right;
 	height: 25px;
@@ -94,10 +102,8 @@ fieldset input {
 	height: 25px;
 	width: 100%;
 	margin-left: 50px ;
-
+    
 }
-
-
 
 
 label
@@ -105,7 +111,7 @@ label
 
 
 #msform fieldset {
-	background: white;
+	background: 	linear-gradient(#cff3b7,#fafafa);
 	border: 0 none;
 	border-radius: 3px;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
@@ -126,7 +132,7 @@ label
 	padding: 15px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	width: 100%;
 	box-sizing: border-box;
 	font-family: montserrat;
@@ -134,18 +140,22 @@ label
 	font-size: 13px;
 }
 /*buttons*/
-#msform .action-button {
+/*#msform .button {
 	width: 100px;
 	background: #27AE60;
 	font-weight: bold;
 	color: white;
-	border: 0 none;
-	border-radius: 1px;
-	cursor: pointer;
-	padding: 10px 5px;
-	margin: 10px 5px;
-}
-#msform .action-button:hover, #msform .action-button:focus {
+	border: 0 none;*/
+	/*border-radius: 1px;*/
+	/*cursor: pointer;*/
+	/*padding: 10px 5px;*/
+	/*margin: 10px 5px;*/
+    /*margin-bottom: 5px;
+	text-align: center;*/
+	
+
+/*}*/
+#msform .button:hover, #msform .button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
 }
 /*headings*/
@@ -212,3 +222,41 @@ label
 	color: white;
 }
 
+#msform .button {
+	padding: 15px 100px;
+	margin: 10px 4px;
+	color: #eee;
+	background: #27AE60;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+	border: 1px solid;
+  }
+  #msform  .button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	-webkit-transform: scaleY(0.1);
+	transform: scaleY(0.1);
+	transition: all 0.4s;
+  }
+  #msform  .button:hover {
+	color: #27AE60;
+	background: rgb(196, 240, 183);
+  }
+  #msform  .button:hover::before {
+	opacity: 1;
+	background-color: rgb(202, 31, 31);
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+	transition: -webkit-transform 0.6s cubic-bezier(0.08, 0.35, 0.13, 1.02), opacity 0.4s;
+	transition: transform 0.6s cubic-bezier(0.08, 0.35, 0.13, 1.02), opacity;
+  }

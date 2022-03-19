@@ -46,7 +46,8 @@
      
 
 </br>
-    <input type="button" name="next" class="next action-button" value="Next" /> 
+    <span class="next button">Suivant</span>
+
   </fieldset>
 
 
