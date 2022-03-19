@@ -32,6 +32,11 @@
     
     <p> <label>Numéro: </label>  <input type="text" id="fname" name="fname" placeholder="" onblur="validate(1)"/> </p>
     <p> <label>Agence: </label>  <input type="text" id="lname" name="agence" placeholder="" onblur="validate(2)"/> </p>
+    <p> <label>Agence: </label>  <select name="pays">
+            <option value="France" selected="">France </option>
+            <option value="Algérie" selected="selected">Algérie </option>
+            <option value="Algérie" selected="">Adr </option>
+          </select> </p> 
     <p> <label>Nom: </label>     <input type="text" /> </p>
     <p> <label>Prénom: </label>   <input type="text" /> </p>
     

@@ -98,7 +98,7 @@ fieldset label {
 	margin-right: 20px ;
 	/*margin-left: 50px ;*/
 }
-fieldset input {
+fieldset input,fieldset select {
 	height: 25px;
 	width: 100%;
 	margin-left: 50px ;
@@ -139,6 +139,18 @@ label
 	color: #2C3E50;
 	font-size: 13px;
 }
+
+/*select*/
+#msform  fieldset select {
+	margin-bottom: 5px;
+	width: 100%;
+	
+	
+	
+	
+}
+
+
 /*buttons*/
 /*#msform .button {
 	width: 100px;
