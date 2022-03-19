@@ -39,14 +39,14 @@
     </br> <h2 class="fs-title">Pièces d'identités</h2>
     <p> <label>Type: </label>  <input type="text" /> </p>
     <p> <label>Numéro: </label>  <input type="text" />
-        <label>Validité: </label>     <input type="text" />  </p>
+        <label>Validité: </label>     <input type="date" />  </p>
     <p> <label>Délivrée à: </label>     <input type="text" /> 
         <label>Le: </label>     <input type="text" /> </p>
-    <p> <label>Prénom: </label>   <input type="text" /> </p>
+  
      
 
 </br>
-    <input type="button" name="next" class="next action-button" value="Next" /> </br>
+    <input type="button" name="next" class="next action-button" value="Next" /> 
   </fieldset>
 
 
