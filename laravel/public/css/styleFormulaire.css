@@ -48,7 +48,7 @@
 * {margin: 0; padding: 0;}
 
 html {
-	height: auto;
+	height: 150%;
 	/*Image only BG fallback*/
 	
 	/*background = gradient + image pattern combo*/
@@ -56,11 +56,12 @@ html {
 		/*linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));*/
 		/*linear-gradient(#ffd500,  #0051a8);*/
 		linear-gradient(#0051a8,#ffd500);
-		position: relative;
+	/*	position: relative;*/
 	}
 
 body {
 	font-family: montserrat, arial, verdana;
+	
 }
 
 
@@ -70,7 +71,7 @@ body {
 	margin: 5px ;/*25*/
 	text-align: center;
 	position: relative;
-	
+
 }
 
 span{
@@ -81,6 +82,7 @@ fieldset {
 	display: table;/* 100%;*/
 	text-align: center;
 	position: relative;
+	height: auto;
 }
 
 fieldset p {
@@ -109,9 +111,7 @@ fieldset input,fieldset select {
     
 }
 
-div{
-	text-align: right;
-}
+
 label
 { border: 10px; }
 

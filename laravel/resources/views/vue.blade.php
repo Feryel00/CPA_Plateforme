@@ -91,24 +91,23 @@
         <label>Apurement:</label>    
            <input type="text" name="apurement"/> </p>
 </br>
-  <div>  <span class="next button">Suivant</span><div>
+   <span class="next button">Suivant</span>
 
   </fieldset>
 
 
   <fieldset>
-    <h2 class="fs-title">Social Profiles</h2>
-    <h3 class="fs-subtitle">Your presence on the social network</h3>
-    <input type="text" name="twitter" placeholder="Twitter" />
-    <input type="text" name="facebook" placeholder="Facebook" />
-    <input type="text" name="gplus" placeholder="Google Plus" />
-
-    <label>date: </label>    <input type="date" />   </p>
-    <p> <label>Age: </label>     <select>  <option>Choose</option>  </select> </p>
+    <h2 class="fs-title">Informations</h2>
+    <!--h3 class="fs-subtitle">Your presence on the social network</h3-->
+    
 
 
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" name="next" class="next action-button" value="Next" />
+
+
+    <!--input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" /-->
+    <span class="previous button">Précédent</span>
+    <span class="next button">Suivant</span>
   </fieldset>
   <fieldset>
     <h2 class="fs-title">Social Profiles</h2>
