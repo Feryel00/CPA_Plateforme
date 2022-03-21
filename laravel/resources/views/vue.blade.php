@@ -101,19 +101,25 @@
     <!--h3 class="fs-subtitle">Your presence on the social network</h3-->
     <p> <label>Nationalité:   <span class="text-danger"> * </span></label>  
           <select name="nationalite">
-             <option value="fr" selected="selected">France</option>
-            <option value="ma" selected="">Maroc</option>
-            <option value="dz" selected="">Algérie</option>
+          <option value="fr" selected="selected">Française</option>
+            <option value="ma" selected="">Marocaine</option>
+            <option value="dz" selected="">Algérienne </option>
+             
           </select> </p>
     
     <p> <label>Pays de résidence:   <span class="text-danger"> * </span></label>  
           <select name="pays_residence">
-             <option value="fr" selected="selected">Française</option>
-            <option value="ma" selected="">Marocaine</option>
-            <option value="dz" selected="">Algérienne </option>
+          <option value="fr" selected="selected">France</option>
+            <option value="ma" selected="">Maroc</option>
+            <option value="dz" selected="">Algérie</option>
           </select> </p>
 
-
+    
+          <p> <label>Cat. interne:   <span class="text-danger"> * </span></label>  
+          <select name="carte_interne">
+             <option value="Client_Standard" selected="selected">Client Standard</option>
+           
+          </select> </p>      
 
     <!--input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="button" name="next" class="next action-button" value="Next" /-->
