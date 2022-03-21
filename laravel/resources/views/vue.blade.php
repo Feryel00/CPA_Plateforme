@@ -85,9 +85,13 @@
         <label>Code Dec:</label>    
            <input type="text" name="code_dec"/> </p>
 
-        
+</br>           
+    <p> <label>Casier:  </label>     
+          <input type="text" name="casier"/>
+        <label>Apurement:</label>    
+           <input type="text" name="apurement"/> </p>
 </br>
-    <span class="next button">Suivant</span>
+  <div>  <span class="next button">Suivant</span><div>
 
   </fieldset>
 

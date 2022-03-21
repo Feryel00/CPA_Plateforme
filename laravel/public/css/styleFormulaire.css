@@ -109,7 +109,9 @@ fieldset input,fieldset select {
     
 }
 
-
+div{
+	text-align: right;
+}
 label
 { border: 10px; }
 
@@ -239,7 +241,7 @@ label
 }
 
 #msform .button {
-	padding: 15px 100px;
+	padding: 15px 45px;
 	margin: 10px 4px;
 	color: #eee;
 	background: #27AE60;
