@@ -116,10 +116,20 @@
 
     
           <p> <label>Cat. interne:   <span class="text-danger"> * </span></label>  
-          <select name="carte_interne">
+          <select name="cat_interne">
              <option value="Client_Standard" selected="selected">Client Standard</option>
-           
-          </select> </p>      
+          </select> </p>  
+          
+          <p> <label>Cat. bq cent:   <span class="text-danger"> * </span></label>  
+          <select name="cat">
+             <option value="salaries" selected="selected">Salaries</option>
+          </select> </p>   
+
+          <p> <label>Qualité client:  <span class="text-danger"> * </span></label>  
+          <select name="qualité_client">
+             <option value="normal" selected="selected">Normal</option>
+          </select> </p>   
+
 
     <!--input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="button" name="next" class="next action-button" value="Next" /-->
