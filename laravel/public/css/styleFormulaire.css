@@ -86,7 +86,7 @@ fieldset {
 fieldset p {
     display: table-row;
 	text-align: center;
-	
+	width: 100%;
 }
 
 fieldset input, fieldset select, fieldset label {
@@ -104,8 +104,8 @@ fieldset label {
 }
 fieldset input,fieldset select {
 	height: 25px;
-	width: 80px;
-	margin-left: 15px ;
+	width: 70px;
+	margin-left: 5px ;
     
 }
 
@@ -133,7 +133,7 @@ label
 }
 /*inputs*/
 #msform input, #msform textarea{
-	padding: 15px;
+	/*padding: 15px;*/
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	margin-bottom: 5px;
@@ -249,7 +249,7 @@ label
 	position: relative;
 	text-decoration: none;
 	display: inline-block;
-	border: 1px solid;
+	
   }
   #msform  .button::before {
 	content: "";

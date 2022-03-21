@@ -53,20 +53,39 @@
 
     <p> <label>Numéro: <span class="text-danger"> * </span> </label>  
         <input type="text" id="ans" name="numero" placeholder="" onblur="validate(6)"/>
-
-        <label>Validité: </label>     <input type="date" />  </p>
-    <p> <label>Délivrée à: </label>     <input type="text" />
-        <label>Le: </label>     <input type="text" /> </p>
+       <label>Validité: <span class="text-danger"> * </span> </label>     
+            <input type="date" name="validite_one"/>  </p>
+    
+    <p> <label>Délivrée à: <span class="text-danger"> * </span> </label>     
+          <input type="text" name="delivre_à"/>
+        <label>Le: <span class="text-danger"> * </span> </label>    
+           <input type="text" name="le_one"/> </p>
 
 </br>
 
-    <p> <label>Passeport  numéro: </label>  <input type="text" />
-        <label>Validité: </label>     <input type="date" />  </p>
-    <p> <label>Délivrée à: </label>     <input type="text" />
-        <label>Le: </label>     <input type="text" /> </p>
+    <p> <label>Passeport  numéro: </label>  <input type="text"name="passeport_numero" />
+        <label>Validité: </label>     <input type="date" name="validite_pss"/>  </p>
+    <p> <label>Délivrée à: </label>     <input type="text" name="delivre_a"/>
+        <label>Le: </label>     <input type="text" name="le_pss"/> </p>
 
+</br>
 
+        <p> <label>Identif. sociale: </label>  
+         <input type="text" id="type" name="identif_sociale" placeholder="" /> </p>
 
+    <p> <label>Ind: </label>  
+        <input type="text" id="ans" name="ind" placeholder=""/></p>
+     <p>  <label>No stat:</label>     
+            <input type="text" name="no_stat"/>
+        <label>No clt:</label>     
+            <input type="text" name="no_clt"/>    </p>
+    
+    <p> <label>iden. Cent. Risq.:  </label>     
+          <input type="text" name="ident_cent_risq"/>
+        <label>Code Dec:</label>    
+           <input type="text" name="code_dec"/> </p>
+
+        
 </br>
     <span class="next button">Suivant</span>
 
