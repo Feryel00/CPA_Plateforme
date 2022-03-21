@@ -26,7 +26,7 @@
   </ul>
   <!-- fieldsets -->
   <fieldset>
-    <h2 class="fs-title">Identification</h2>
+    <h2 class="fs-title">Identification</h2><br>
     <!--h3 class="fs-subtitle">This is step 1</h3-->
 
     <p> <label>Numéro:   <span class="text-danger"> * </span> </label>  
@@ -97,7 +97,7 @@
 
 
   <fieldset>
-    <h2 class="fs-title">Informations</h2>
+    <h2 class="fs-title">Informations</h2><br>
     <!--h3 class="fs-subtitle">Your presence on the social network</h3-->
     <p> <label>Nationalité:   <span class="text-danger"> * </span></label>  
           <select name="nationalite">
@@ -113,8 +113,7 @@
             <option value="ma" selected="">Maroc</option>
             <option value="dz" selected="">Algérie</option>
           </select> </p>
-
-    
+        
           <p> <label>Cat. interne:   <span class="text-danger"> * </span></label>  
           <select name="cat_interne">
              <option value="Client_Standard" selected="selected">Client Standard</option>
@@ -128,11 +127,23 @@
           <p> <label>Qualité client:  <span class="text-danger"> * </span></label>  
           <select name="qualité_client">
              <option value="normal" selected="selected">Normal</option>
-          </select> </p>   
+          </select> </p>
+   
+<br>
 
 
-    <!--input type="button" name="previous" class="previous action-button" value="Previous" />
+ 
+   <p> <label>Gestionnaire:  <span class="text-danger"> * </span></label>  
+          <select name="gestionnaire">
+             <option value="charge clientèle catégorie 2 " selected="selected">Charge clientèle catégorie 2</option>
+          </select> 
+          <label>Ouvert: <span class="text-danger"> * </span> </label>     <input type="date" name="Ouvert"/> 
+        </p>   
+   
+          <!--input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="button" name="next" class="next action-button" value="Next" /-->
+
+    
     <span class="previous button">Précédent</span>
     <span class="next button">Suivant</span>
   </fieldset>
