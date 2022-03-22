@@ -289,24 +289,31 @@
     <span class="previous button">Précédent</span>
     <span class="next button">Suivant</span>
   </fieldset>
+
+
+
   <fieldset>
-    <h2 class="fs-title">Social Profiles</h2>
-    <h3 class="fs-subtitle">Your presence on the social network</h3>
-    <input type="text" name="twitter" placeholder="Twitter" />
-    <input type="text" name="facebook" placeholder="Facebook" />
-    <input type="text" name="gplus" placeholder="Google Plus" />
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" name="next" class="next action-button" value="Next" />
+    <h2 class="fs-title">Services Annexes</h2></br>
+    <span class="previous button">Précédent</span>
+    <span class="next button">Suivant</span>
   </fieldset>
+
   <fieldset>
-    <h2 class="fs-title">Personal Details</h2>
-    <h3 class="fs-subtitle">We will never sell it</h3>
-    <input type="text" name="fname" placeholder="First Name" />
-    <input type="text" name="lname" placeholder="Last Name" />
-    <input type="text" name="phone" placeholder="Phone" />
-    <textarea name="address" placeholder="Address"></textarea>
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="submit" name="submit" class="submit action-button" value="Submit" />
+    <h2 class="fs-title">Memo</h2></br>
+    <p>
+       <label for="ameliorer">
+       
+       </label></p>
+       <br />
+       
+       <textarea name="memo" id="memo" rows="15" cols="30" placeholder="">
+       
+       </textarea>       
+</br>
+    <!--input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="submit" name="submit" class="submit action-button" value="Submit" /-->
+    <span class="previous button">Précédent</span>
+    <span class="submit button">Submit</span>
   </fieldset>
 
 </form>

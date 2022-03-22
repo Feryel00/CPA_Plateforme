@@ -145,7 +145,11 @@ label
 	color: #2C3E50;
 	font-size: 13px;
 }
+#msform  fieldset textarea{
+	text-align: left;
+	width: 50%;
 
+} 
 /*select*/
 #msform  fieldset select {
 	margin-bottom: 5px;
