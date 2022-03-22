@@ -35,9 +35,7 @@ Route::get('/', function () {
 
 Route::view('ajouterClient','Vue');
 Route::post('ajouterClient',[ClientController::class,'ajouterClient']);
- /*Route::get('/Vue', function(){
-     return view('Vue');
- });*/
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
