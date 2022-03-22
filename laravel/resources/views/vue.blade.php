@@ -160,14 +160,14 @@
 
     <p> <label>Département de naiss.:  <span class="text-danger"> * </span></label>  
           <select name="departement_de_naissance">
+          <option value="ORN" selected="selected">Oran</option>
              <option value="TLM" selected="selected">Tlemcen</option>
-             <option value="ORN" selected="selected">Oran</option>
           </select> </P>
 
           <p> <label>Commune de naissance:  <span class="text-danger"> * </span></label>  
           <select name="commune_de_naissance">
+          <option value="ORN" selected="selected">Oran</option>
              <option value="TLM" selected="selected">Tlemcen</option>
-             <option value="ORN" selected="selected">Oran</option>
           </select> </P>    
           
           
@@ -219,14 +219,75 @@
     <span class="previous button">Précédent</span>
     <span class="next button">Suivant</span>
   </fieldset>
+
   <fieldset>
-    <h2 class="fs-title">Social Profiles</h2>
-    <h3 class="fs-subtitle">Your presence on the social network</h3>
-    <input type="text" name="twitter" placeholder="Twitter" />
-    <input type="text" name="facebook" placeholder="Facebook" />
-    <input type="text" name="gplus" placeholder="Google Plus" />
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" name="next" class="next action-button" value="Next" />
+    <h2 class="fs-title">Conjoint</h2>
+    <!--h3 class="fs-subtitle">Your presence on the social network</h3--></br>
+    <p> <label>Nom de jeune fille:  </label>     <input type="text" name="nom_de_conjoint"/></p>
+    <p> <label>Prenom: <span class="text-danger"> * </span> </label> 
+    <input type="text" name="prenom_de_conjoint"/></p>
+
+</br>
+  
+<p>  <label>Date de naissance: <span class="text-danger"> * </span> </label>    
+          <input type="date" name="date_de_naissance_conjoint"/> 
+        </p> 
+
+        <p> <label>Code territorialité: <span class="text-danger"> * </span> </label>     
+          <input type="text" name="code_territorialite_conjoint"/></p>
+
+    <p> <label>Département de naiss.:  <span class="text-danger"> * </span></label>  
+          <select name="departement_de_naissance_conjoint">
+          <option value="ORN" selected="selected">Oran</option>
+             <option value="TLM" selected="selected">Tlemcen</option>
+          </select> </P>
+
+          <p> <label>Commune de naissance:  <span class="text-danger"> * </span></label>  
+          <select name="commune_de_naissance_conjoint">
+             <option value="ORN" selected="selected">Oran</option>
+             <option value="TLM" selected="selected">Tlemcen</option>
+          </select> </P>    
+          
+          
+<br>
+
+<p> <label>Sexe: <span class="text-danger"> * </span></label>  
+          <select name="sexe">
+             <option value="F" selected="selected">Féminin</option>
+             <option value="M" selected="selected">Masculin</option>
+          </select> </P> 
+
+    <p> <label>Nom de jeune fille:  </label>     <input type="text" name="nom_de_jeune_fille_conjoint"/></p>
+  
+
+          <br>
+          <p> <label>Profession: <span class="text-danger"> * </span></label>  
+          <select name="profession_conjoint">
+             <option value="cadre superieur" selected="selected">Cadre supérieur</option>
+          </select> </p>
+
+          <p> <label>Nom de l'employeur:</label>  <input type="text" name="nom_de_employeur_conjoint"/></p>
+          
+          <p> <label>Revenus:</label>  <input type="text" name="revenus_conjoint"/></p>
+
+</br>
+<p> <label>Situation famille: <span class="text-danger"> * </span></label>  
+          <select name="situation_famille_conjoint">
+             <option value="célibataire" selected="selected">Célibataire</option>
+             <option value="divorcé" selected="selected">Divorcé(e)</option>
+             <option value="veuf" selected="selected">veuf(veuve)</option>
+             <option value="marié" selected="selected">Marié(e)</option>
+          </select> </p>
+
+
+          <p> <label>Capacité juridique: <span class="text-danger"> * </span></label>  
+          <select name="capacite_juridique_conjoint">
+             <option value="majeur" selected="selected">Majeur(e)</option>
+          </select> </p>    
+    <!--input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" /-->
+    <span class="previous button">Précédent</span>
+    <span class="next button">Suivant</span>
   </fieldset>
   <fieldset>
     <h2 class="fs-title">Social Profiles</h2>
