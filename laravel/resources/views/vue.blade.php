@@ -14,7 +14,8 @@
 <body>
 
   <!-- multistep form -->
-<form id="msform">
+<form action="ajouterClient" method="POST" id="msform">
+    @csrf
   <!-- progressbar -->
   <ul id="progressbar">
     <li class="active">Identification</li>
@@ -314,7 +315,8 @@
     <!--input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="submit" name="submit" class="submit action-button" value="Submit" /-->
     <span class="previous button">Précédent</span>
-    <span class="submit button">Submit</span>
+    <button  type='submit' > Submit</button>
+    <!-- <span class="submit button">Submit</span> -->
   </fieldset>
 
 </form>

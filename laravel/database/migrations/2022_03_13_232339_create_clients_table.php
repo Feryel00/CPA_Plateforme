@@ -75,16 +75,16 @@ class CreateClientsTable extends Migration
             $table->string("situation_famille_conjoint");
             $table->string("capacite_juridique_conjoint");
 
-            $table->string("carte_cpa_cash");
-            $table->string("carte_visa_internal");
-            $table->string("location_cofre_fort");
-            $table->string("garde_de_titres");
-            $table->string("ebanking_internet_pers_physiq");
-            $table->string("ebanking_internet_pers_morale");
-            $table->string("ebanking_sce_sms_pers_physiq");
-            $table->string("ebanking_sce_sms_pers_morale");
-            $table->string("ebanking_sce_fax_pers_physiq");
-            $table->string("ebanking_sce_fax_pers_morale");
+            // $table->string("carte_cpa_cash");
+            // $table->string("carte_visa_internal");
+            // $table->string("location_cofre_fort");
+            // $table->string("garde_de_titres");
+            // $table->string("ebanking_internet_pers_physiq");
+            // $table->string("ebanking_internet_pers_morale");
+            // $table->string("ebanking_sce_sms_pers_physiq");
+            // $table->string("ebanking_sce_sms_pers_morale");
+            // $table->string("ebanking_sce_fax_pers_physiq");
+            // $table->string("ebanking_sce_fax_pers_morale");
             $table->string("memo");
 
         });

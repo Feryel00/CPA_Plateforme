@@ -67,16 +67,16 @@ class ClientController extends Controller
          $client->revenus_conjoint=$req->revenus_conjoint;
          $client->situation_famille_conjoint=$req->situation_famille_conjoint;
          $client->capacite_juridique_conjoint=$req->capacite_juridique_conjoint;
-         $client->carte_cpa_cash=$req->carte_cpa_cash;
-         $client->carte_visa_internal=$req->carte_visa_internal;
-         $client->location_cofre_fort=$req->location_cofre_fort;
-         $client->garde_de_titres=$req->garde_de_titres;
-         $client->ebanking_internet_pers_physiq=$req->ebanking_internet_pers_physiq;
-         $client->ebanking_internet_pers_morale=$req->ebanking_internet_pers_morale;
-         $client->ebanking_sce_sms_pers_physiq=$req->ebanking_sce_sms_pers_physiq;
-         $client->ebanking_sce_sms_pers_morale=$req->ebanking_sce_sms_pers_morale;
-         $client->ebanking_sce_fax_pers_physiq=$req->ebanking_sce_fax_pers_physiq;
-         $client->ebanking_sce_fax_pers_morale=$req->ebanking_sce_fax_pers_morale;
+        //  $client->carte_cpa_cash=$req->carte_cpa_cash;
+        //  $client->carte_visa_internal=$req->carte_visa_internal;
+        //  $client->location_cofre_fort=$req->location_cofre_fort;
+        //  $client->garde_de_titres=$req->garde_de_titres;
+        //  $client->ebanking_internet_pers_physiq=$req->ebanking_internet_pers_physiq;
+        //  $client->ebanking_internet_pers_morale=$req->ebanking_internet_pers_morale;
+        //  $client->ebanking_sce_sms_pers_physiq=$req->ebanking_sce_sms_pers_physiq;
+        //  $client->ebanking_sce_sms_pers_morale=$req->ebanking_sce_sms_pers_morale;
+        //  $client->ebanking_sce_fax_pers_physiq=$req->ebanking_sce_fax_pers_physiq;
+        //  $client->ebanking_sce_fax_pers_morale=$req->ebanking_sce_fax_pers_morale;
 
 
         //  $client->delivre_à=$req->delivre_à;
