@@ -190,8 +190,30 @@
           <input type="text" name="prenom_de_la_mere"/></p>
 
           <br>
+          <p> <label>Profession: <span class="text-danger"> * </span></label>  
+          <select name="profession">
+             <option value="cadre superieur" selected="selected">Cadre supérieur</option>
+          </select> </p>
 
+          <p> <label>Nom de l'employeur:</label>  <input type="text" name="nom_de_employeur"/></p>
           
+          <p> <label>Revenus:</label>  <input type="text" name="revenus"/></p>
+
+</br>
+<p> <label>Situation famille: <span class="text-danger"> * </span></label>  
+          <select name="situation_famille">
+             <option value="célibataire" selected="selected">Célibataire</option>
+             <option value="divorcé" selected="selected">Divorcé(e)</option>
+             <option value="veuf" selected="selected">veuf(veuve)</option>
+             <option value="marié" selected="selected">Marié(e)</option>
+          </select> </p>
+
+          <p> <label>Régime matrimonial:</label>  <input type="text" name="regime_famille"/></p>
+
+          <p> <label>Capacité juridique: <span class="text-danger"> * </span></label>  
+          <select name="capacite_juridique">
+             <option value="majeur" selected="selected">Majeur(e)</option>
+          </select> </p>    
     <!--input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="button" name="next" class="next action-button" value="Next" /-->
     <span class="previous button">Précédent</span>
