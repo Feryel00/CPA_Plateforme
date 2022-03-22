@@ -170,7 +170,28 @@
              <option value="ORN" selected="selected">Oran</option>
           </select> </P>    
           
+          
+<br>
+    <!--p><label>Sexe: <span class="text-danger"> * </span> </label> 
+       <input type="checkbox" name="sexe" value="M">Masculin </input>  
+       <input type="checkbox" name="sexe" value="F"/>Féminin</input>
+</p-->
+<p> <label>Sexe: <span class="text-danger"> * </span></label>  
+          <select name="sexe">
+             <option value="F" selected="selected">Féminin</option>
+             <option value="M" selected="selected">Masculin</option>
+          </select> </P> 
 
+
+    <p> <label>Nom de jeune fille:  </label>     <input type="text" name="nom_de_jeune_fille"/></p>
+    <p> <label>Nom de la mère: <span class="text-danger"> * </span> </label>     
+          <input type="text" name="nom_de_la_mere"/></p>
+    <p> <label>prénom de la mère: <span class="text-danger"> * </span> </label>     
+          <input type="text" name="prenom_de_la_mere"/></p>
+
+          <br>
+
+          
     <!--input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="button" name="next" class="next action-button" value="Next" /-->
     <span class="previous button">Précédent</span>
