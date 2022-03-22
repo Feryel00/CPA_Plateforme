@@ -143,18 +143,38 @@
           <!--input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="button" name="next" class="next action-button" value="Next" /-->
 
-    
     <span class="previous button">Précédent</span>
     <span class="next button">Suivant</span>
   </fieldset>
+
   <fieldset>
-    <h2 class="fs-title">Social Profiles</h2>
-    <h3 class="fs-subtitle">Your presence on the social network</h3>
-    <input type="text" name="twitter" placeholder="Twitter" />
-    <input type="text" name="facebook" placeholder="Facebook" />
-    <input type="text" name="gplus" placeholder="Google Plus" />
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="button" name="next" class="next action-button" value="Next" />
+    <h2 class="fs-title">Titulaire</h2><br>
+
+    <!--h3 class="fs-subtitle">Your presence on the social network</h3-->
+    <p>  <label>Date de naissance: <span class="text-danger"> * </span> </label>    
+          <input type="date" name="date_de_naissance_titulaire"/> 
+        </p> 
+
+        <p> <label>Code territorialité: <span class="text-danger"> * </span> </label>     
+          <input type="text" name="code_territorialite"/></p>
+
+    <p> <label>Département de naiss.:  <span class="text-danger"> * </span></label>  
+          <select name="departement_de_naissance">
+             <option value="TLM" selected="selected">Tlemcen</option>
+             <option value="ORN" selected="selected">Oran</option>
+          </select> </P>
+
+          <p> <label>Commune de naissance:  <span class="text-danger"> * </span></label>  
+          <select name="commune_de_naissance">
+             <option value="TLM" selected="selected">Tlemcen</option>
+             <option value="ORN" selected="selected">Oran</option>
+          </select> </P>    
+          
+
+    <!--input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" /-->
+    <span class="previous button">Précédent</span>
+    <span class="next button">Suivant</span>
   </fieldset>
   <fieldset>
     <h2 class="fs-title">Social Profiles</h2>
