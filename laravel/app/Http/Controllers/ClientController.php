@@ -30,12 +30,15 @@ class ClientController extends Controller
          $client->code_dec=$req->code_dec;
          $client->casier=$req->casier;
          $client->apurement=$req->apurement;
+         $client->nationalite=$req->nationalite;
          $client->pays_residence=$req->pays_residence;
-         $client->carte_interne=$req->carte_interne;
+         $client->cat_interne=$req->cat_interne;
+         $client->cat=$req->cat;
          $client->qualite_client=$req->qualite_client;
          $client->gestionnaire=$req->gestionnaire;
-         $client->famille=$req->famille;
-         $client->groupe=$req->groupe;
+         $client->Ouvert=$req->Ouvert;
+         //$client->famille=$req->famille;
+         //$client->groupe=$req->groupe;
          $client->date_de_naissance_titulaire=$req->date_de_naissance_titulaire;
          $client->code_territorialite=$req->code_territorialite;
          $client->departement_de_naissance=$req->departement_de_naissance;
@@ -48,7 +51,7 @@ class ClientController extends Controller
          $client->nom_de_emmployeur=$req->nom_de_emmployeur;
          $client->revenus=$req->revenus;
          $client->situation_famille=$req->situation_famille;
-         $client->regime_famille=$req->regime_famille;
+        // $client->regime_famille=$req->regime_famille;
          $client->regime_matrimonial=$req->regime_matrimonial;
          $client->capacite_juridique=$req->capacite_juridique;
          $client->nom_de_conjoint=$req->nom_de_conjoint;

@@ -36,13 +36,16 @@ class CreateClientsTable extends Migration
             $table->string("code_dec");
             $table->string("casier");
             $table->string("apurement");
-            // $table->string("nationalite");
+
+            $table->string("nationalite");
             $table->string("pays_residence");
-            $table->string("carte_interne");
+            $table->string("cat_interne");
+            $table->string("cat");
             $table->string("qualite_client");
             $table->string("gestionnaire");
-            $table->string("famille");
-            $table->string("groupe");
+            $table->string("Ouvert");
+            //$table->string("famille");
+            //$table->string("groupe");
             $table->string("date_de_naissance_titulaire");
             $table->string("code_territorialite");
             $table->string("departement_de_naissance");
@@ -55,7 +58,7 @@ class CreateClientsTable extends Migration
             $table->string("nom_de_emmployeur");
             $table->string("revenus");
             $table->string("situation_famille");
-            $table->string("regime_famille");
+            //$table->string("regime_famille");
             $table->string("regime_matrimonial");
             $table->string("capacite_juridique");
             $table->string("nom_de_conjoint");
@@ -71,6 +74,7 @@ class CreateClientsTable extends Migration
             $table->string("revenus_conjoint");
             $table->string("situation_famille_conjoint");
             $table->string("capacite_juridique_conjoint");
+
             $table->string("carte_cpa_cash");
             $table->string("carte_visa_internal");
             $table->string("location_cofre_fort");
