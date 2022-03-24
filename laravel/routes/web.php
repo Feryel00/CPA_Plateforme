@@ -23,20 +23,20 @@ Route::get('/', function () {
  });
 
 
-// Route::get('/vue6', function(){
-//     return view('Vue_client/vue6Client');
-// });
-
-// Route::view('ajouterClient','Vue_client/vue1Client');
-// Route::post('ajouterClient',[ClientController::class,'ajouterClient']);
-
-// Route::view('ajouterClient','Vue_client/vue6Client');
-// Route::post('ajouterClient',[ClientController::class,'ajouterClient']);
-
 Route::view('ajouterClient','Vue');
 Route::post('ajouterClient',[ClientController::class,'ajouterClient']);
 
 
+
+
+Route::get('/d', function(){
+    return view('dashbord/dash');
+});
+
+
+Route::get('/ddirecteur', function(){
+    return view('dashbord/Dashdirecteur');
+});
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

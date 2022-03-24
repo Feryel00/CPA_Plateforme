@@ -50,18 +50,18 @@
 html {
 	height: 140%;
 	/*Image only BG fallback*/
-	
+
 	/*background = gradient + image pattern combo*/
-	background: 
+	background:
 		/*linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));*/
 		/*linear-gradient(#ffd500,  #0051a8);*/
-		linear-gradient(#0051a8,#ffd500);
+		linear-gradient(#0051a8,#ffd500) ;
 	/*	position: relative;*/
 	}
 
 body {
 	font-family: montserrat, arial, verdana;
-	
+
 }
 
 
@@ -75,7 +75,7 @@ body {
 }
 
 span{
-	color: red;
+	color: rgb(236, 226, 226);
 }
 
 fieldset {
@@ -108,7 +108,7 @@ fieldset input,fieldset select {
 	height: 25px;
 	width: 70px;
 	margin-left: 5px ;
-    
+
 }
 
 
@@ -149,15 +149,15 @@ label
 	text-align: left;
 	width: 50%;
 
-} 
+}
 /*select*/
 #msform  fieldset select {
 	margin-bottom: 5px;
 	width: 150%;
-	
-	
-	
-	
+
+
+
+
 }
 
 
@@ -174,7 +174,7 @@ label
 	/*margin: 10px 5px;*/
     /*margin-bottom: 5px;
 	text-align: center;*/
-	
+
 
 /*}*/
 #msform .button:hover, #msform .button:focus {
@@ -235,7 +235,7 @@ label
 }
 #progressbar li:first-child:after {
 	/*connector not needed before the first step*/
-	content: none; 
+	content: none;
 }
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
@@ -255,7 +255,7 @@ label
 	position: relative;
 	text-decoration: none;
 	display: inline-block;
-	
+
   }
   #msform  .button::before {
 	content: "";
