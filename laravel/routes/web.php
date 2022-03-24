@@ -26,6 +26,9 @@ Route::get('/', function () {
 Route::view('ajouterClient','Vue');
 Route::post('ajouterClient',[ClientController::class,'ajouterClient']);
 
+
+
+
 Route::get('/d', function(){
     return view('dashbord/dash');
 });

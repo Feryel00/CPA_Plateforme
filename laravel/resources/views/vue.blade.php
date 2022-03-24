@@ -8,7 +8,32 @@
   <link rel="icon" type="image/png" href="{{URL::to('/images/icons/bank-logo.jpg')}}">
 
   <link rel="stylesheet" href="css/styleFormulaire.css">
+  <script type="text/javascript">
 
+
+window.onload=function() {
+  horloge('div_horloge');
+};
+
+
+function horloge(el) {
+  if(typeof el=="string") { el = document.getElementById(el); }
+  function actualiser() {
+    var date = new Date();
+    //var str = date.getHours();
+    //str += ':'+(date.getMinutes()<10?'0':'')+date.getMinutes();
+    //str += ':'+(date.getSeconds()<10?'0':'')+date.getSeconds();
+
+
+    el.innerHTML = date;
+  }
+  actualiser();
+  setInterval(actualiser,1000);
+}
+
+
+
+</script>
 </head>
 
 <body>
@@ -71,8 +96,8 @@
 
 </br>
 
-        <p> <label>Identif. sociale: </label>
-         <input type="text" id="type" name="identif_sociale" placeholder="" /> </p>
+        <p> <label>Identif. sociale </label>
+         </p>
 
     <p> <label>Ind: </label>
         <input type="text" id="ans" name="ind" placeholder=""/></p>
