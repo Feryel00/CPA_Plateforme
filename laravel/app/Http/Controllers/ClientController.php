@@ -48,7 +48,7 @@ class ClientController extends Controller
          $client->nom_de_la_mere=$req->nom_de_la_mere;
          $client->prenom_de_la_mere=$req->prenom_de_la_mere;
          $client->profession=$req->profession;
-         $client->nom_de_emmployeur=$req->nom_de_emmployeur;
+         $client->nom_de_employeur=$req->nom_de_employeur;
          $client->revenus=$req->revenus;
          $client->situation_famille=$req->situation_famille;
         // $client->regime_famille=$req->regime_famille;
@@ -88,6 +88,6 @@ class ClientController extends Controller
          $client->memo=$req->memo;
 
          $client->save();
-        return redirect('Vue');
+        return redirect('ajouterClient');
     }
 }

@@ -64,10 +64,10 @@
 
 </br>
 
-    <p> <label>Passeport  numéro: </label>  <input type="text"name="passeport_numero" />
+    <p> <label>Passeport  numéro: </label>  <input type="text"name="passport_numero" />
         <label>Validité: </label>     <input type="date" name="validite_pss"/>  </p>
     <p> <label>Délivrée à: </label>     <input type="text" name="delivre_a"/>
-        <label>Le: </label>     <input type="text" name="le_pss"/> </p>
+        <label>Le: </label>     <input type="text" name="le_pass"/> </p>
 
 </br>
 
@@ -315,7 +315,7 @@
     <!--input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="submit" name="submit" class="submit action-button" value="Submit" /-->
     <span class="previous button">Précédent</span>
-    <button  type='submit' > Submit</button>
+    <button  type='submit' class="submit button" > Submit</button>
     <!-- <span class="submit button">Submit</span> -->
   </fieldset>
 

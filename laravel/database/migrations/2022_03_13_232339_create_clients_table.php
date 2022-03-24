@@ -55,7 +55,7 @@ class CreateClientsTable extends Migration
             $table->string("nom_de_la_mere");
             $table->string("prenom_de_la_mere");
             $table->string("profession");
-            $table->string("nom_de_emmployeur");
+            $table->string("nom_de_employeur");
             $table->string("revenus");
             $table->string("situation_famille");
             //$table->string("regime_famille");
