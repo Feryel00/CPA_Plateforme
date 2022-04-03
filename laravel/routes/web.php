@@ -18,6 +18,11 @@ use App\http\Controllers\ClientController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/w', function () {
+    return view('wlcm');
+});
+
  Route::get('/client', function(){
      return view('Vue_client/vue1Client');
  });
