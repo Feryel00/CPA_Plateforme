@@ -340,7 +340,11 @@ function horloge(el) {
     <!--input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="submit" name="submit" class="submit action-button" value="Submit" /-->
     <span class="previous button">Précédent</span>
+<<<<<<< HEAD
+    <span  type="submit" class="submit button"> Soumettre</span>
+=======
     <button  type='submit' class="submit button" > Submit</button>
+>>>>>>> d04cffd0b47dcd3a0dda7ef127daa2829cf16422
     <!-- <span class="submit button">Submit</span> -->
   </fieldset>
 
