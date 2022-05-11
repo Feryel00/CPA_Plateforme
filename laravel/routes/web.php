@@ -26,9 +26,7 @@ Route::get('/w', function () {
  Route::get('/client', function(){
      return view('Vue_client/vue1Client');
  });
- Route::get('/client', function(){
-    return view('Vue_client/vue1Client');
-});
+ 
 
 
 Route::view('ajouterClient','Vue');
