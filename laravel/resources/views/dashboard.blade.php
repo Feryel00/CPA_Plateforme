@@ -1,11 +1,37 @@
 <x-app-layout>
+   <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Dashboard') }}
+        </h2>
+
+    </x-slot>
 
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-jet-welcome />
-            </div>
-        </div>
+
+<!--Start sidebar-wrapper-->
+ <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true"  >
+    <div id="wrapper"> @yield('aside')</div>
+
+</div>
+
+<div class="content-wrapper"  >
+    <div class="container-fluid" >
+
+    <div class="row mt-3" >
+      <div class="col-lg-12" >
+         <div class="card" >
+           <div class="card-body" >
+           <!-- <div class="card-title" style="color:red">@yield('tache')</div> -->
+
+           @yield('contentDash')
+
+
+
+
+         </div>
+         </div>
+      </div>
     </div>
+</div>
 </x-app-layout>
+

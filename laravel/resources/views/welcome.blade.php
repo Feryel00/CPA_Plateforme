@@ -12,8 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <title>Chain App Dev - App Landing Page HTML5 Template</title>
 
+
+    <title>La banque CPA</title>
+    <link rel="icon" type="image/png" href="{{URL::to('/images/icons/bank-logo.jpg')}}">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -63,11 +65,11 @@ https://templatemo.com/tm-570-chain-app-dev
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#top" class="active">Acceuil</a></li>
               <li class="scroll-to-section"><a href="#services">Services</a></li>
               <li class="scroll-to-section"><a href="#about">About</a></li>
-              <li class="scroll-to-section"><a href="#pricing">Pricing</a></li>
-              <li class="scroll-to-section"><a href="#newsletter">Newsletter</a></li>
+              <li class="scroll-to-section"><a href="#pricing">contact</a></li>
+              <!-- <li class="scroll-to-section"><a href="#newsletter">Newsletter</a></li> -->
               <li><div class="gradient-button">
               @if (Route::has('login'))
 

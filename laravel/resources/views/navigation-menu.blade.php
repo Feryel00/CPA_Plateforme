@@ -1,21 +1,78 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-    <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex">
+<nav x-data="{ open: false }" class="  navbar navbar-expand fixed-top"style='background-color:rgb(0,0,55)'>
+
+  <ul class="navbar-nav mr-auto align-items-center">
+    <li class="nav-item">
+      <a class="nav-link toggle-menu" href="javascript:void();">
+       <i class="icon-menu menu-icon"></i>
+     </a>
+    </li>
+    <li class="nav-item">
+      <form class="search-bar">
+        <input type="text" class="form-control" placeholder="Enter keywords">
+         <a href="javascript:void();"><i class="icon-magnifier"></i></a>
+      </form>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav align-items-center right-nav-link">
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();">
+      <i class="fa fa-envelope-open-o"></i></a>
+    </li>
+    <li class="nav-item dropdown-lg">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();">
+      <i class="fa fa-bell-o"></i></a>
+    </li>
+    <li class="nav-item language">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret waves-effect" data-toggle="dropdown" href="javascript:void();"><i class="fa fa-flag"></i></a>
+      <ul class="dropdown-menu dropdown-menu-right">
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-gb mr-2"></i> Français</li>
+          <li class="dropdown-item"> <i class="flag-icon flag-icon-fr mr-2"></i> Arabe</li>
+
+        </ul>
+    </li>
+    <!--li class="nav-item">
+      <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" data-toggle="dropdown" href="#">
+        <span class="user-profile"><img src="https://via.placeholder.com/110x110" class="img-circle" alt="user avatar"></span>
+      </a>
+       <ul class="dropdown-menu dropdown-menu-right">
+       <li class="dropdown-item user-details">
+        <a href="javaScript:void();">
+           <div class="media">
+             <div class="avatar"><img class="align-self-start mr-3" src="https://via.placeholder.com/110x110" alt="user avatar"></div>
+            <div class="media-body">
+            <h6 class="mt-2 user-title">Sarajhon Mccoy</h6>
+            <p class="user-subtitle">mccoy@example.com</p>
+            </div>
+           </div>
+          </a>
+        </li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-envelope mr-2"></i> Inbox</li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-wallet mr-2"></i> Account</li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-settings mr-2"></i> Setting</li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><i class="icon-power mr-2"></i> Logout</li>
+      </ul>
+    </li>-->
+  </ul>
+            <div class="flex items-center " >
+                <div style='background-color:yellow'>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
+                 <!-- <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         <x-jet-application-mark class="block h-9 w-auto" />
                     </a>
-                </div>
+                </div> -->
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
-                    </x-jet-nav-link>
-                </div>
+
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -132,6 +189,7 @@
                 </button>
             </div>
         </div>
+
     </div>
 
     <!-- Responsive Navigation Menu -->
@@ -212,4 +270,5 @@
             </div>
         </div>
     </div>
+
 </nav>

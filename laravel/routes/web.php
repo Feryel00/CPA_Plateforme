@@ -26,22 +26,32 @@ Route::get('/w', function () {
  Route::get('/client', function(){
      return view('Vue_client/vue1Client');
  });
+ Route::get('/c', function(){
+    return view('Vue_client/vueClient');
+});
 
 
-Route::view('ajouterClient','Vue');
+Route::view('ajouterClient','client/ajouterClient');
 Route::post('ajouterClient',[ClientController::class,'ajouterClient']);
 
 
 
 
-Route::get('/d', function(){
-    return view('dashbord/dash');
+Route::get('/da', function(){
+    return view('da');
 });
 
 
 Route::get('/ddirecteur', function(){
-    return view('dashbord/Dashdirecteur');
+    return view('dashboardDirecteur');
+});
+Route::get('/dCharge', function(){
+    return view('chargeClienteleDashboard');
 });
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::get('redirects','App\Http\Controllers\HomeController@index');
+Route::get('/lister',[ClientController::class,'lister']);
+
