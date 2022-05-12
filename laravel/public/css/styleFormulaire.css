@@ -1,0 +1,284 @@
+/*custom font*/
+/*@import url(http://fonts.googleapis.com/css?family=Montserrat);*/
+
+/* cyrillic-ext */
+@font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/montserrat/v23/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw0aXpsog.woff2) format('woff2');
+	unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+  }
+  /* cyrillic */
+  @font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/montserrat/v23/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw9aXpsog.woff2) format('woff2');
+	unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* vietnamese */
+  @font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/montserrat/v23/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw2aXpsog.woff2) format('woff2');
+	unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/montserrat/v23/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw3aXpsog.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/montserrat/v23/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html {
+	height: 140%;
+	/*Image only BG fallback*/
+
+	/*background = gradient + image pattern combo*/
+	background:
+		/*linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));*/
+		/*linear-gradient(#ffd500,  #0051a8);*/
+		linear-gradient(#0051a8,#ffd500) ;
+	/*	position: relative;*/
+	}
+
+body {
+	font-family: montserrat, arial, verdana;
+
+}
+
+
+/*form styles*/
+#msform {
+	width:auto;/*800*/
+	margin: 5px ;/*25*/
+	text-align: center;
+	position: relative;
+
+}
+
+span{
+	color: rgb(236, 226, 226);
+}
+
+fieldset {
+	display: table;/* 100%;*/
+	text-align: center;
+	position: relative;
+	height: auto;
+}
+
+fieldset p {
+    display: table-row;
+	text-align: center;
+	width: 100%;
+}
+
+fieldset input, fieldset select, fieldset label {
+    display: table-cell ;
+    margin: 0px ;/*10*/
+	position: relative;
+}
+
+fieldset label {
+    text-align: right;
+	height: 25px;
+	width:200px;
+	/*margin-right: 15px ;*/
+		/*margin-left: 50px ;*/
+}
+fieldset input,fieldset select {
+	height: 25px;
+	width: 70px;
+	margin-left: 5px ;
+
+}
+
+
+label
+{ border: 10px; }
+
+
+#msform fieldset {
+	background: 	linear-gradient(#cff3b7,#fafafa);
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 90%;
+	margin: 0 5%;
+	text-align: center;
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+/*inputs*/
+#msform input, #msform textarea{
+	/*padding: 15px;*/
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 5px;
+	width: 150%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+#msform  fieldset textarea{
+	text-align: left;
+	width: 50%;
+
+}
+/*select*/
+#msform  fieldset select {
+	margin-bottom: 5px;
+	width: 150%;
+
+
+
+
+}
+
+
+/*buttons*/
+/*#msform .button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;*/
+	/*border-radius: 1px;*/
+	/*cursor: pointer;*/
+	/*padding: 10px 5px;*/
+	/*margin: 10px 5px;*/
+    /*margin-bottom: 5px;
+	text-align: center;*/
+
+
+/*}*/
+#msform .button:hover, #msform .button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+	font-size: 15px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*progressbar*/
+
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: white;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 16.16%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+}
+
+#msform .button {
+	padding: 15px 45px;
+	margin: 10px 4px;
+	color: #eee;
+	background: #27AE60;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+
+  }
+  #msform  .button::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	-webkit-transform: scaleY(0.1);
+	transform: scaleY(0.1);
+	transition: all 0.4s;
+  }
+  #msform  .button:hover {
+	color: #27AE60;
+	background: rgb(196, 240, 183);
+  }
+  #msform  .button:hover::before {
+	opacity: 1;
+	background-color: rgb(202, 31, 31);
+	-webkit-transform: scaleY(1);
+	transform: scaleY(1);
+	transition: -webkit-transform 0.6s cubic-bezier(0.08, 0.35, 0.13, 1.02), opacity 0.4s;
+	transition: transform 0.6s cubic-bezier(0.08, 0.35, 0.13, 1.02), opacity;
+  }
