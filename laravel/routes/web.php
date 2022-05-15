@@ -30,7 +30,7 @@ Route::get('/w', function () {
     return view('Vue_client/vueClient');
 });
 
-Route::view('ajouterClient','client/ajouterClient');
+//Route::view('ajouterClient','client/ajouterClient');
 Route::post('ajouterClient',[ClientController::class,'ajouterClient']);
 
 
@@ -54,3 +54,19 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('redirects','App\Http\Controllers\HomeController@index');
 Route::get('/lister',[ClientController::class,'lister']);
 
+Route::view('/lister/ajouterClient','client/modifierClient');
+Route::post('ajouterClient',[ClientController::class,'ajouterClient']);
+
+Route::get('/e', function(){
+    return view('es');
+});
+Route::get('/v', function(){
+    return view ('index');
+});
+
+Route::post('/store', [ClientController::class, 'store'])->name('store');
+
+Route::get('/fetchall', [ClientController::class, 'fetchAll'])->name('fetchAll');
+Route::delete('/delete', [ClientController::class, 'delete'])->name('delete');
+Route::get('/edit', [ClientController::class, 'edit'])->name('edit');
+Route::post('/update', [ClientController::class, 'update'])->name('update');

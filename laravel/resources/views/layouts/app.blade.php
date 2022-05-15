@@ -54,6 +54,8 @@
   <!-- <script src="js/jquery.loading-indicator.js"></script> -->
   <!-- Custom scripts -->
   <script src="js/app-script.js"></script>
+  <script src="js/bootstrap5.bundle.min.js" crossorigin="anonymous"></script>
+
   <!-- Chart js -->
 
   <!-- <script src="plugins/Chart.js/Chart.min.js"></script> -->

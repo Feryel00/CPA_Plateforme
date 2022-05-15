@@ -19,7 +19,7 @@ Charge Clientele
 
 
     <li>
-      <a href="/lister" target="_blank">
+      <a href="/lister" >
            <i class="zmdi zmdi-account-circle"></i> <span>Gestion des clients</span>
       </a>
     </li>

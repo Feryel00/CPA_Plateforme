@@ -16,36 +16,36 @@
 
 </head>
 {{-- add new employee modal start --}}
-<div class="modal fade" id="addEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-  data-bs-backdrop="static" aria-hidden="true">
+<div class="modal fade card" id="addEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+  data-bs-backdrop="static" aria-hidden="true" style='background-color:green'>
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add New Employee</h5>
+      <div class="modal-header" style="background-color:yellow">
+        <h5 class="modal-title" id="exampleModalLabel" style="color:blue">Ajouter nouveau client</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
+      <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data" style="color:black">
         @csrf
         <div class="modal-body p-4 bg-light">
           <div class="row">
-            <div class="col-lg">
-              <label for="agence">Agence</label>
-              <input type="text" name="agence" class="form-control" placeholder="First Name" required>
+            <div class="col-lg ">
+              <label for="agence" style="color:blue">Agence</label>
+              <input type="text" name="agence" class="form-control" placeholder="First Name" required style="color:black">
             </div>
             <div class="col-lg">
-              <label for="nom">Nom</label>
-              <input type="text" name="nom" class="form-control" placeholder="Last Name" required>
+              <label for="nom" style="color:blue">Nom</label>
+              <input type="text" name="nom" class="form-control" placeholder="Last Name" required style="color:blue">
             </div>
           </div>
           <div class="my-2">
-            <label for="email">Prenom</label>
-            <input type="text" name="prenom" class="form-control" placeholder="E-mail" required>
+            <label for="email" style="color:blue">Prenom</label>
+            <input type="text" name="prenom" class="form-control" placeholder="E-mail" required style="color:blue">
           </div>
 
 
 
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer" style="background-color:yellow">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="submit" id="add_employee_btn" class="btn btn-primary">Add Employee</button>
         </div>
@@ -96,17 +96,17 @@
 </div>
 {{-- edit employee modal end --}}
 
-<body class="bg-light">
+<body class="bg-light" >
   <div class="container">
     <div class="row my-5">
       <div class="col-lg-12">
         <div class="card shadow">
-          <div class="card-header bg-danger d-flex justify-content-between align-items-center">
-            <h3 class="text-light">Manage Employees</h3>
+          <div class="card-header  d-flex justify-content-between align-items-center" style='background-color:blue'>
+            <h3 class="text-light "style='background-color:blue'>Gestion des clients</h3>
             <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
-                class="bi-plus-circle me-2"></i>Add New Employee</button>
+                class="bi-plus-circle me-2"></i>Ajouter nouveau client</button>
           </div>
-          <div class="card-body" id="show_all_employees">
+          <div class="card-body" style='background-color:rgb(0,0,30)' id="show_all_employees">
             <h1 class="text-center text-secondary my-5">Loading...</h1>
           </div>
         </div>
@@ -254,7 +254,4 @@
 </body>
 
 </html>
-
-
-</script>
 @endsection
