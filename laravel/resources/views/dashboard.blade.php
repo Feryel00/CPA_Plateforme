@@ -19,7 +19,7 @@
 
     <div class="row mt-3" >
       <div class="col-lg-12" >
-         <div class="card" style="background-color:white">
+
 
            <!-- <div class="card-title" style="color:red">@yield('tache')</div> -->
 
@@ -28,7 +28,7 @@
 
 
 
-         </div>
+
          </div>
       </div>
     </div>
