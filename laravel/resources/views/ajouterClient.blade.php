@@ -1,5 +1,4 @@
 
-@extends('dashboard')
   <link rel="stylesheet" href="css/reset.min.css">
   <link rel="icon" type="image/png" href="{{URL::to('/images/icons/bank-logo.jpg')}}">
 

@@ -27,15 +27,15 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Nom_client</strong>
-                <input type="text" name="nom" class="form-control" placeholder="Enter Title">
+                <input type="text" name="nom_client" class="form-control" placeholder="Enter Title">
             </div>
             <div class="form-group">
                 <strong>Prenom_client</strong>
-                <input type="text" name="prenom" class="form-control" placeholder="Enter Title">
+                <input type="text" name="prenom_client" class="form-control" placeholder="Enter Title">
             </div>
             <div class="form-group">
                 <strong>Solde</strong>
-                <input type="date" name="date_naissance" class="form-control" placeholder="Enter Title">
+                <input type="text" name="solde" class="form-control" placeholder="Enter Title">
             </div>
 
 
@@ -63,7 +63,7 @@
             </div>
 
 @endcan
-@endif
+
 
 
 

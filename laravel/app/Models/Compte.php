@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Client extends Model
+class Compte extends Model
 {
     use HasFactory;
-   // public $timestamps=false;
-   protected $fillable = [
-    'nom',
-    'prenom'
+    protected $fillable = [
+        'nom_client',
+        'prenom_client',
+        'solde',
 
-];
+    ];
 }

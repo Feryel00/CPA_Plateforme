@@ -150,6 +150,16 @@
       </div>
     </div>
   </div>
+  <button>
+  <a href="/gestion_clients" >
+           <i class="zmdi zmdi-account-circle"></i> <span>Gestion des clients</span>
+      </a>
+  </button>
+  <button>
+  <a href="{{route('compte.index')}}" >
+           <i class="zmdi zmdi-account-circle"></i> <span>Gestion des clients</span>
+      </a>
+  </button>
 </body>
 
 </html>

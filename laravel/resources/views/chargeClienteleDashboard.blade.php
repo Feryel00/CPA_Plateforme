@@ -12,26 +12,33 @@ Charge Clientele
  <ul class="sidebar-menu do-nicescrol">
     <li class="sidebar-header">MAIN NAVIGATION</li>
     <li>
-      <a href="index.html">
-        <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
+      <a href="/">
+        <i class="zmdi zmdi-view-dashboard"></i> <span>Acceuil</span>
       </a>
     </li>
+    <li>
+                        <a href="/gestion_clients" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Gestion des clients</span></a>
+                        <ul class=" " id="element">
+                           <li><a href="general_elements.html">> <span>Clients morales</span></a></li>
+                           <li><a href="media_gallery.html">> <span>Clients physiques</span></a></li>
 
+                        </ul>
+                     </li>
 
     <li>
-      <a href="/lister" >
+      <a href="/gestion_clients" >
            <i class="zmdi zmdi-account-circle"></i> <span>Gestion des clients</span>
       </a>
     </li>
      <li>
-      <a href="/lister" target="_blank">
-           <i class="zmdi zmdi-account-circle"></i> <span>Gestion des comptes</span>
+      <a href="{{route('compte.index')}}" >
+           <i class="zmdi zmdi-accounts"></i> <span>Gestion des comptes</span>
 
 
       </a>
     </li>
     <li>
-      <a href="register.html" target="_blank">
+      <a href="typeCarte" >
         <!-- <i class="zmdi zmdi-account-circle"></i> -->
         <i class="zmdi zmdi-card"></i> <span>Moneitique</span>
       </a>
