@@ -15,8 +15,8 @@ Directeur
  <ul class="sidebar-menu do-nicescrol">
     <li class="sidebar-header">MAIN NAVIGATION</li>
     <li>
-      <a href="index.html">
-        <i class="zmdi zmdi-view-dashboard"></i> <span>Dashboard</span>
+      <a href="/">
+        <i class="zmdi zmdi-view-dashboard"></i> <span>Acceuil</span>
       </a>
     </li>
 

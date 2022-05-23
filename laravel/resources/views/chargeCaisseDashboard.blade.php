@@ -1,12 +1,12 @@
 @extends('dashboard')
 @section('title')
-Charge Credit
+Charge Clientele
 @endsection
 @section('aside')
 <div class="brand-logo" >
     <!-- <a href="index.html"> -->
      <img src="images/icons/bank-logo.jpg" class="logo-icon" alt="logo">
-     <h5 class="logo-text">Charge Credit</h5>
+     <h5 class="logo-text">Charge Caisse</h5>
    <!-- </a> -->
  </div>
  <ul class="sidebar-menu do-nicescrol">
@@ -19,13 +19,13 @@ Charge Credit
 
 
     <li>
-      <a href="/ficheScoring" >
-           <i class="zmdi zmdi-account-circle"></i> <span>Fiche de scoring</span>
+      <a href="/gestion_clients" >
+           <i class="zmdi zmdi-account-circle"></i> <span>Gestion des clients</span>
       </a>
     </li>
      <li>
-      <a href="/lister" >
-           <i class="zmdi zmdi-account-circle"></i> <span>Gestion des comptes credit</span>
+      <a href="{{route('compte.index')}}" >
+           <i class="zmdi zmdi-account-circle"></i> <span>Gestion des comptes</span>
 
 
       </a>

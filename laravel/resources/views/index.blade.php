@@ -1,14 +1,13 @@
 @extends('chargeClienteledashboard')
 @section('contentDash')
-<!DOCTYPE html>
-<html lang="en">
+
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <!-- <meta name="csrf-token" content="{{ csrf_token() }}"> -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clients</title>
+  <title>CRUD App Laravel 8 & Ajax</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css' />
   <link rel='stylesheet'
     href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css' />
@@ -16,38 +15,33 @@
 
 </head>
 {{-- add new employee modal start --}}
-<div class="modal fade " id="addEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-  data-bs-backdrop="static" aria-hidden="true" >
-  <div class="modal-dialog modal-dialog-centered" >
-    <div class="modal-content" id="modal-content" >
-      <div class="modal-header" >
-        <h5 class="modal-title" id="exampleModalLabel" >Ajouter nouveau client</h5>
+<div class="modal fade" id="addEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+  data-bs-backdrop="static" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" id="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouveau client</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data" >
+      <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
         @csrf
         <div class="modal-body p-4 bg-light">
           <div class="row">
-            <div class="col-lg ">
-              <label for="agence" style="color:blue">Agence</label>
-              <input type="text" name="agence" class="form-control" placeholder="First Name" required >
+            <div class="col-lg">
+              <label for="fname" style='color:blue'>Nom</label>
+              <input type="text" name="fname" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="nom" style="color:blue">Nom</label>
-              <input type="text" name="nom" class="form-control" id="form-control" placeholder="Last Name" required >
+              <label for="lname" style='color:blue'>Prenom</label>
+              <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
             </div>
           </div>
-          <div class="my-2">
-            <label for="email" style="color:blue">Prenom</label>
-            <input type="text" name="prenom" class="form-control" placeholder="E-mail" required style="color:blue">
-          </div>
-
 
 
         </div>
-        <div class="modal-footer" id="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" id="add_employee_btn" class="btn btn-primary">Add Employee</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="submit" id="add_employee_btn" class="btn btn-primary">Ajouter client</button>
         </div>
       </form>
     </div>
@@ -59,9 +53,9 @@
 <div class="modal fade" id="editEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
   data-bs-backdrop="static" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
+    <div class="modal-content" id="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Edittttt Employee</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Modier client</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data">
@@ -71,24 +65,23 @@
         <div class="modal-body p-4 bg-light">
           <div class="row">
             <div class="col-lg">
-              <label for="agence">Agence</label>
-              <input type="text" name="agence" id="agence" class="form-control" placeholder="First Name" required>
+              <label for="fname" style="color:blue">Nom</label>
+              <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="nom">Nom</label>
-              <input type="text" name="nom" id="nom" class="form-control" placeholder="Last Name" required>
+              <label for="lname" style="color:blue">Prenm</label>
+              <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name" required>
             </div>
           </div>
-          <div class="my-2">
-            <label for="prenom">Prenom</label>
-            <input type="text" name="prenom" id="prenom" class="form-control" placeholder="E-mail" required>
+
+
+          <div class="mt-2" id="avatar">
+
           </div>
-
-
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" id="edit_employee_btn" class="btn btn-success">Update Employee</button>
+        <div class="modal-footer" id="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="submit" id="edit_employee_btn" class="btn btn-success">Modifier Client</button>
         </div>
       </form>
     </div>
@@ -97,7 +90,7 @@
 {{-- edit employee modal end --}}
 
 
-  <div class="container" >
+<div class="container" >
     <div class="row my-5">
       <div class="col-lg-12">
         <div class="card shadow position" id="pos">
@@ -113,6 +106,7 @@
       </div>
     </div>
   </div>
+
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js'></script>
   <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.10.25/datatables.min.js"></script>
@@ -161,9 +155,12 @@
             _token: '{{ csrf_token() }}'
           },
           success: function(response) {
-            $("#agence").val(response.agence);
-            $("#nom").val(response.nom);
-            $("#prenom").val(response.prenom);
+            $("#fname").val(response.nom);
+            $("#lname").val(response.prenom);
+
+
+
+            $("#emp_id").val(response.id);
 
           }
         });
@@ -252,6 +249,4 @@
     });
   </script>
 
-
-</html>
 @endsection

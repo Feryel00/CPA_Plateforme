@@ -20,13 +20,12 @@ class ClientController extends Controller
 		$output = '';
 		if ($emps->count() > 0) {
 			$output .= '<table class="table table-striped table-sm text-center align-middle">
-            <thead style="color:white; font-weight:bold">
+            <thead>
               <tr>
                 <th>ID</th>
-                <th>Agence</th>
+
                 <th>Nom</th>
                 <th>Prenom</th>
-
 
                 <th>Action</th>
               </tr>
@@ -34,16 +33,16 @@ class ClientController extends Controller
             <tbody>';
 			foreach ($emps as $emp) {
 				$output .= '<tr>
-                <td style="color:white">' . $emp->id . '</td>
-                <td>' . $emp->agence . '</td>
-                <td>' . $emp->nom . ' ' . $emp->last_name . '</td>
+                <td>' . $emp->id . '</td>
+
+                <td>' . $emp->nom . '</td>
                 <td>' . $emp->prenom . '</td>
 
-
                 <td>
-                  <a href="#" id="' . $emp->id . '" class="text-success mx-1 editIcon" data-bs-toggle="modal" data-bs-target="#editEmployeeModal"><i class="bi-pencil-square  color-green h4"></i></a>
+                <a href="#" id="' . $emp->id . '" class="text-success mx-1 editIcon" data-bs-toggle="modal" data-bs-target="#editEmployeeModal"><i class="bi-pencil-square  color-green h4"></i></a>
+                <a href="#" id="' . $emp->id . '" class="text-danger mx-1 deleteIcon"><i class="bi-trash color-red h4"></i></a>
+                <a href="/show/'. $emp->id .'"  class=""><i class="bi bi-eye-fill"></i></a>
 
-                  <a href="#" id="' . $emp->id . '" class="text-danger mx-1 deleteIcon"><i class="bi-trash color-red h4"></i></a>
                 </td>
               </tr>';
 			}
@@ -56,11 +55,9 @@ class ClientController extends Controller
 
 	// handle insert a new employee ajax request
 	public function store(Request $request) {
-		$file = $request->file('avatar');
-		$fileName = time() . '.' . $file->getClientOriginalExtension();
-		$file->storeAs('public/images', $fileName);
 
-		$empData = ['agence' => $request->agence, 'nom' => $request->nom, 'prenom' => $request->prenom];
+		$empData = ['nom' => $request->fname,
+         'prenom' => $request->lname];
 		Client::create($empData);
 		return response()->json([
 			'status' => 200,
@@ -80,13 +77,14 @@ class ClientController extends Controller
 		$emp = Client::find($request->emp_id);
 
 
-		$empData = ['agence' => $request->agence, 'nom' => $request->nom, 'prenom' => $request->prenom];
+		$empData = ['nom' => $request->fname, 'prenom' => $request->lname];
 
 		$emp->update($empData);
 		return response()->json([
 			'status' => 200,
 		]);
 	}
+
 	// handle delete an employee ajax request
 	public function delete(Request $request) {
 		$id = $request->id;
@@ -95,6 +93,12 @@ class ClientController extends Controller
 			Client::destroy($id);
 		//}
 	}
+
+    public function show($id){
+        $client=Client::find($id);
+       return view('client.show',compact('client'));
+    }
+
 	}
 
 
