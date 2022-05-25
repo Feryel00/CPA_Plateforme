@@ -21,13 +21,18 @@ Directeur
     </li>
 
      <li>
-      <a href="register.html" target="_blank">
+      <a href="/gestion_clients" >
         <i class="zmdi zmdi-account-circle"></i> <span>Gestion des clients</span>
       </a>
     </li>
     <li>
-      <a href="register.html" target="_blank">
+      <a href="" >
         <i class="zmdi zmdi-account-circle"></i> <span>Gestion des comptes</span>
+      </a>
+    </li>
+    <li>
+      <a href="/gestion_employe" >
+        <i class="zmdi zmdi-account-circle"></i> <span>Gestion des employés</span>
       </a>
     </li>
 
