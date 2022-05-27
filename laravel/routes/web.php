@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\ClientController;
 use App\http\Controllers\CompteController;
+use App\http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,12 +77,28 @@ Route::get('/gestion_comptes', function(){
     return view ('index');
 });
 
+Route::get('/gestion_employe', function(){
+    return view ('user.index');
+});
+
+
+//----------------------------------Les employes--------------------------------
+Route::post('/storeEm', [UserController::class, 'storeEm'])->name('storeEm');
+Route::get('/fetchallEm', [UserController::class, 'fetchAllEm'])->name('fetchAllEm');
+Route::delete('/deleteEm', [UserController::class, 'deleteEm'])->name('deleteEm');
+Route::get('/editEm', [UserController::class, 'editEm'])->name('editEm');
+Route::post('/updateEm', [UserController::class, 'updateEm'])->name('updateEm');
+Route::get('/showEm/{id}', [UserController::class, 'showEm'])->name('userEm.show');
+
+// ---------------------------------Les clients----------------------------------/
+
 Route::post('/store', [ClientController::class, 'store'])->name('store');
 
 Route::get('/fetchall', [ClientController::class, 'fetchAll'])->name('fetchAll');
 Route::delete('/delete', [ClientController::class, 'delete'])->name('delete');
 Route::get('/edit', [ClientController::class, 'edit'])->name('edit');
 Route::post('/update', [ClientController::class, 'update'])->name('update');
+
 
 Route::resource('compte', \App\Http\Controllers\CompteController::class);
 

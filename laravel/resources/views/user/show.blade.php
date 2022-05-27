@@ -14,22 +14,23 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </style>
 <body>
 
-<h2>Fiche Client</h2>
+<h2>Fiche employé</h2>
 
 
   <div class="container1">
-    <h2>Voir les Information du {{ $client->nom }}</h2>
+    <h2>Voir les Information du {{ $user->name }}</h2>
     <table >
         <tr><td><div class="col-xs-12 col-sm-12 col-md-12">
+
             <div class="form-group">
                 <strong>Nom*</strong>
-                {{ $client ->id}}
+                <strong>{{ $user->name }}</strong>
             </div>
         </div></td>
         <tr><td><div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Nom*</strong>
-                {{ $client->nom}}
+                <strong>Email</strong>
+                <strong>{{ $user->email }}</strong>
             </div>
         </div></td>
 
@@ -41,8 +42,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
         <tr><td><div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Prenom</strong>
-                {{ $client->prenom}}
+                <strong>Role</strong>
+                @if($user->role =='1')
+                <strong> Directeur</strong>
+                @elseif($user->role =='2')
+                <strong> Charge clientele</strong>
+                @elseif($user->role =='3')
+                <strong> Charge caisse</strong>
+                @elseif($user->role =='4')
+                <strong> Charge credit</strong>
+                @endif
             </div>
         </div></td>
 
