@@ -27,6 +27,10 @@ Route::get('/', function () {
     return view('Vue_client/vueClient');
 });
 
+Route::get('/Acceuil', function(){
+    return view('pageAcceuil');
+});
+
 Route::view('ajouterClient','ajouterClient');
 Route::post('ajouterClient',[ClientController::class,'ajouterClient']);
 
