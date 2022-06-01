@@ -10,44 +10,51 @@ Charge Clientele
    <!-- </a> -->
  </div>
  <ul class="sidebar-menu do-nicescrol">
-    <li class="sidebar-header">MAIN NAVIGATION</li>
+    <li class="sidebar-header">NAVIGATION PRINCIPALE</li>
     <li>
       <a href="/">
         <i class="zmdi zmdi-view-dashboard"></i> <span>Acceuil</span>
       </a>
     </li>
-    <li>
+    <!-- <li>
                         <a href="/gestion_clients" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-diamond purple_color"></i> <span>Gestion des clients</span></a>
                         <ul class=" " id="element">
                            <li><a href="general_elements.html">> <span>Clients morales</span></a></li>
                            <li><a href="media_gallery.html">> <span>Clients physiques</span></a></li>
 
                         </ul>
-                     </li>
+                     </li> -->
 
     <li>
       <a href="/gestion_clients" >
-           <i class="zmdi zmdi-account-circle"></i> <span>Gestion des clients</span>
+           <i class="zmdi zmdi-accounts"></i> <span>Gestion des clients</span>
       </a>
     </li>
      <li>
       <a href="{{route('compte.index')}}" >
-           <i class="zmdi zmdi-accounts"></i> <span>Gestion des comptes</span>
+           <i class=" zmdi zmdi-account-circle"></i> <span>Gestion des comptes</span>
 
 
       </a>
     </li>
+
     <li>
-      <a href="typeCarte" >
+      <a href="carte" >
         <!-- <i class="zmdi zmdi-account-circle"></i> -->
         <i class="zmdi zmdi-card"></i> <span>Moneitique</span>
       </a>
     </li>
+    <li>
+      <a href="{{route('compte.index')}}" >
+           <i class="zmdi zmdi-book"></i> <span>Documents du services</span>
 
-    <li class="sidebar-header">LABELS</li>
+
+      </a>
+    </li>
+    <!-- <li class="sidebar-header">LABELS</li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-coffee text-danger"></i> <span>Important</span></a></li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-chart-donut text-success"></i> <span>Warning</span></a></li>
-    <li><a href="javaScript:void();"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li>
+    <li><a href="javaScript:void();"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li> -->
 
   </ul>
 

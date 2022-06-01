@@ -19,6 +19,7 @@ class CreateClientsTable extends Migration
 
             $table->string("nom");
             $table->string("prenom");
+            $table->foreignId('compte_id')->constrained();
             $table->timestamps();
 
         });

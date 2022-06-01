@@ -1,7 +1,6 @@
 @extends('chargeClienteledashboard')
 @section('contentDash')
 
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +25,7 @@
       <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
         @csrf
         <div class="modal-body p-4 bg-light">
-          <div class="row">
+
             <div class="col-lg">
               <label for="fname" style='color:blue'>Nom</label>
               <input type="text" name="fname" class="form-control" placeholder="First Name" required>
@@ -35,7 +34,11 @@
               <label for="lname" style='color:blue'>Prenom</label>
               <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
             </div>
-          </div>
+            <div class="col-lg">
+              <label for="lcompte_id" style='color:blue'>compte_id</label>
+              <input type="text" name="lcompte_id" class="form-control" placeholder="Last Name" >
+            </div>
+
 
 
         </div>
@@ -55,7 +58,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modier client</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Modifier client</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data">
@@ -63,7 +66,7 @@
         <input type="hidden" name="emp_id" id="emp_id">
         <input type="hidden" name="emp_avatar" id="emp_avatar">
         <div class="modal-body p-4 bg-light">
-          <div class="row">
+
             <div class="col-lg">
               <label for="fname" style="color:blue">Nom</label>
               <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name" required>
@@ -72,7 +75,11 @@
               <label for="lname" style="color:blue">Prenm</label>
               <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name" required>
             </div>
-          </div>
+            <div class="col-lg">
+              <label for="lcompte_id" style="color:blue">compte_id</label>
+              <input type="text" name="lcompte_id" id="lcompte_id" class="form-control" placeholder="Last Name" required>
+            </div>
+
 
 
           <div class="mt-2" id="avatar">
@@ -87,7 +94,6 @@
     </div>
   </div>
 </div>
-{{-- edit employee modal end --}}
 
 
 <div class="container" >
@@ -99,8 +105,11 @@
             <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
                 class="bi-plus-circle me-2"></i>Ajouter nouveau client</button>
           </div>
+          <div>
+
+          </div>
           <div class="card-body" id="show_all_employees">
-            <h1 class="text-center text-secondary my-5">Loading...</h1>
+            <h1 class="text-center text-secondary my-5">Chargement...</h1>
           </div>
         </div>
       </div>
@@ -130,8 +139,8 @@
           success: function(response) {
             if (response.status == 200) {
               Swal.fire(
-                'Added!',
-                'Employee Added Successfully!',
+                'Ajouté!',
+                'Client Ajouté Avec Succès!',
                 'success'
               )
               fetchAllEmployees();
@@ -157,7 +166,7 @@
           success: function(response) {
             $("#fname").val(response.nom);
             $("#lname").val(response.prenom);
-
+            $("#lcompte_id").val(response.compte_id);
 
 
             $("#emp_id").val(response.id);
@@ -182,8 +191,8 @@
           success: function(response) {
             if (response.status == 200) {
               Swal.fire(
-                'Updated!',
-                'Employee Updated Successfully!',
+                'Modifié!',
+                'Client modifié Avec Succès!',
                 'success'
               )
               fetchAllEmployees();
@@ -201,13 +210,13 @@
         let id = $(this).attr('id');
         let csrf = '{{ csrf_token() }}';
         Swal.fire({
-          title: 'Are you sure?',
-          text: "You won't be able to revert this!",
+          title: 'Vous êtes sûre?',
+          text: "Vous ne pourrez pas revenir en arrière !",
           icon: 'warning',
           showCancelButton: true,
           confirmButtonColor: '#3085d6',
           cancelButtonColor: '#d33',
-          confirmButtonText: 'Yes, delete it!'
+          confirmButtonText: 'Oui, Supprimez!'
         }).then((result) => {
           if (result.isConfirmed) {
             $.ajax({
@@ -220,8 +229,8 @@
               success: function(response) {
                 console.log(response);
                 Swal.fire(
-                  'Deleted!',
-                  'Your file has been deleted.',
+                  'Supprimé!',
+                  'Ce client a été supprimé',
                   'success'
                 )
                 fetchAllEmployees();

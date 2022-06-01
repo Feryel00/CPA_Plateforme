@@ -22,7 +22,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     <table >
         <tr><td><div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Nom*</strong>
+                <strong>Identifiant :</strong>
                 {{ $client ->id}}
             </div>
         </div></td>
@@ -55,7 +55,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
     </table>
 
-  <div class="container1" style="background-color:red">
+
 
 
 
