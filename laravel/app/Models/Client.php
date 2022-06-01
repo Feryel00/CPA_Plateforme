@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Compte;
 
 class Client extends Model
 {
@@ -11,7 +12,11 @@ class Client extends Model
    // public $timestamps=false;
    protected $fillable = [
     'nom',
-    'prenom'
+    'prenom',
+    'compte_id'
 
 ];
+    public function compte(){
+        return $this->belongsTo(Compte::class);
+    }
 }

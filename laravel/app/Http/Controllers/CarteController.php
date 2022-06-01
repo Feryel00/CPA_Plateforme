@@ -4,19 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Client;
+use App\Models\Carte;
+use App\Models\CategoryCarte;
 
 
-class ClientController extends Controller
+class CarteController extends Controller
 {
     //
-    public function index() {
+    public function viewCategory(Request $request){
+        $categories= CategoryCarte::where('is_online',1)->get();
+        //dd($categories);
+        $cartes=Carte::where('category_id',$request->id)->get();
+        //dd($cartes);
+        return view('categorie',compact('categories','cartes'));
+    }
+    public function indexEm() {
 		return view('index');
 	}
 
 	// handle fetch all eamployees ajax request
-	public function fetchAll() {
-		$emps = Client::all();
+	public function fetchAllCarte() {
+		$emps = Carte::all();
 		$output = '';
 		if ($emps->count() > 0) {
 			$output .= '<table class="table table-striped table-sm text-center align-middle">
@@ -24,9 +32,9 @@ class ClientController extends Controller
               <tr>
                 <th>ID</th>
 
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Compte_id</th>
+                <th>Numero de carte</th>
+                <th>Date Expiration </th>
+
                 <th>Action</th>
               </tr>
             </thead>
@@ -35,14 +43,13 @@ class ClientController extends Controller
 				$output .= '<tr>
                 <td>' . $emp->id . '</td>
 
-                <td>' . $emp->nom . '</td>
-                <td>' . $emp->prenom . '</td>
-                <td>' . $emp->compte_id . '</td>
+                <td>' . $emp->num_carte. '</td>
+                <td>' . $emp->date_expiration . '</td>
 
                 <td>
                 <a href="#" id="' . $emp->id . '" class="text-success mx-1 editIcon" data-bs-toggle="modal" data-bs-target="#editEmployeeModal"><i class="bi-pencil-square  color-green h4"></i></a>
                 <a href="#" id="' . $emp->id . '" class="text-danger mx-1 deleteIcon"><i class="bi-trash color-red h4"></i></a>
-                <a href="/show/'. $emp->id .'"  class=""><i class="bi bi-eye-fill"></i></a>
+                <a href="/showEm/'. $emp->id .'"  class=""><i class="bi bi-eye-fill"></i></a>
 
                 </td>
               </tr>';
@@ -55,31 +62,33 @@ class ClientController extends Controller
 	}
 
 	// handle insert a new employee ajax request
-	public function store(Request $request) {
+	public function storeCarte(Request $request) {
 
-		$empData = ['nom' => $request->fname,
-         'prenom' => $request->lname,
-         'compte_id' => $request->lcompte_id];
-		Client::create($empData);
+		$empData = ['num_carte' => $request->fnum_carte,
+         'date_expiration' => $request->ldate_expiration];
+
+
+
+	    Carte::create($empData);
 		return response()->json([
 			'status' => 200,
 		]);
 	}
 
 	// handle edit an employee ajax request
-	public function edit(Request $request) {
+	public function editCarte(Request $request) {
 		$id = $request->id;
-		$emp = Client::find($id);
+		$emp = Carte::find($id);
 		return response()->json($emp);
 	}
 
 	// handle update an employee ajax request
-	public function update(Request $request) {
+	public function updateCarte(Request $request) {
 		$fileName = '';
-		$emp = Client::find($request->emp_id);
+		$emp = Carte::find($request->emp_id);
 
 
-		$empData = ['nom' => $request->fname, 'prenom' => $request->lname, 'compte_id' => $request->lcompte_id];
+		$empData = ['num_carte' => $request->fnum_carte, 'date_expiration' => $request->ldate_expiration];
 
 		$emp->update($empData);
 		return response()->json([
@@ -88,17 +97,17 @@ class ClientController extends Controller
 	}
 
 	// handle delete an employee ajax request
-	public function delete(Request $request) {
+	public function deleteEm(Request $request) {
 		$id = $request->id;
-		$emp = Client::find($id);
+		$emp = User::find($id);
 		//if (Storage::delete('public/images/' . $emp->avatar)) {
-			Client::destroy($id);
+			User::destroy($id);
 		//}
 	}
 
-    public function show($id){
-        $client=Client::find($id);
-       return view('client.show',compact('client'));
+    public function showEm($id){
+        $user=User::find($id);
+       return view('user.show',compact('user'));
     }
 
 	}

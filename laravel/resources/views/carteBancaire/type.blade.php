@@ -14,9 +14,10 @@ Cartes
           <div class="card">
             <div class="card-body">
               <h5 class="card-title " style='background-color:red'>Carte CIB</h5>
+
 			  <div class="table-responsive">
                <table class="table">
-               <td><img src="images\icons/cib_cpa.png" alt=""></td>
+               <td><a href="/carte"><img src="images\icons/cib_cpa.png" alt=""></a></td>
                 </table>
             </div>
             </div>

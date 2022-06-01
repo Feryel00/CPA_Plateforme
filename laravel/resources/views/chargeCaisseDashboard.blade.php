@@ -30,6 +30,17 @@ Charge Clientele
 
       </a>
     </li>
+    <li>
+      <a href="{{route('compte.index')}}" >
+           <i class="zmdi zmdi-account-circle"></i> <span>Virement</span>
+      </a>
+    </li>
+
+    <li>
+      <a href="{{route('compte.index')}}" >
+           <i class="zmdi zmdi-account-circle"></i> <span>Retrait</span>
+      </a>
+    </li>
 
 
     <li class="sidebar-header">LABELS</li>

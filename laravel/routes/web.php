@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\http\Controllers\ClientController;
 use App\http\Controllers\CompteController;
 use App\http\Controllers\UserController;
+use App\http\Controllers\CarteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +17,14 @@ use App\http\Controllers\UserController;
 |
 */
 
+Route::get('c/{id}',[CarteController::class,'viewCategory'])->name('viewCategory');
 Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('/ct', function(){
+    return view('categorie');
+});
  Route::get('/client', function(){
      return view('Vue_client/vue1Client');
  });
@@ -76,8 +80,14 @@ Route::get('/gestion_comptes', function(){
 Route::get('/gestion_employe', function(){
     return view ('user.index');
 });
-
-
+Route::get('/carte', function(){
+    return view('carteBancaire.index');
+});
+//////////////----------------------------Les cartes
+Route::post('/storeCarte', [CarteController::class, 'storeCarte'])->name('storeCarte');
+Route::get('/fetchallCarte', [CarteController::class, 'fetchAllCarte'])->name('fetchAllCarte');
+Route::get('/editCarte', [CarteController::class, 'editCarte'])->name('editCarte');
+Route::post('/updateCarte', [CarteController::class, 'updateCarte'])->name('updateCarte');
 //----------------------------------Les employes--------------------------------
 Route::post('/storeEm', [UserController::class, 'storeEm'])->name('storeEm');
 Route::get('/fetchallEm', [UserController::class, 'fetchAllEm'])->name('fetchAllEm');
@@ -86,7 +96,7 @@ Route::get('/editEm', [UserController::class, 'editEm'])->name('editEm');
 Route::post('/updateEm', [UserController::class, 'updateEm'])->name('updateEm');
 Route::get('/showEm/{id}', [UserController::class, 'showEm'])->name('userEm.show');
 
-// ---------------------------------Les clients----------------------------------/
+// ---------------------------------Les clients----------------------------------
 
 Route::post('/store', [ClientController::class, 'store'])->name('store');
 
@@ -102,6 +112,8 @@ Route::get('/ficheScoring', function(){
     return view('Credit.ficheScoring');
 });
 
+
+
 Route::get('/typeCarte', function(){
     return view('carteBancaire.type');
 });
@@ -114,3 +126,5 @@ Route::get('/typeCarte', function(){
 Route::get('/show/{id}', [ClientController::class, 'show'])->name('client.show');
 
 Route::resource('client', \App\Http\Controllers\ClientController::class);
+
+

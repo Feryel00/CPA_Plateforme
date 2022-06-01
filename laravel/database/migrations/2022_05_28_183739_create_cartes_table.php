@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddPhotoPathColumnToUsers extends Migration
+class CreateCartesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,12 @@ class AddPhotoPathColumnToUsers extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-            $table->string('profile_photo_path');
+        Schema::create('cartes', function (Blueprint $table) {
+            $table->id();
+            $table->string('num_carte');
+            $table->string('date_expiration');
+
+            $table->timestamps();
         });
     }
 
@@ -26,9 +29,7 @@ class AddPhotoPathColumnToUsers extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('profile_photo_path');
-            //
-        });
+        Schema::dropIfExists('cartes');
+
     }
 }

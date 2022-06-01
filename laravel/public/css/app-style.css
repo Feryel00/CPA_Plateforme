@@ -1668,7 +1668,7 @@ body.bg-theme15 {
 }
 
 label {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(4, 28, 133, 0.75);
     font-size: .75rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1996,7 +1996,7 @@ table.grid td {
 }
 .table-dark {
     color: #fff;
-    background-color: #000000;
+    background-color: #0b0a0e;
 }
 .table-dark td, .table-dark th, .table-dark thead th {
     border-color: rgba(244, 245, 250, 0.15);
@@ -3675,14 +3675,15 @@ table.grid td {
 
 }
 #pos{
-    background-image: linear-gradient(567deg, rgba(165, 42, 4, 0.89), rgba(113, 102, 8, 0.89), rgba(13, 95, 16, 0.93), rgba(4, 79, 88, 0.94), rgba(19, 56, 86, 0.9), rgba(24, 32, 78, 0.94), rgba(100, 8, 115, 0.95));
+    /* background-image: linear-gradient(180deg,  rgb(255 255 255), rgb(6 31 175 / 74%), rgb(219 225 149 / 100%)); */
+    box-shadow: yellow;
 }
 .position td{
-   color:white;
+   color:blue;
 }
 
 .modal {
-    background-image:linear-gradient(567deg, rgba(165, 42, 4, 0.89), rgba(113, 102, 8, 0.89), rgba(13, 95, 16, 0.93), rgba(4, 79, 88, 0.94), rgba(19, 56, 86, 0.9), rgba(24, 32, 78, 0.94), rgba(100, 8, 115, 0.95));
+
 }
 #modal-content {
     background-image:linear-gradient(45deg, #fff707, rgb(18 3 54 / 89%), rgb(95 48 201 / 89%), rgb(234 255 76 / 89%));
