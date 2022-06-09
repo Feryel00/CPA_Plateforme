@@ -17,7 +17,13 @@ Charge Credit
       </a>
     </li>
 
+    <li>
+      <a href="/listClient" >
+           <i class="zmdi zmdi-account-circle"></i> <span>Liste des clients</span>
 
+
+      </a>
+    </li>
     <li>
       <a href="/ficheScoring" >
            <i class="zmdi zmdi-account-circle"></i> <span>Fiche de scoring</span>
@@ -32,10 +38,11 @@ Charge Credit
     </li>
 
 
-    <li class="sidebar-header">LABELS</li>
+
+    <!-- <li class="sidebar-header">LABELS</li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-coffee text-danger"></i> <span>Important</span></a></li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-chart-donut text-success"></i> <span>Warning</span></a></li>
-    <li><a href="javaScript:void();"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li>
+    <li><a href="javaScript:void();"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li> -->
 
   </ul>
 

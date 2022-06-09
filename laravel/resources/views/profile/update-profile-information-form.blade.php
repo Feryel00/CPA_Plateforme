@@ -1,6 +1,8 @@
 <x-jet-form-section submit="updateProfileInformation">
+<header class="topbar-nav navbar"  >
     <x-slot name="title">
-        {{ __('Profile Information') }}
+
+        {{ __('Profile Informaaaaaaaaaation') }}
     </x-slot>
 
     <x-slot name="description">

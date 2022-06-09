@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Compte;
+use App\Models\Retrait;
 
 
-class CompteController extends Controller
+class RetraitController extends Controller
 {
     //
     public function index() {
@@ -15,19 +16,17 @@ class CompteController extends Controller
 	}
 
 	// handle fetch all eamployees ajax request
-	public function fetchAllCom() {
-		$emps = Compte::all();
+	public function fetchAllRe() {
+		$emps = Retrait::all();
 		$output = '';
 		if ($emps->count() > 0) {
 			$output .= '<table class="table table-striped table-sm text-center align-middle">
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Nom client</th>
-                <th>Prenom client</th>
-                <th>solde</th>
-                <th>client_id</th>
-                <th>Date de creation</th>
+                <th>Montant</th>
+                <th>Compte ID</th>
+                <th>Date de retrait</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -35,17 +34,13 @@ class CompteController extends Controller
 			foreach ($emps as $emp) {
 				$output .= '<tr>
                 <td>' . $emp->id . '</td>
-                <td>' . $emp->nom_client . '</td>
-                <td>' . $emp->prenom_client . '</td>
-
-                <td>' . $emp->solde . '</td>
-                <td>' . $emp->client_id . '</td>
+                <td>' . $emp->montant . '</td>
+                <td>' . $emp->compte_id . '</td
                 <td>' . $emp->created_at . '</td>
-
+                <td>' . $emp->created_at . '</td>
                 <td>
-                <a href="#" id="' . $emp->id . '" class="text-success mx-1 editIcon" data-bs-toggle="modal" data-bs-target="#editEmployeeModal"><i class="bi-pencil-square  color-green h4"></i></a>
-                <a href="#" id="' . $emp->id . '" class="text-danger mx-1 deleteIcon"><i class="bi-trash color-red h4"></i></a>
-                <a href="/show/'. $emp->id .'"  class=""><i class="bi bi-eye-fill"></i></a>
+
+                <a href="/showRe/'. $emp->id .'"  class=""><i class="bi bi-eye-fill"></i></a>
 
                 </td>
               </tr>';
@@ -58,18 +53,27 @@ class CompteController extends Controller
 	}
 
 	// handle insert a new employee ajax request
-	public function storeCom(Request $request) {
+	public function storeRe(Request $request) {
 
+        $q=request()->input('q');
+
+         $montant=request()->input('fmontant');
+         $comptes= Compte::where('id','like',"$q")->get();
+         print($montant);
+         foreach($comptes as $compte)
+                $compte->solde=$compte->solde-$montant;
+
+
+             $empData = ['solde' => $compte->solde];
+             $compte->update($empData);
 		$empData = [
-        'nom_client' => $request->cNom_client,
-        'prenom_client' => $request->cPrenom_client,
-        'solde' => $request->cSolde,
+        'montant' => $request->fmontant,
+        'compte_id' => $request->q];
+		Retrait::create($empData);
 
-         'client_id' => $request->cClient_id];
-		Compte::create($empData);
-		return response()->json([
-			'status' => 200,
-		]);
+		// return response()->json([
+		// 	'status' => 200,
+		// ]);
 	}
 
 	// handle edit an employee ajax request
@@ -105,9 +109,11 @@ class CompteController extends Controller
 		//}
 	}
 
-    public function showCom($id){
-        $client=Compte::find($id);
-       return view('compte.show',compact('compte'));
+    public function showRe($id){
+        $retrait=Retrait::find($id);
+        $cp=$retrait->compte_id;
+        $comptes= Compte::where('id','like',"$cp")->get();
+       return view('retrait.show',compact('retrait','comptes'));
     }
     public function retrait(Request $request){
 

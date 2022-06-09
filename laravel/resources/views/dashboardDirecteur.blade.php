@@ -21,12 +21,12 @@ Directeur
     </li>
 
      <li>
-      <a href="/gestion_clients" >
+      <a href="/gestion_clients_directeur" >
         <i class="zmdi zmdi-account-circle"></i> <span>Gestion des clients</span>
       </a>
     </li>
     <li>
-      <a href="" >
+      <a href="/gestion_comptes_directeur" >
         <i class="zmdi zmdi-account-circle"></i> <span>Gestion des comptes</span>
       </a>
     </li>

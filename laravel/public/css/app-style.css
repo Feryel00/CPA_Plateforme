@@ -3683,7 +3683,7 @@ table.grid td {
 }
 
 .modal {
-
+    /* color:red; */
 }
 #modal-content {
     background-image:linear-gradient(45deg, #fff707, rgb(18 3 54 / 89%), rgb(95 48 201 / 89%), rgb(234 255 76 / 89%));

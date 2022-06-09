@@ -34,7 +34,7 @@ class CarteController extends Controller
 
                 <th>Numero de carte</th>
                 <th>Date Expiration </th>
-
+                <th>Category_id </th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -45,7 +45,7 @@ class CarteController extends Controller
 
                 <td>' . $emp->num_carte. '</td>
                 <td>' . $emp->date_expiration . '</td>
-
+                <td>' . $emp->category_id . '</td>
                 <td>
                 <a href="#" id="' . $emp->id . '" class="text-success mx-1 editIcon" data-bs-toggle="modal" data-bs-target="#editEmployeeModal"><i class="bi-pencil-square  color-green h4"></i></a>
                 <a href="#" id="' . $emp->id . '" class="text-danger mx-1 deleteIcon"><i class="bi-trash color-red h4"></i></a>
@@ -65,7 +65,8 @@ class CarteController extends Controller
 	public function storeCarte(Request $request) {
 
 		$empData = ['num_carte' => $request->fnum_carte,
-         'date_expiration' => $request->ldate_expiration];
+         'date_expiration' => $request->ldate_expiration,
+         'category_id' => $request->lcategory_id];
 
 
 
@@ -88,7 +89,9 @@ class CarteController extends Controller
 		$emp = Carte::find($request->emp_id);
 
 
-		$empData = ['num_carte' => $request->fnum_carte, 'date_expiration' => $request->ldate_expiration];
+		$empData = ['num_carte' => $request->fnum_carte,
+                    'date_expiration' => $request->ldate_expiration,
+                    'category_id' => $request->lcategory_id];
 
 		$emp->update($empData);
 		return response()->json([

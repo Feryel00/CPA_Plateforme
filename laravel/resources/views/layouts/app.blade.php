@@ -76,7 +76,7 @@
     <header class="topbar-nav navbar"  >
 
 
-        @livewire('navigation-menu')
+
 
         </header>
 
