@@ -18,6 +18,8 @@
             <div>
                 
             </div>  
+
+            <h3></h3>
         <h3 class="loginh3"> LOGIN  </h3>
             <div>
                 <x-jet-label for="email" value="{{ __('Email') }}"  />
