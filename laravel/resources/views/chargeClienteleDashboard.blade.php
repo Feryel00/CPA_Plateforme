@@ -27,12 +27,12 @@ Charge Clientele
 
     <li>
       <a href="/gestion_clients" >
-           <i class="zmdi zmdi-accounts"></i> <span>Gestion des clients</span>
+           <i class="zmdi zmdi-accounts"></i> <span>Clients</span>
       </a>
     </li>
      <li>
-      <a href="{{route('compte.index')}}" >
-           <i class=" zmdi zmdi-account-circle"></i> <span>Gestion des comptes</span>
+      <a href="/gestion_comptes" >
+           <i class=" zmdi zmdi-account-circle"></i> <span> Comptes</span>
 
 
       </a>
@@ -45,11 +45,16 @@ Charge Clientele
       </a>
     </li>
     <li>
+<<<<<<< HEAD
       <a href="{{route('compte.index')}}" >
            <i class="zmdi zmdi-book"></i> <span>Documents du service</span>
+=======
+    <a href="file" >
+           <i class="zmdi zmdi-book"></i> <span>Documents du services</span>
+>>>>>>> b28c09eef4c7f3b01e56d383f0859ee4dc5dbf31
 
+</a>
 
-      </a>
     </li>
     <!-- <li class="sidebar-header">LABELS</li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-coffee text-danger"></i> <span>Important</span></a></li>

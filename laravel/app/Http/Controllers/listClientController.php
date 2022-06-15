@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Client;
 
 
-class ClientController extends Controller
+class listClientController extends Controller
 {
     //
     public function index() {
@@ -15,7 +15,7 @@ class ClientController extends Controller
 	}
 
 	// handle fetch all eamployees ajax request
-	public function fetchAll() {
+	public function fetchAllList() {
 		$emps = Client::all();
 		$output = '';
 		if ($emps->count() > 0) {
@@ -26,7 +26,7 @@ class ClientController extends Controller
 
                 <th>Nom</th>
                 <th>Prenom</th>
-
+                <th>Compte_id</th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -37,10 +37,10 @@ class ClientController extends Controller
 
                 <td>' . $emp->nom . '</td>
                 <td>' . $emp->prenom . '</td>
+                <td>' . $emp->compte_id . '</td>
 
                 <td>
-                <a href="#" id="' . $emp->id . '" class="text-success mx-1 editIcon" data-bs-toggle="modal" data-bs-target="#editEmployeeModal"><i class="bi-pencil-square  color-green h4"></i></a>
-                <a href="#" id="' . $emp->id . '" class="text-danger mx-1 deleteIcon"><i class="bi-trash color-red h4"></i></a>
+
                 <a href="/show/'. $emp->id .'"  class=""><i class="bi bi-eye-fill"></i></a>
 
                 </td>
@@ -54,7 +54,7 @@ class ClientController extends Controller
 	}
 
 	// handle insert a new employee ajax request
-	public function store(Request $request) {
+	public function storeList(Request $request) {
 
 		$empData = ['nom' => $request->fname,
          'prenom' => $request->lname,

@@ -12,12 +12,12 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
+        <link rel="stylesheet" href="../../../public/css/login.css">
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body>
-        <div class="font-sans text-gray-900 antialiased " style="backgound-color:red">
+    <body >
+        <div class="font-sans text-gray-900 antialiased " >
             {{ $slot }}
         </div>
     </body>

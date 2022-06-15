@@ -13,10 +13,10 @@ class Client extends Model
    protected $fillable = [
     'nom',
     'prenom',
-    'compte_id'
+
 
 ];
     public function compte(){
-        return $this->belongsTo(Compte::class);
+        return $this->hasOne(Compte::class,'client_id');
     }
 }

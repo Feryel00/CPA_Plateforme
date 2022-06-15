@@ -1,6 +1,6 @@
 @extends('dashboard')
 @section('title')
-Charge Clientele
+Charge Caisse
 @endsection
 @section('aside')
 <div class="brand-logo" >
@@ -19,34 +19,46 @@ Charge Clientele
 
 
     <li>
-      <a href="/gestion_clients" >
-           <i class="zmdi zmdi-account-circle"></i> <span>Gestion des clients</span>
+      <a href="/CaisselistClient" >
+           <i class="zmdi zmdi-account-circle"></i> <span>Liste des Clients</span>
       </a>
     </li>
-     <li>
-      <a href="{{route('compte.index')}}" >
+     <!-- <li>
+      <a href="/gestion_comptes" >
            <i class="zmdi zmdi-account-circle"></i> <span>Gestion des comptes</span>
 
 
       </a>
-    </li>
+    </li> -->
     <li>
-      <a href="{{route('compte.index')}}" >
+      <a href="/gestion_virement" >
            <i class="zmdi zmdi-account-circle"></i> <span>Virement</span>
       </a>
     </li>
 
     <li>
-      <a href="{{route('compte.index')}}" >
+      <a href="/gestion_retrait" >
            <i class="zmdi zmdi-account-circle"></i> <span>Retrait</span>
+      </a>
+    </li>
+    <li>
+      <a href="/gestion_versement" >
+           <i class="zmdi zmdi-account-circle"></i> <span>Versement</span>
       </a>
     </li>
 
 
+<<<<<<< HEAD
     <li class="sidebar-header">Étiquettes</li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-coffee text-danger"></i> <span>Important</span></a></li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-chart-donut text-success"></i> <span>Avertissement</span></a></li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li>
+=======
+    <!-- <li class="sidebar-header">LABELS</li>
+    <li><a href="javaScript:void();"><i class="zmdi zmdi-coffee text-danger"></i> <span>Important</span></a></li>
+    <li><a href="javaScript:void();"><i class="zmdi zmdi-chart-donut text-success"></i> <span>Warning</span></a></li>
+    <li><a href="javaScript:void();"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li> -->
+>>>>>>> b28c09eef4c7f3b01e56d383f0859ee4dc5dbf31
 
   </ul>
 

@@ -5,7 +5,9 @@
         </h2>
 
     </x-slot>
-
+    <header class="topbar-nav navbar"  >
+@include('navigation-menu')
+</header>
 
 
 <!--Start sidebar-wrapper-->

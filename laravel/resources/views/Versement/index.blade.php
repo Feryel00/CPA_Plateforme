@@ -1,16 +1,12 @@
-@extends('chargeClienteleDashboard')
+@extends('chargeCaisseDashboard')
 @section('contentDash')
-@php
-$categories=App\Models\CategoryCarte::all();
-@endphp
-
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestion des cartes</title>
+  <title>CRUD App Laravel 8 & Ajax</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css' />
   <link rel='stylesheet'
     href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css' />
@@ -23,32 +19,29 @@ $categories=App\Models\CategoryCarte::all();
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ajouter une nouvelle carte</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Retérer</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
+      <form action="#"  id="add_employee_form" enctype="multipart/form-data">
+
+        <!-- <form action="{{route('rechercher')}}"  > -->
         @csrf
         <div class="modal-body p-4 bg-light">
+    <div class="form-group">
+         <label for="cNom_client" style="color:blue">Compte ID</label>
+         <input type="text" name='q' class="form-control" style='color:blue'>
+         <label for="cNom_client" style="color:blue">Montant retéré</label>
+         <input type="text" name='fmontant' class="form-control" style='color:blue'>
+    </div>
 
-            <div class="col-lg">
-              <label for="fnum_carte" style='color:blue'>Numero de carte</label>
-              <input type="text" name="fnum_carte" class="form-control" placeholder="First Name" required>
-            </div>
-            <div class="col-lg">
-              <label for="ldate_expiration" style='color:blue'>Date d'expiration</label>
-              <input type="text" name="ldate_expiration" class="form-control" placeholder="Last Name" required>
-            </div>
-            <div class="col-lg">
-              <label for="lcategory_id" style='color:blue'>Category ID</label>
-              <input type="text" name="lcategory_id" class="form-control" placeholder="Last Name" required>
-            </div>
+
 
 
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="submit" id="add_employee_btn" class="btn btn-primary">Crer Carte</button>
+          <button type="submit" id="add_employee_btn" class="btn btn-primary">Envoyer</button>
         </div>
       </form>
     </div>
@@ -62,7 +55,7 @@ $categories=App\Models\CategoryCarte::all();
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Renouvler carte</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Modifier compte</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data">
@@ -70,16 +63,25 @@ $categories=App\Models\CategoryCarte::all();
         <input type="hidden" name="emp_id" id="emp_id">
         <input type="hidden" name="emp_avatar" id="emp_avatar">
         <div class="modal-body p-4 bg-light">
-          <div class="row">
-            <div class="col-lg">
-              <label for="fnum_carte" style="color:blue">Numero de carte</label>
-              <input type="text" name="fnum_carte" id="fnum_carte" class="form-control" placeholder="First Name" required>
+
+        <div class="col-lg">
+              <label for="cNom_client" style="color:blue">Nom_client</label>
+              <input type="text" name="cNom_client" id="cNom_client" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="ldate_expiration" style="color:blue">Date Expiration</label>
-              <input type="text" name="ldate_expiration" id="ldate_expiration" class="form-control" placeholder="Last Name" required>
+              <label for="cPrenom_client" style="color:blue">Prenom client</label>
+              <input type="text" name="cPrenom_client" id="cPrenom_client" class="form-control" placeholder="First Name" required>
             </div>
-          </div>
+            <div class="col-lg">
+              <label for="cSolde" style="color:blue">Solde</label>
+              <input type="text" name="cSolde" id="cSolde" class="form-control" placeholder="First Name" required>
+            </div>
+
+            <div class="col-lg">
+              <label for="cClient_id" style="color:blue">Client_id</label>
+              <input type="text" name="cClient_id" id="cClient_id" class="form-control" placeholder="Last Name" required>
+            </div>
+
 
 
           <div class="mt-2" id="avatar">
@@ -88,13 +90,12 @@ $categories=App\Models\CategoryCarte::all();
         </div>
         <div class="modal-footer" id="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="submit" id="edit_employee_btn" class="btn btn-success">Rounevler la carte</button>
+          <button type="submit" id="edit_employee_btn" class="btn btn-success">Modifier Compte</button>
         </div>
       </form>
     </div>
   </div>
 </div>
-{{-- edit employee modal end --}}
 
 
 <div class="container" >
@@ -102,24 +103,15 @@ $categories=App\Models\CategoryCarte::all();
       <div class="col-lg-12">
         <div class="card shadow position" id="pos">
           <div class="card-header  d-flex justify-content-between align-items-center" style='background-color:blue'>
-            <h3 class="text-light "style='background-color:blue'>Gestion des cartes</h3>
-
+            <h3 class="text-light "style='background-color:blue'>Gestion des versements</h3>
             <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
-                class="bi-plus-circle me-2"></i>Ajouter une nouvelle carte</button>
+                class="bi-plus-circle me-2"></i>Retérer</button>
           </div>
-          <div class="col-lg-12">
-            <ul>
-        @foreach($categories as $category)
-        <li class="nav-item"> <a href="{{route('viewCategory',['id'=>$category->id])}}">{{$category->name}}</a>
-            </li>
-@endforeach
-</ul>
+          <div>
 
-
-
-            </div>
+          </div>
           <div class="card-body" id="show_all_employees">
-            <h1 class="text-center text-secondary my-5">Loading...</h1>
+            <h1 class="text-center text-secondary my-5">Chargement...</h1>
           </div>
         </div>
       </div>
@@ -133,13 +125,12 @@ $categories=App\Models\CategoryCarte::all();
   <script>
     $(function() {
 
-      // add new employee ajax request
-      $("#add_employee_form").submit(function(e) {
+        $("#add_employee_form").submit(function(e) {
         e.preventDefault();
         const fd = new FormData(this);
         $("#add_employee_btn").text('Adding...');
         $.ajax({
-          url: '{{ route('storeCarte') }}',
+          url: '{{ route('storeVer') }}',
           method: 'post',
           data: fd,
           cache: false,
@@ -147,14 +138,14 @@ $categories=App\Models\CategoryCarte::all();
           processData: false,
           dataType: 'json',
           success: function(response) {
-            if (response.status == 200) {
+
               Swal.fire(
-                'Added!',
-                'Employee Added Successfully!',
+                'Ajouté!',
+                'Client Ajouté Avec Succès!',
                 'success'
               )
               fetchAllEmployees();
-            }
+
             $("#add_employee_btn").text('Add Employee');
             $("#add_employee_form")[0].reset();
             $("#addEmployeeModal").modal('hide');
@@ -162,21 +153,25 @@ $categories=App\Models\CategoryCarte::all();
         });
       });
 
+      // add new employee ajax request
+
+
       // edit employee ajax request
       $(document).on('click', '.editIcon', function(e) {
         e.preventDefault();
         let id = $(this).attr('id');
         $.ajax({
-          url: '{{ route('editCarte') }}',
+          url: '{{ route('retrait') }}',
           method: 'get',
           data: {
             id: id,
             _token: '{{ csrf_token() }}'
           },
           success: function(response) {
-            $("#fnum_carte").val(response.num_carte);
-            $("#ldate_expiration").val(response.date_expiration);
 
+            $("#cSolde").val(response.solde);
+
+            $("#cClient_id").val(response.client_id);
 
 
             $("#emp_id").val(response.id);
@@ -191,7 +186,7 @@ $categories=App\Models\CategoryCarte::all();
         const fd = new FormData(this);
         $("#edit_employee_btn").text('Updating...');
         $.ajax({
-          url: '{{ route('updateCarte') }}',
+          url: '{{ route('updateCom') }}',
           method: 'post',
           data: fd,
           cache: false,
@@ -201,8 +196,8 @@ $categories=App\Models\CategoryCarte::all();
           success: function(response) {
             if (response.status == 200) {
               Swal.fire(
-                'Updated!',
-                'Employee Updated Successfully!',
+                'Modifié!',
+                'Client modifié Avec Succès!',
                 'success'
               )
               fetchAllEmployees();
@@ -220,17 +215,17 @@ $categories=App\Models\CategoryCarte::all();
         let id = $(this).attr('id');
         let csrf = '{{ csrf_token() }}';
         Swal.fire({
-          title: 'Are you sure?',
-          text: "You won't be able to revert this!",
+          title: 'Vous êtes sûre?',
+          text: "Vous ne pourrez pas revenir en arrière !",
           icon: 'warning',
           showCancelButton: true,
           confirmButtonColor: '#3085d6',
           cancelButtonColor: '#d33',
-          confirmButtonText: 'Yes, delete it!'
+          confirmButtonText: 'Oui, Supprimez!'
         }).then((result) => {
           if (result.isConfirmed) {
             $.ajax({
-              url: '{{ route('deleteEm') }}',
+              url: '{{ route('deleteCom') }}',
               method: 'delete',
               data: {
                 id: id,
@@ -239,8 +234,8 @@ $categories=App\Models\CategoryCarte::all();
               success: function(response) {
                 console.log(response);
                 Swal.fire(
-                  'Deleted!',
-                  'Your file has been deleted.',
+                  'Supprimé!',
+                  'Ce client a été supprimé',
                   'success'
                 )
                 fetchAllEmployees();
@@ -255,7 +250,7 @@ $categories=App\Models\CategoryCarte::all();
 
       function fetchAllEmployees() {
         $.ajax({
-          url: '{{ route('fetchAllCarte') }}',
+          url: '{{ route('fetchAllVer') }}',
           method: 'get',
           success: function(response) {
             $("#show_all_employees").html(response);
@@ -269,4 +264,3 @@ $categories=App\Models\CategoryCarte::all();
   </script>
 
 @endsection
-

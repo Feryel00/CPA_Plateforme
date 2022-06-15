@@ -14,9 +14,12 @@ class Compte extends Model
         'prenom_client',
         'solde',
 
+        'client_id'
+
     ];
     public function client(){
-        return $this->hasOne(Compte::class);
+
+        return $this->belongsTo(Client::class,'client_id');
     }
 }
 

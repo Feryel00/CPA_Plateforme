@@ -1,4 +1,4 @@
-@extends('chargeClienteledashboard')
+@extends('chargeCaissedashboard')
 @section('contentDash')
 
 <head>
@@ -19,8 +19,8 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouveau client</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouveau client</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
       </div>
       <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
         @csrf
@@ -101,9 +101,9 @@
       <div class="col-lg-12">
         <div class="card shadow position" id="pos">
           <div class="card-header  d-flex justify-content-between align-items-center" style='background-color:blue'>
-            <h3 class="text-light "style='background-color:blue'>Gestion des clients</h3>
-            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
-                class="bi-plus-circle me-2"></i>Ajouter nouveau client</button>
+            <h3 class="text-light "style='background-color:blue'>Liste des clients</h3>
+            <!-- <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
+                class="bi-plus-circle me-2"></i>Ajouter nouveau client</button> -->
           </div>
           <div>
 
@@ -129,7 +129,7 @@
         const fd = new FormData(this);
         $("#add_employee_btn").text('Adding...');
         $.ajax({
-          url: '{{ route('store') }}',
+          url: '{{ route('storeList') }}',
           method: 'post',
           data: fd,
           cache: false,
@@ -245,7 +245,7 @@
 
       function fetchAllEmployees() {
         $.ajax({
-          url: '{{ route('fetchAll') }}',
+          url: '{{ route('fetchAllList') }}',
           method: 'get',
           success: function(response) {
             $("#show_all_employees").html(response);
