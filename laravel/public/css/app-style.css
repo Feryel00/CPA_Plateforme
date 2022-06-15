@@ -3665,8 +3665,6 @@ table.grid td {
 
 }
 
-
-
 .position{
     top:-70px;
     left:-15px;
@@ -3689,6 +3687,7 @@ table.grid td {
     background-image:linear-gradient(45deg, #fff707, rgb(18 3 54 / 89%), rgb(95 48 201 / 89%), rgb(234 255 76 / 89%));
 
     color:white;
+    width:850px;
 }
 #modal-footer{
     background-image:linear-gradient(45deg, #fff707, rgb(18 3 54 / 89%), rgb(95 48 201 / 89%), rgb(234 255 76 / 89%));
@@ -3696,4 +3695,7 @@ table.grid td {
 }
 #form-control{
     color:black;
+}
+.download {
+
 }

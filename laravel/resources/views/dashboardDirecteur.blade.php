@@ -22,17 +22,17 @@ Directeur
 
      <li>
       <a href="/gestion_clients_directeur" >
-        <i class="zmdi zmdi-account-circle"></i> <span>Gestion des clients</span>
+      <i class="zmdi zmdi-accounts"></i>  <span>Clients</span>
       </a>
     </li>
     <li>
       <a href="/gestion_comptes_directeur" >
-        <i class="zmdi zmdi-account-circle"></i> <span>Gestion des comptes</span>
+        <i class="zmdi zmdi-account-circle"></i> <span>Comptes</span>
       </a>
     </li>
     <li>
       <a href="/gestion_employe" >
-        <i class="zmdi zmdi-account-circle"></i> <span>Gestion des employés</span>
+      <i class="zmdi zmdi-accounts-list-alt"></i> <span>Employés</span>
       </a>
     </li>
 

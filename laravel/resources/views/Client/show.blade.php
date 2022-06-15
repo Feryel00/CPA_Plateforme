@@ -1,73 +1,53 @@
 <!DOCTYPE html>
-<html>
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche Scoring</title>
+    <style>
+       .card{
+           color:black;
+           margin:auto  ;
+           padding:20px;
+           text-align:20px;
+           background-color:rgb(41 41 243 / 43%);
+           height:100%;
+           width:70%;
 
+       }
+       label{
+           margin:20px;
 
+           /* padding:10px; */
 
-.container1 {
-  padding: 20px;
-  background-color: #f1f1f1;
-}
-
-
-</style>
+           font-size:20px;
+       }
+       .flex{
+           display:flex;
+       }
+    </style>
+</head>
 <body>
+<div class='card' >
 
-<h2>Fiche Client</h2>
+<h1>Fiche Client</h1>
+<div>
 
-
-  <div class="container1">
-    <h2>Voir les Information du {{ $client->nom }}</h2>
-    <table >
-        <tr><td><div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Identifiant :</strong>
-                {{ $client ->id}}
-            </div>
-        </div></td>
-        <tr><td><div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Nom*</strong>
-                {{ $client->nom}}
-            </div>
-        </div></td>
+<label for="" >Nom de client </label>
+               <label for=""><strong>{{$compte->nom_client}}</strong></label>   </div>
 
 
 
-        <td></td></tr>
+ <label for="" >Prenom de client</label> <strong>{{$compte->prenom_client}}</strong>
+ <br>
+ <label for="" >Solde  : </label> <strong>{{$compte->solde}} </strong>
+ <br>
+ <label for="" >Client ID  </label><strong>{{$compte->client_id}}</strong>
 
-
-
-        <tr><td><div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Prenom</strong>
-                {{ $client->prenom}}
-            </div>
-        </div></td>
-
-
-
-
-
-
-            <br></tr>
-
-    </table>
-
-
-
-
+</div>
+</div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 

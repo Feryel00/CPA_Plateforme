@@ -19,14 +19,28 @@ class ClientController extends Controller
 		$emps = Client::all();
 		$output = '';
 		if ($emps->count() > 0) {
-			$output .= '<table class="table table-striped table-sm text-center align-middle">
+			$output .= '<table class="table table-responsive table-striped table-sm text-center align-middle">
             <thead>
               <tr>
                 <th>ID</th>
 
                 <th>Nom</th>
                 <th>Prenom</th>
-
+                <th>Numero Tel</th>
+                <th>type</th>
+                <th>Numero de passport</th>
+                <th>Date naissance</th>
+                <th>Département naissance</th>
+                <th>Profession</th>
+                <th>Revenus</th>
+                <th>Situation familiale</th>
+                <th>Nom Conjoint</th>
+                <th>Prenom_conjoint</th>
+                <th>Date de naissance </th>
+                <th>Sex Conjoint</th>
+                <th>Profession Conjoint</th>
+                <th>Revenu conjoint</th>
+                <th>Situation familaile </th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -37,6 +51,22 @@ class ClientController extends Controller
 
                 <td>' . $emp->nom . '</td>
                 <td>' . $emp->prenom . '</td>
+                <td>' . $emp->numero_tel . '</td>
+                <td>' . $emp->type . '</td>
+                <td>' . $emp->passport_numero . '</td>
+                <td>' . $emp->date_de_naissance_titulaire . '</td>
+                <td>' . $emp->departement_de_naissance . '</td>
+                <td>' . $emp->profession . '</td>
+                <td>' . $emp->revenus . '</td>
+                <td>' . $emp->situation_famille . '</td>
+                <td>' . $emp->nom_de_conjoint . '</td>
+                <td>' . $emp->prenom_de_conjoint . '</td>
+                <td>' . $emp->date_de_naissance_conjoint . '</td>
+                <td>' . $emp->sexe_conjoint . '</td>
+                <td>' . $emp->profession_conjoint. '</td>
+                <td>' . $emp->revenus_conjoint. '</td>
+                <td>' . $emp->situation_famille_conjoint . '</td>
+
 
                 <td>
                 <a href="#" id="' . $emp->id . '" class="text-success mx-1 editIcon" data-bs-toggle="modal" data-bs-target="#editEmployeeModal"><i class="bi-pencil-square  color-green h4"></i></a>
@@ -56,9 +86,24 @@ class ClientController extends Controller
 	// handle insert a new employee ajax request
 	public function store(Request $request) {
 
-		$empData = ['nom' => $request->fname,
-         'prenom' => $request->lname,
-         'compte_id' => $request->lcompte_id];
+		$empData = ['nom' => $request->tname,
+         'prenom' => $request->tprenom,
+         'numero_tel' => $request->tnum_id,
+         'type' => $request->ttype,
+         'nom' => $request->tpass_port,
+         'passport_numero' => $request->tdate_nais,
+         'date_de_naissance_titulaire' => $request->tdep_nais,
+         'departement_de_naissance' => $request->tsex,
+         'profession' => $request->tprofession,
+         'revenus' => $request->trevenu,
+         'situation_famille' => $request->tsituation,
+         'nom_de_conjoint' => $request->lname,
+         'prenom_de_conjoint' => $request->lprenom,
+         'date_de_naissance_conjoint' => $request->ldate_nais,
+         'sexe_conjoint' => $request->lsex,
+         'profession_conjoint' => $request->lprofession,
+         'revenus_conjoint' => $request->lrevenu,
+         'situation_famille_conjoint' => $request->lsituation];
 		Client::create($empData);
 		return response()->json([
 			'status' => 200,
@@ -78,7 +123,9 @@ class ClientController extends Controller
 		$emp = Client::find($request->emp_id);
 
 
-		$empData = ['nom' => $request->fname, 'prenom' => $request->lname, 'compte_id' => $request->lcompte_id];
+		$empData = ['nom' => $request->fname,
+                    'prenom' => $request->lname,
+                    'compte_id' => $request->lcompte_id];
 
 		$emp->update($empData);
 		return response()->json([
