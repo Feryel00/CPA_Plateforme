@@ -41,11 +41,7 @@ html {
 body {
   margin: 0; /* 1 */
   line-height: inherit; /* 2 */
-
-  background-color: #2563eb;
-
-  background-color:blue;
-
+  /* background-color:blue; */
 }
 
 /*
@@ -1355,8 +1351,8 @@ select {
 }
 .bg-gray-100 {
   --tw-bg-opacity: 1;
-  /* background-color: rgb(243 244 246 / var(--tw-bg-opacity)); */
-  background-color: rgb(23 24 246 / var(--tw-bg-opacity));
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  /* background-color: rgb(23 24 246 / var(--tw-bg-opacity)); */
 }
 .bg-indigo-500 {
   --tw-bg-opacity: 1;
@@ -2192,6 +2188,4 @@ select {
 .red{
     background-color:red;
 }
-body{
 
-}

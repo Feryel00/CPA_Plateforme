@@ -12,6 +12,9 @@
     href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css' />
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.10.25/datatables.min.css" />
 
+  <link rel="stylesheet" href="css/styleFormulaire.css">
+
+
 </head>
 {{-- add new employee modal start --}}
 <div class="modal fade" id="addEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -22,47 +25,104 @@
         <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouveau client</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
+      <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data" class='msform'>
         @csrf
-        <div class="modal-body p-4 bg-light">
+        <div class="modal-body p-4 ">
 
+        <ul id="progressbar">
+    <li class="active" >Identification</li>
+    <!-- <li>Informations</li> -->
+    <li>Titulaire</li>
+    <li>Conjoint</li>
+    <!-- <li>Services Annexes</li> -->
+    <!-- <li>Memo</li> -->
+  </ul>
+  <fieldset >
+    <h2 class="fs-title">Identification</h2><br>
             <div class="col-lg">
-              <label for="fname" style='color:blue'>Nom</label>
-              <input type="text" name="fname" class="form-control" placeholder="First Name" required>
+              <label for="tname" style='color:blue'>Nom</label>
+              <input type="text" name="tname" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="lname" style='color:blue'>Prenom</label>
-              <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+              <label for="tprenom" style='color:blue'>Prenom</label>
+              <input type="text" name="tprenom" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="lname" style='color:blue'>Date de naissance</label>
+              <label for="tnum_id" style='color:blue'>Numéro </label>
+              <input type="date" name="tnum_id" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="ttype" style='color:blue'>Type</label>
+              <input type="text" name="ttype" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tpass_port" style='color:blue'>Passport numéro</label>
+              <input type="text" name="tpass_port" class="form-control" placeholder="Last Name" required>
+            </div>
+            <span class="next button">Suivant</span>
+</fieldset>
+<fieldset>
+<h2 class="fs-title">Titulaire</h2><br>
+            <div class="col-lg">
+              <label for="tdate_nais" style='color:blue'>Date de naissance</label>
+              <input type="date" name="tdate_nais" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tdep_nais" style='color:blue'>Département de naissance</label>
+              <input type="text" name="tdep_nais" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tsex" style='color:blue'>Sex</label>
+              <input type="text" name="tsex" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tprofession" style='color:blue'>Profession</label>
+              <input type="text" name="tprofession" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="trevenu" style='color:blue'>Revenu</label>
+              <input type="text" name="trevenu" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tsituation" style='color:blue'>Situation familaile</label>
+              <input type="text" name="tsituation" class="form-control" placeholder="Last Name" required>
+            </div>
+            <span class="previous button">Précédent</span>
+    <span class="next button">Suivant</span>
+</fieldset>
+<fieldset>
+<h2 class="fs-title">Conjoint</h2><br>
+            <div class="col-lg">
+              <label for="lname" style='color:blue'>Nom</label>
               <input type="date" name="lname" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="lname" style='color:blue'>Ville de naissance</label>
-              <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+              <label for="lprenom" style='color:blue'>Prenom</label>
+              <input type="text" name="lprenom" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="lname" style='color:blue'>Pays de naissance</label>
-              <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+              <label for="ldate_nais" style='color:blue'>Date de naissance</label>
+              <input type="date" name="ldate_nais" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="lname" style='color:blue'>Adresse</label>
-              <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+              <label for="lsex" style='color:blue'>Sex</label>
+              <input type="text" name="lsex" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="lname" style='color:blue'>Sex</label>
-              <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+              <label for="lprofession" style='color:blue'>Profession</label>
+              <input type="text" name="lprofession" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="lname" style='color:blue'>Numero de tel</label>
-              <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+              <label for="lrevenu" style='color:blue'>Revenu</label>
+              <input type="text" name="lrevenu" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="lname" style='color:blue'>Email</label>
-              <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+              <label for="lsituation" style='color:blue'>Situation familaile</label>
+              <input type="text" name="lsituation" class="form-control" placeholder="Last Name" required>
             </div>
+            <span class="previous button">Précédent</span>
 
+</fieldset>
             <!-- <div class="col-lg">
               <label for="lcompte_id" style='color:blue'>compte_id</label>
               <input type="text" name="lcompte_id" class="form-control" placeholder="Last Name" >
@@ -286,5 +346,8 @@
       }
     });
   </script>
+<!-- <script src='/js/jquery.min.js'></script> -->
+<script src='/js/jquery.easing.min.js'></script>
 
+    <script src="/js/indexFormulaire.js"></script>
 @endsection

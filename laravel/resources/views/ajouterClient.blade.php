@@ -1,5 +1,4 @@
-
-  <link rel="stylesheet" href="css/reset.min.css">
+<link rel="stylesheet" href="css/reset.min.css">
   <link rel="icon" type="image/png" href="{{URL::to('/images/icons/bank-logo.jpg')}}">
 
   <link rel="stylesheet" href="css/styleFormulaire.css">
@@ -334,11 +333,7 @@ function horloge(el) {
   </fieldset>
 
 </form>
-
-
 <script src='/js/jquery.min.js'></script>
 <script src='/js/jquery.easing.min.js'></script>
 
     <script src="/js/indexFormulaire.js"></script>
-
-

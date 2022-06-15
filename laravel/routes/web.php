@@ -86,6 +86,8 @@ Route::get('/gestion_versement', function(){return view ('versement.index');});
 Route::get('/gestion_retrait',function(){return view('Retrait.index');});
 
 Route::get('/carte', function(){return view('carteBancaire.index');});
+
+Route::get('/Score', function(){return view('Credit.index');});
 //----------------------------Les cartes------------------------------------------
 Route::post('/storeCarte', [CarteController::class, 'storeCarte'])->name('storeCarte');
 Route::get('/fetchallCarte', [CarteController::class, 'fetchAllCarte'])->name('fetchAllCarte');
@@ -137,7 +139,7 @@ Route::resource('client', \App\Http\Controllers\ClientController::class);
   //  return view('scoreCredit.index');
 //});
 
-Route::get('/listClient', function(){return view('scoreCredit.listClient');});
+Route::get('/listClient', function(){return view('Credit.listClient');});
 Route::get('/CaisselistClient', function(){return view('listClient');});
 
 Route::post('/storeList', [listClientController::class, 'storeList'])->name('storeList');
@@ -166,11 +168,16 @@ Route::post('/storeVir', [VirementController::class, 'storeVir'])->name('storeVi
 Route::get('/fetchallVir', [VirementController::class, 'fetchAllVir'])->name('fetchAllVir');
 Route::get('/showVir/{id}', [VirementController::class, 'showVir'])->name('Virement.show');
 
-//-------------------------------------------------Credit ------------------------------------
+//-------------------------------------------------Caisse ------------------------------------
 Route::post('/storeVir', [VirementController::class, 'storeVir'])->name('storeVir');
 Route::get('/fetchallVir', [VirementController::class, 'fetchAllVir'])->name('fetchAllVir');
 Route::get('/showVir/{id}', [VirementController::class, 'showVir'])->name('Virement.show');
-Route::get('/calculer', [ScoreController::class, 'calculer'])->name('scoreCredit.show');
+//-------------------------------------------------Credit -----------------------------------
+//Route::get('/calculer', [ScoreController::class, 'calculer'])->name('Credit.show');
+Route::post('/storeScore', [ScoreController::class, 'storeScore'])->name('storeScore');
+
+Route::get('/fetchallScore', [ScoreController::class, 'fetchAllScore'])->name('fetchAllScore');
+Route::get('/showScore/{id}', [ScoreController::class, 'showScore'])->name('Credit.show');
 
 
 Route::get('/retrait',[CompteController::class,'retrait'])->name('retrait');
@@ -182,3 +189,9 @@ Route::get('/rechercher',[RetraitController::class,'rechercher'])->name('recherc
 Route::get('/r',function(){
     return view('search');
 });
+// Route::get('/score',function(){
+//     return view('Credit.ficheScoring');
+// });
+// Route::get('/sco',function(){
+//     return view('Credit.crerCredit');
+// });

@@ -52,10 +52,10 @@ html {
 	/*Image only BG fallback*/
 
 	/*background = gradient + image pattern combo*/
-	background:
+	/* background: */
 		/*linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));*/
 		/*linear-gradient(#ffd500,  #0051a8);*/
-		linear-gradient(#0051a8,#ffd500) ;
+		/* linear-gradient(#0051a8,#ffd500) ; */
 	/*	position: relative;*/
 	}
 
@@ -66,10 +66,10 @@ body {
 
 
 /*form styles*/
-#msform {
+.msform {
 	width:auto;/*800*/
 	margin: 5px ;/*25*/
-	text-align: center;
+	/* text-align: center; */
 	position: relative;
 
 }
@@ -80,33 +80,33 @@ span{
 
 fieldset {
 	display: table;/* 100%;*/
-	text-align: center;
+	/* text-align: center; */
 	position: relative;
 	height: auto;
 }
 
 fieldset p {
-    display: table-row;
-	text-align: center;
+    /* display: table-row; */
+	/* text-align: center; */
 	width: 100%;
 }
 
 fieldset input, fieldset select, fieldset label {
-    display: table-cell ;
+    /* display: table-cell ; */
     margin: 0px ;/*10*/
 	position: relative;
 }
 
 fieldset label {
-    text-align: right;
+    text-align: left;
 	height: 25px;
 	width:200px;
 	/*margin-right: 15px ;*/
 		/*margin-left: 50px ;*/
 }
 fieldset input,fieldset select {
-	height: 25px;
-	width: 70px;
+	 /* height: 25px;
+	width: 70px; */
 	margin-left: 5px ;
 
 }
@@ -116,7 +116,7 @@ label
 { border: 10px; }
 
 
-#msform fieldset {
+.msform fieldset {
 	background: 	linear-gradient(#cff3b7,#fafafa);
 	border: 0 none;
 	border-radius: 3px;
@@ -130,30 +130,30 @@ label
 	position: relative;
 }
 /*Hide all except first fieldset*/
-#msform fieldset:not(:first-of-type) {
+.msform fieldset:not(:first-of-type) {
 	display: none;
 }
 /*inputs*/
-#msform input, #msform textarea{
+.msform input, .msform textarea , select{
 	/*padding: 15px;*/
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	margin-bottom: 5px;
-	width: 150%;
+	/* width: 150%; */
 	box-sizing: border-box;
 	font-family: montserrat;
 	color: #2C3E50;
 	font-size: 13px;
 }
-#msform  fieldset textarea{
+.msform  fieldset textarea{
 	text-align: left;
 	width: 50%;
 
 }
 /*select*/
-#msform  fieldset select {
+.msform  fieldset select {
 	margin-bottom: 5px;
-	width: 150%;
+	width: 100%;
 
 
 
@@ -177,8 +177,8 @@ label
 
 
 /*}*/
-#msform .button:hover, #msform .button:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+.msform .button:hover, .msform .button:focus {
+	/* box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60; */
 }
 /*headings*/
 .fs-title {
@@ -205,10 +205,12 @@ label
 	list-style-type: none;
 	color: white;
 	text-transform: uppercase;
-	font-size: 9px;
-	width: 16.16%;
-	float: left;
+	font-size: 12px;
+	width: 18%;
+	float:left;
 	position: relative;
+    margin-right:30px;
+    margin-left:30px;
 }
 #progressbar li:before {
 	content: counter(step);
@@ -244,11 +246,11 @@ label
 	color: white;
 }
 
-#msform .button {
+.msform .button {
 	padding: 15px 45px;
 	margin: 10px 4px;
 	color: #eee;
-	background: #27AE60;
+	background: #2f32f3;
 	font-family: sans-serif;
 	text-transform: uppercase;
 	text-align: center;
@@ -257,7 +259,7 @@ label
 	display: inline-block;
 
   }
-  #msform  .button::before {
+  .msform  .button::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -270,11 +272,11 @@ label
 	transform: scaleY(0.1);
 	transition: all 0.4s;
   }
-  #msform  .button:hover {
-	color: #27AE60;
-	background: rgb(196, 240, 183);
+  .msform  .button:hover {
+	color: #0d10c5;
+	background: rgb(115, 80, 240);
   }
-  #msform  .button:hover::before {
+  .msform  .button:hover::before {
 	opacity: 1;
 	background-color: rgb(202, 31, 31);
 	-webkit-transform: scaleY(1);
@@ -282,3 +284,4 @@ label
 	transition: -webkit-transform 0.6s cubic-bezier(0.08, 0.35, 0.13, 1.02), opacity 0.4s;
 	transition: transform 0.6s cubic-bezier(0.08, 0.35, 0.13, 1.02), opacity;
   }
+

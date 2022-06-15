@@ -19,7 +19,7 @@ class CompteController extends Controller
 		$emps = Compte::all();
 		$output = '';
 		if ($emps->count() > 0) {
-			$output .= '<table class="table table-striped table-sm text-center align-middle">
+			$output .= '<table class="table table-responsive table-striped table-sm text-center align-middle">
             <thead>
               <tr>
                 <th>ID</th>
@@ -45,7 +45,7 @@ class CompteController extends Controller
                 <td>
                 <a href="#" id="' . $emp->id . '" class="text-success mx-1 editIcon" data-bs-toggle="modal" data-bs-target="#editEmployeeModal"><i class="bi-pencil-square  color-green h4"></i></a>
                 <a href="#" id="' . $emp->id . '" class="text-danger mx-1 deleteIcon"><i class="bi-trash color-red h4"></i></a>
-                <a href="/show/'. $emp->id .'"  class=""><i class="bi bi-eye-fill"></i></a>
+                <a href="/showCom/'. $emp->id .'"  class=""><i class="bi bi-eye-fill"></i></a>
 
                 </td>
               </tr>';
@@ -106,7 +106,7 @@ class CompteController extends Controller
 	}
 
     public function showCom($id){
-        $client=Compte::find($id);
+        $compte=Compte::find($id);
        return view('compte.show',compact('compte'));
     }
     public function retrait(Request $request){

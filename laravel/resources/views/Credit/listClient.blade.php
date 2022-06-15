@@ -1,4 +1,4 @@
-@extends('chargeCaisseDashboard')
+@extends('chargeCreditdashboard')
 @section('contentDash')
 
 <head>
@@ -19,29 +19,32 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Retérer</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouveau client</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
       </div>
-      <form action="#"  id="add_employee_form" enctype="multipart/form-data">
-
-        <!-- <form action="{{route('rechercher')}}"  > -->
+      <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
         @csrf
         <div class="modal-body p-4 bg-light">
-    <div class="form-group">
-         <label for="cNom_client" style="color:blue">Compte ID</label>
-         <input type="text" name='q' class="form-control" style='color:blue'>
-         <label for="cNom_client" style="color:blue">Montant retéré</label>
-         <input type="text" name='fmontant' class="form-control" style='color:blue'>
-    </div>
 
-
+            <div class="col-lg">
+              <label for="fname" style='color:blue'>Nom</label>
+              <input type="text" name="fname" class="form-control" placeholder="First Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="lname" style='color:blue'>Prenom</label>
+              <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="lcompte_id" style='color:blue'>compte_id</label>
+              <input type="text" name="lcompte_id" class="form-control" placeholder="Last Name" >
+            </div>
 
 
 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="submit" id="add_employee_btn" class="btn btn-primary">Envoyer</button>
+          <button type="submit" id="add_employee_btn" class="btn btn-primary">Ajouter client</button>
         </div>
       </form>
     </div>
@@ -55,7 +58,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modifier compte</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Modifier client</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data">
@@ -64,22 +67,17 @@
         <input type="hidden" name="emp_avatar" id="emp_avatar">
         <div class="modal-body p-4 bg-light">
 
-        <div class="col-lg">
-              <label for="cNom_client" style="color:blue">Nom_client</label>
-              <input type="text" name="cNom_client" id="cNom_client" class="form-control" placeholder="First Name" required>
+            <div class="col-lg">
+              <label for="fname" style="color:blue">Nom</label>
+              <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="cPrenom_client" style="color:blue">Prenom client</label>
-              <input type="text" name="cPrenom_client" id="cPrenom_client" class="form-control" placeholder="First Name" required>
+              <label for="lname" style="color:blue">Prenm</label>
+              <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="cSolde" style="color:blue">Solde</label>
-              <input type="text" name="cSolde" id="cSolde" class="form-control" placeholder="First Name" required>
-            </div>
-
-            <div class="col-lg">
-              <label for="cClient_id" style="color:blue">Client_id</label>
-              <input type="text" name="cClient_id" id="cClient_id" class="form-control" placeholder="Last Name" required>
+              <label for="lcompte_id" style="color:blue">compte_id</label>
+              <input type="text" name="lcompte_id" id="lcompte_id" class="form-control" placeholder="Last Name" required>
             </div>
 
 
@@ -90,7 +88,7 @@
         </div>
         <div class="modal-footer" id="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="submit" id="edit_employee_btn" class="btn btn-success">Modifier Compte</button>
+          <button type="submit" id="edit_employee_btn" class="btn btn-success">Modifier Client</button>
         </div>
       </form>
     </div>
@@ -103,9 +101,9 @@
       <div class="col-lg-12">
         <div class="card shadow position" id="pos">
           <div class="card-header  d-flex justify-content-between align-items-center" style='background-color:blue'>
-            <h3 class="text-light "style='background-color:blue'>Gestion des retraits</h3>
-            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
-                class="bi-plus-circle me-2"></i>Retérer</button>
+            <h3 class="text-light "style='background-color:red'>Liste des clients</h3>
+            <!-- <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
+                class="bi-plus-circle me-2"></i>Ajouter nouveau client</button> -->
           </div>
           <div>
 
@@ -125,12 +123,13 @@
   <script>
     $(function() {
 
-        $("#add_employee_form").submit(function(e) {
+      // add new employee ajax request
+      $("#add_employee_form").submit(function(e) {
         e.preventDefault();
         const fd = new FormData(this);
         $("#add_employee_btn").text('Adding...');
         $.ajax({
-          url: '{{ route('storeRe') }}',
+          url: '{{ route('storeList') }}',
           method: 'post',
           data: fd,
           cache: false,
@@ -138,14 +137,14 @@
           processData: false,
           dataType: 'json',
           success: function(response) {
-
+            if (response.status == 200) {
               Swal.fire(
                 'Ajouté!',
                 'Client Ajouté Avec Succès!',
                 'success'
               )
               fetchAllEmployees();
-
+            }
             $("#add_employee_btn").text('Add Employee');
             $("#add_employee_form")[0].reset();
             $("#addEmployeeModal").modal('hide');
@@ -153,25 +152,21 @@
         });
       });
 
-      // add new employee ajax request
-
-
       // edit employee ajax request
       $(document).on('click', '.editIcon', function(e) {
         e.preventDefault();
         let id = $(this).attr('id');
         $.ajax({
-          url: '{{ route('retrait') }}',
+          url: '{{ route('edit') }}',
           method: 'get',
           data: {
             id: id,
             _token: '{{ csrf_token() }}'
           },
           success: function(response) {
-
-            $("#cSolde").val(response.solde);
-
-            $("#cClient_id").val(response.client_id);
+            $("#fname").val(response.nom);
+            $("#lname").val(response.prenom);
+            $("#lcompte_id").val(response.compte_id);
 
 
             $("#emp_id").val(response.id);
@@ -186,7 +181,7 @@
         const fd = new FormData(this);
         $("#edit_employee_btn").text('Updating...');
         $.ajax({
-          url: '{{ route('updateCom') }}',
+          url: '{{ route('update') }}',
           method: 'post',
           data: fd,
           cache: false,
@@ -225,7 +220,7 @@
         }).then((result) => {
           if (result.isConfirmed) {
             $.ajax({
-              url: '{{ route('deleteCom') }}',
+              url: '{{ route('delete') }}',
               method: 'delete',
               data: {
                 id: id,
@@ -250,7 +245,7 @@
 
       function fetchAllEmployees() {
         $.ajax({
-          url: '{{ route('fetchAllScore') }}',
+          url: '{{ route('fetchAllList') }}',
           method: 'get',
           success: function(response) {
             $("#show_all_employees").html(response);

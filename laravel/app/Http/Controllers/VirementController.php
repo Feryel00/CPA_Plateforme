@@ -20,7 +20,7 @@ class VirementController extends Controller
 		$emps =Virement::all();
 		$output = '';
 		if ($emps->count() > 0) {
-			$output .= '<table class="table table-striped table-sm text-center align-middle">
+			$output .= '<table class="table table-responsive table-striped table-sm text-center align-middle">
             <thead>
               <tr>
                 <th>ID</th>

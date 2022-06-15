@@ -25,7 +25,7 @@ Charge Credit
       </a>
     </li>
     <li>
-      <a href="/ficheScoring" >
+      <a href="/Score" >
            <i class="zmdi zmdi-account-circle"></i> <span>Fiche de scoring</span>
       </a>
     </li>
