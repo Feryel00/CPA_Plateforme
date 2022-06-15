@@ -6,11 +6,11 @@ Charge Clientele
 <div class="brand-logo" >
     <!-- <a href="index.html"> -->
      <img src="images/icons/bank-logo.jpg" class="logo-icon" alt="logo">
-     <h5 class="logo-text">Charge Caisse</h5>
+     <h5 class="logo-text">Chargé Caisse</h5>
    <!-- </a> -->
  </div>
  <ul class="sidebar-menu do-nicescrol">
-    <li class="sidebar-header">MAIN NAVIGATION</li>
+    <li class="sidebar-header">NAVIGATION PRINCIPALE</li>
     <li>
       <a href="/">
         <i class="zmdi zmdi-view-dashboard"></i> <span>Acceuil</span>
@@ -43,9 +43,9 @@ Charge Clientele
     </li>
 
 
-    <li class="sidebar-header">LABELS</li>
+    <li class="sidebar-header">Étiquettes</li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-coffee text-danger"></i> <span>Important</span></a></li>
-    <li><a href="javaScript:void();"><i class="zmdi zmdi-chart-donut text-success"></i> <span>Warning</span></a></li>
+    <li><a href="javaScript:void();"><i class="zmdi zmdi-chart-donut text-success"></i> <span>Avertissement</span></a></li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li>
 
   </ul>

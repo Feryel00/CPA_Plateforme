@@ -10,11 +10,9 @@ use App\http\Controllers\CarteController;
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-|
 */
 
 Route::get('c/{id}',[CarteController::class,'viewCategory'])->name('viewCategory');
@@ -36,15 +34,16 @@ Route::get('/Acceuil', function(){
     return view('pageAcceuil');
 });
 
+Route::get('/A', function(){
+    return view('acceuil');
+});
+
 Route::view('ajouterClient','ajouterClient');
 Route::post('ajouterClient',[ClientController::class,'ajouterClient']);
 
 
 
 
-Route::get('/da', function(){
-    return view('da');
-});
 
 
 Route::get('/ddirecteur', function(){

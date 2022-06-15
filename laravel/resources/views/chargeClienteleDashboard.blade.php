@@ -6,7 +6,7 @@ Charge Clientele
 <div class="brand-logo" >
     <!-- <a href="index.html"> -->
      <img src="images/icons/bank-logo.jpg" class="logo-icon" alt="logo">
-     <h5 class="logo-text">Charge Clientele</h5>
+     <h5 class="logo-text">Chargé Clientèle</h5>
    <!-- </a> -->
  </div>
  <ul class="sidebar-menu do-nicescrol">
@@ -41,12 +41,12 @@ Charge Clientele
     <li>
       <a href="carte" >
         <!-- <i class="zmdi zmdi-account-circle"></i> -->
-        <i class="zmdi zmdi-card"></i> <span>Moneitique</span>
+        <i class="zmdi zmdi-card"></i> <span>Monétique</span>
       </a>
     </li>
     <li>
       <a href="{{route('compte.index')}}" >
-           <i class="zmdi zmdi-book"></i> <span>Documents du services</span>
+           <i class="zmdi zmdi-book"></i> <span>Documents du service</span>
 
 
       </a>
