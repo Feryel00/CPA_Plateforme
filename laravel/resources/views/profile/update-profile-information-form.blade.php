@@ -6,7 +6,7 @@
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Mettez à jour les informations de profil et l'adresse e-mail de votre compte.') }}
+        {{ __('Mettez à jour les informations de profil et l\'adresse e-mail de votre compte.') }}
     </x-slot>
 
     <x-slot name="form">

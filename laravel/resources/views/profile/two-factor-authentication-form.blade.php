@@ -4,7 +4,7 @@
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Ajoutez une sécurité supplémentaire à votre compte en utilisant l'authentification à deux facteurs.') }}
+        {{ __('Ajoutez une sécurité supplémentaire à votre compte en utilisant l\'authentification à deux facteurs.') }}
     </x-slot>
 
     <x-slot name="content">
