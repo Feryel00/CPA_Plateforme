@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,7 @@
            margin:auto  ;
            padding:20px;
            text-align:20px;
-           background-color:rgb(41 41 243 / 43%);
+           background-color:rgb(69 151 217 / 69%);
            height:100%;
            width:70%;
 
@@ -32,22 +34,56 @@
 <div class='card' >
 
 <h1>Fiche Client</h1>
+<!-- <img src="../../../public/images/icons/bank-logo.jpg" > -->
 <div>
 
-<label for="" >Nom de client </label>
-               <label for=""><strong>{{$compte->nom_client}}</strong></label>   </div>
 
 
 
- <label for="" >Prenom de client</label> <strong>{{$compte->prenom_client}}</strong>
+    <h3>Identification</h3>
+    <label for="" >Nom de client </label> <label for=""><strong>Bouchachia</strong></label>   </div>
+ <label for="" >Prenom de client</label> <strong>{{$client->prenom}}</strong>
  <br>
- <label for="" >Solde  : </label> <strong>{{$compte->solde}} </strong>
+
+ <label for="" >Numero de téléphone </label> <strong>{{$client->numero_tel}} </strong>
  <br>
- <label for="" >Client ID  </label><strong>{{$compte->client_id}}</strong>
+ <label for="" >Type de client </label><strong>{{$client->type}}</strong>
+ <br>
+ <label for="" >Numero de passport  </label><strong>{{$client->passport_numero}}</strong>
+
+ <br>
+ <h3>Titulaire</h3>
+ <label for="" >Date de naissance </label><strong>{{$client->date_de_naissance_titulaire}}</strong>
+
+ <br>
+ <label for="" >Departement de naissance  </label><strong>Tlemcen</strong>
+ <br>
+ <label for="" >Profession  </label><strong>{{$client->profession}}</strong>
+ <br>
+ <label for="" >Revenus   </label><strong>{{$client->revenus}}</strong>
+ <br>
+ <label for="" >Situation familiale  </label><strong>{{$client->situation_famille}}</strong>
+ <br>
+ <h3>Conjoint</h3>
+ <label for="" >Nom de conjoint </label><strong>{{$client->nom_de_conjoint}}</strong>
+ <br>
+ <label for="" >Prenom de conjoint </label><strong>{{$client->prenom_de_conjoint}}</strong>
+ <br>
+ <label for="" >Date de naissance  Conjoint  </label><strong>{{$client->date_de_naissance_conjoint}}</strong>
+ <br>
+ <label for="" >Sex conjoint  </label><strong>{{$client->sexe_conjoint}}</strong>
+ <br>
+ <label for="" >Profession conjoint  </label><strong>{{$client->profession_conjoint}}</strong>
+ <br>
+ <label for="" >Revenus conjoint  </label><strong>{{$client->revenus_conjoint}}</strong>
+ <br>
+ <label for="" >Situation familiale conjoint  </label><strong>{{$client->situation_famille_conjoint}}</strong>
+
 
 </div>
 </div>
 
 </body>
 </html>
+
 

@@ -25,27 +25,28 @@
       </div>
       <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
         @csrf
+        <div class="modal-body p-4 bg-light">
             <div>
-                <x-jet-label for="name" style='color:black' value="{{ __('Nom') }}" />
-                <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                <x-jet-label for="name" style='color:blue' value="{{ __('Nom') }}" />
+                <x-jet-input id="name" style='color:black' class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="email" style='color:black' value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                <x-jet-label for="email" style='color:blue' value="{{ __('Email') }}" />
+                <x-jet-input id="email" style='color:black' class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password" style='color:black' value="{{ __('Mot de passe') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
+                <x-jet-label for="password" style='color:blue' value="{{ __('Mot de passe') }}" />
+                <x-jet-input id="password" style='color:black' class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
 
             <div class="mt-4">
-                <x-jet-label for="password_confirmation" style='color:black' value="{{ __('Confirmation de mot de passe') }}" />
-                <x-jet-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
+                <x-jet-label for="password_confirmation" style='color:blue' value="{{ __('Confirmation de mot de passe') }}" />
+                <x-jet-input id="password_confirmation" style='color:black' class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             </div>
             <div class="mt-4">
-                <x-jet-label for="role" style='color:black' value="{{ __('Role') }}" />
+                <x-jet-label for="role" style='color:blue' value="{{ __('Role') }}" />
                 <select name="role" x-model="role" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                     <option value="1">Directeur</option>
                     <option value="2">Charge Clientele</option>
@@ -72,14 +73,19 @@
             @endif
 
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+                <!-- <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
-                </a>
+                </a> -->
 
-                <x-jet-button class="ml-4">
+                <!-- <x-jet-button class="ml-4">
                     {{ __('Register') }}
-                </x-jet-button>
-            </div>
+                </x-jet-button> -->
+
+            </div></div>
+            <div class="modal-footer" id="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="submit" id="edit_employee_btn" class="btn btn-success">Ajouter</button>
+        </div>
 
       </form>
     </div>
@@ -93,7 +99,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modier employee</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Modifier employé</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data">

@@ -35,19 +35,18 @@
 <div>
 
 <label for="" >Nom de client </label>
-               <label for=""><strong>{{$client->nom_client}}</strong></label>   </div>
+               <label for=""><strong>{{$compte->nom_client}}</strong></label>   </div>
 
 
 
- <label for="" >Prenom de client</label> <strong>{{$client->prenom_client}}</strong>
+ <label for="" >Prenom de client</label> <strong>{{$compte->prenom_client}}</strong>
  <br>
- <label for="" >Solde  : </label> <strong>{{$client->solde}} </strong>
+ <label for="" >Solde  : </label> <strong>{{$compte->solde}} </strong>
  <br>
- <label for="" >Client ID  </label><strong>{{$client->client_id}}</strong>
+ <label for="" >Client ID  </label><strong>{{$compte->client_id}}</strong>
 
 </div>
 </div>
 
 </body>
 </html>
-

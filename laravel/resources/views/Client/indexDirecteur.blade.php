@@ -23,18 +23,104 @@
         <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouveau client</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
+      <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data" class='msform'>
         @csrf
-        <div class="modal-body p-4 bg-light">
+        <div class="modal-body p-4 ">
 
+        <ul id="progressbar">
+    <li class="active" >Identification</li>
+    <!-- <li>Informations</li> -->
+    <li>Titulaire</li>
+    <li>Conjoint</li>
+    <!-- <li>Services Annexes</li> -->
+    <!-- <li>Memo</li> -->
+  </ul>
+  <fieldset >
+    <h2 class="fs-title">Identification</h2><br>
             <div class="col-lg">
-              <label for="fname" style='color:blue'>Nom</label>
-              <input type="text" name="fname" class="form-control" placeholder="First Name" required>
+              <label for="tname" style='color:blue'>Nom</label>
+              <input type="text" name="tname" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="lname" style='color:blue'>Prenom</label>
+              <label for="tprenom" style='color:blue'>Prenom</label>
+              <input type="text" name="tprenom" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tnum_id" style='color:blue'>Numéro de téléphone</label>
+              <input type="text" name="tnum_id" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="ttype" style='color:blue'>Type</label>
+              <input type="text" name="ttype" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tpass_port" style='color:blue'>Passport numéro</label>
+              <input type="text" name="tpass_port" class="form-control" placeholder="Last Name" required>
+            </div>
+            <span class="next button">Suivant</span>
+</fieldset>
+<fieldset>
+<h2 class="fs-title">Titulaire</h2><br>
+            <div class="col-lg">
+              <label for="tdate_nais" style='color:blue'>Date de naissance</label>
+              <input type="date" name="tdate_nais" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tdep_nais" style='color:blue'>Département de naissance</label>
+              <input type="text" name="tdep_nais" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tsex" style='color:blue'>Sex</label>
+              <input type="text" name="tsex" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tprofession" style='color:blue'>Profession</label>
+              <input type="text" name="tprofession" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="trevenu" style='color:blue'>Revenu</label>
+              <input type="text" name="trevenu" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tsituation" style='color:blue'>Situation familaile</label>
+              <input type="text" name="tsituation" class="form-control" placeholder="Last Name" required>
+            </div>
+            <span class="previous button">Précédent</span>
+    <span class="next button">Suivant</span>
+</fieldset>
+<fieldset>
+<h2 class="fs-title">Conjoint</h2><br>
+            <div class="col-lg">
+              <label for="lname" style='color:blue'>Nom</label>
               <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
             </div>
+            <div class="col-lg">
+              <label for="lprenom" style='color:blue'>Prenom</label>
+              <input type="text" name="lprenom" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="ldate_nais" style='color:blue'>Date de naissance</label>
+              <input type="date" name="ldate_nais" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="lsex" style='color:blue'>Sex</label>
+              <input type="text" name="lsex" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="lprofession" style='color:blue'>Profession</label>
+              <input type="text" name="lprofession" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="lrevenu" style='color:blue'>Revenu</label>
+              <input type="text" name="lrevenu" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="lsituation" style='color:blue'>Situation familaile</label>
+              <input type="text" name="lsituation" class="form-control" placeholder="Last Name" required>
+            </div>
+            <span class="previous button">Précédent</span>
+
+</fieldset>
             <!-- <div class="col-lg">
               <label for="lcompte_id" style='color:blue'>compte_id</label>
               <input type="text" name="lcompte_id" class="form-control" placeholder="Last Name" >
@@ -62,35 +148,116 @@
         <h5 class="modal-title" id="exampleModalLabel">Modifier client</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data">
+      <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data" class='msform'>
         @csrf
-        <input type="hidden" name="emp_id" id="emp_id">
-        <input type="hidden" name="emp_avatar" id="emp_avatar">
-        <div class="modal-body p-4 bg-light">
+        <div class="modal-body p-4 ">
 
-            <div class="col-lg">
-              <label for="fname" style="color:blue">Nom</label>
-              <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name" required>
-            </div>
-            <div class="col-lg">
-              <label for="lname" style="color:blue">Prenm</label>
-              <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name" required>
-            </div>
-            <!-- <div class="col-lg">
-              <label for="lcompte_id" style="color:blue">compte_id</label>
-              <input type="text" name="lcompte_id" id="lcompte_id" class="form-control" placeholder="Last Name" required>
-            </div> -->
+<ul id="progressbar">
+<li class="active" >Identification</li>
+<!-- <li>Informations</li> -->
+<li>Titulaire</li>
+<li>Conjoint</li>
+<!-- <li>Services Annexes</li> -->
+<!-- <li>Memo</li> -->
+</ul>
+<fieldset >
+<h2 class="fs-title">Identification</h2><br>
+    <div class="col-lg">
+      <label for="tname" style='color:blue'>Nom</label>
+      <input type="text" name="tname" id="tname" class="form-control" placeholder="First Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="tprenom" style='color:blue'>Prenom</label>
+      <input type="text" name="tprenom" id="tprenom" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="tnum_id" style='color:blue'>Numéro </label>
+      <input type="text" name="tnum_id" id="tnum_id" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="ttype" style='color:blue'>Type</label>
+      <input type="text" name="ttype" id="ttype" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="tpass_port" style='color:blue'>Passport numéro</label>
+      <input type="text" name="tpass_port" id="tpass_port" class="form-control" placeholder="Last Name" required>
+    </div>
+    <span class="next button">Suivant</span>
+</fieldset>
+<fieldset>
+<h2 class="fs-title">Titulaire</h2><br>
+    <div class="col-lg">
+      <label for="tdate_nais" style='color:blue'>Date de naissance</label>
+      <input type="date" name="tdate_nais" id="tdate_nais" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="tdep_nais" style='color:blue'>Département de naissance</label>
+      <input type="text" name="tdep_nais" id="tdep_nais" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="tsex" style='color:blue'>Sex</label>
+      <input type="text" name="tsex" id="tsex" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="tprofession" style='color:blue'>Profession</label>
+      <input type="text" name="tprofession" id="tprofession" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="trevenu" style='color:blue'>Revenu</label>
+      <input type="text" name="trevenu" id="trevenu"  class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="tsituation" style='color:blue'>Situation familaile</label>
+      <input type="text" name="tsituation" id="tsituation" class="form-control" placeholder="Last Name" required>
+    </div>
+    <span class="previous button">Précédent</span>
+<span class="next button">Suivant</span>
+</fieldset>
+<fieldset>
+<h2 class="fs-title">Conjoint</h2><br>
+    <div class="col-lg">
+      <label for="lname" style='color:blue'>Nom</label>
+      <input type="date" name="lname" id="lname" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="lprenom" style='color:blue'>Prenom</label>
+      <input type="text" name="lprenom" id="lprenom" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="ldate_nais" style='color:blue'>Date de naissance</label>
+      <input type="date" name="ldate_nais" id="ldate_nais" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="lsex" style='color:blue'>Sex</label>
+      <input type="text" name="lsex" id="lsex" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="lprofession" style='color:blue'>Profession</label>
+      <input type="text" name="lprofession" id="lprofession" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="lrevenu" style='color:blue'>Revenu</label>
+      <input type="text" name="lrevenu" class="form-control" placeholder="Last Name" required>
+    </div>
+    <div class="col-lg">
+      <label for="lsituation" style='color:blue'>Situation familaile</label>
+      <input type="text" name="lsituation" class="form-control" placeholder="Last Name" required>
+    </div>
+    <span class="previous button">Précédent</span>
+
+</fieldset>
+    <!-- <div class="col-lg">
+      <label for="lcompte_id" style='color:blue'>compte_id</label>
+      <input type="text" name="lcompte_id" class="form-control" placeholder="Last Name" >
+    </div> -->
 
 
 
-          <div class="mt-2" id="avatar">
-
-          </div>
-        </div>
-        <div class="modal-footer" id="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="submit" id="edit_employee_btn" class="btn btn-success">Modifier Client</button>
-        </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+  <button type="submit" id="add_employee_btn" class="btn btn-primary">Ajouter client</button>
+</div>
       </form>
     </div>
   </div>
@@ -166,8 +333,25 @@
             _token: '{{ csrf_token() }}'
           },
           success: function(response) {
-            $("#fname").val(response.nom);
-            $("#lname").val(response.prenom);
+            $("#tname").val(response.nom);
+            $("#tprenom").val(response.prenom);
+            $("#tnum_id").val(response.numero_tel);
+            $("#ttype").val(response.type);
+            $("#tpass_port").val(response.passport_numero);
+            $("#tdate_nais").val(response.date_de_naissance_titulaire);
+            $("#tdep_nais").val(response.departement_de_naissance);
+            // $("#tsex").val(response.);
+            $("#tprofession").val(response.profession);
+            $("#trevenu").val(response.revenus);
+            $("#tsituation").val(response.situation_famille);
+            $("#lname").val(response.nom_de_conjoint);
+            $("#lprenom").val(response.prenom_de_conjoint);
+            $("#ldate_nais").val(response.date_de_naissance_conjoint);
+            $("#lsex").val(response.sexe_conjoint);
+            $("#lprofession").val(response.profession_conjoint);
+            $("#lrevenu").val(response.revenus_conjoint);
+            $("#lsituation").val(response.situation_famille_conjoint);
+
             // $("#lcompte_id").val(response.compte_id);
 
 
@@ -259,5 +443,9 @@
       }
     });
   </script>
+<script src='/js/jquery.easing.min.js'></script>
+
+<script src="/js/indexFormulaire.js"></script>
+<link rel="stylesheet" href="css/styleFormulaire.css">
 
 @endsection

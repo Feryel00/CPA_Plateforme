@@ -150,20 +150,20 @@
         <h5 class="modal-title" id="exampleModalLabel">Modifier client</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data">
+      <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data" class='msform'>
         @csrf
         <input type="hidden" name="emp_id" id="emp_id">
         <input type="hidden" name="emp_avatar" id="emp_avatar">
         <div class="modal-body p-4 bg-light">
 
-            <div class="col-lg">
+            <!-- <div class="col-lg">
               <label for="fname" style="color:blue">Nom</label>
               <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
               <label for="lname" style="color:blue">Prenm</label>
               <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name" required>
-            </div>
+            </div> -->
             <!-- <div class="col-lg">
               <label for="lcompte_id" style="color:blue">compte_id</label>
               <input type="text" name="lcompte_id" id="lcompte_id" class="form-control" placeholder="Last Name" required>
