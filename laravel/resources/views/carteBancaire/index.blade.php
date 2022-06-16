@@ -31,7 +31,7 @@ $categories=App\Models\CategoryCarte::all();
         <div class="modal-body p-4 bg-light">
 
             <div class="col-lg">
-              <label for="fnum_carte" style='color:blue'>Numero de carte</label>
+              <label for="fnum_carte" style='color:blue'>Numéro de carte</label>
               <input type="text" name="fnum_carte" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
@@ -39,7 +39,7 @@ $categories=App\Models\CategoryCarte::all();
               <input type="text" name="ldate_expiration" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="lcategory_id" style='color:blue'>Category ID</label>
+              <label for="lcategory_id" style='color:blue'>ID de catégorie</label>
               <input type="text" name="lcategory_id" class="form-control" placeholder="Last Name" required>
             </div>
 
@@ -48,7 +48,7 @@ $categories=App\Models\CategoryCarte::all();
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="submit" id="add_employee_btn" class="btn btn-primary">Crer Carte</button>
+          <button type="submit" id="add_employee_btn" class="btn btn-primary">Créer la carte</button>
         </div>
       </form>
     </div>
@@ -72,7 +72,7 @@ $categories=App\Models\CategoryCarte::all();
         <div class="modal-body p-4 bg-light">
           <div class="row">
             <div class="col-lg">
-              <label for="fnum_carte" style="color:blue">Numero de carte</label>
+              <label for="fnum_carte" style="color:blue">Numéro de carte</label>
               <input type="text" name="fnum_carte" id="fnum_carte" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
@@ -88,7 +88,7 @@ $categories=App\Models\CategoryCarte::all();
         </div>
         <div class="modal-footer" id="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="submit" id="edit_employee_btn" class="btn btn-success">Rounevler la carte</button>
+          <button type="submit" id="edit_employee_btn" class="btn btn-success">Renouvler la carte</button>
         </div>
       </form>
     </div>
@@ -119,7 +119,7 @@ $categories=App\Models\CategoryCarte::all();
 
             </div>
           <div class="card-body" id="show_all_employees">
-            <h1 class="text-center text-secondary my-5">Loading...</h1>
+            <h1 class="text-center text-secondary my-5">Chargement...</h1>
           </div>
         </div>
       </div>

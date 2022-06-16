@@ -31,7 +31,7 @@
               <input type="text" name="fname" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="lname" style='color:blue'>Prenom</label>
+              <label for="lname" style='color:blue'>Prénom</label>
               <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
@@ -72,7 +72,7 @@
               <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="lname" style="color:blue">Prenm</label>
+              <label for="lname" style="color:blue">Prénom</label>
               <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">

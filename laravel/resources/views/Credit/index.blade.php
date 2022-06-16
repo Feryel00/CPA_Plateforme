@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRUD App Laravel 8 & Ajax</title>
+  <title>Nouveau Score</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css' />
   <link rel='stylesheet'
     href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css' />
@@ -31,7 +31,7 @@
               <input type="text" name="fname" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="lname" style='color:blue'>Prenom</label>
+              <label for="lname" style='color:blue'>Prénom</label>
               <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
@@ -73,7 +73,7 @@
       <div class="col-lg-12">
         <div class="card shadow position" id="pos">
           <div class="card-header  d-flex justify-content-between align-items-center" style='background-color:blue'>
-            <h3 class="text-light "style='background-color:blue'>Score Credit Immobiliere</h3>
+            <h3 class="text-light "style='background-color:blue'>Score Credit Immobilière</h3>
             <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
                 class="bi-plus-circle me-2"></i>Ajouter nouveau client</button>
           </div>

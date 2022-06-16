@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRUD App Laravel 8 & Ajax</title>
+  <title>Fichiers</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css' />
   <link rel='stylesheet'
     href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css' />
@@ -29,8 +29,8 @@
         <input type="file" name="file" >
         Description<input type="text" name="fdescription" >
     </div></div>
-    <button type="submit">Upload</button>
-    <a href="{{route('viewfile')}}">Back</a>
+    <button type="submit">Télécharger</button>
+    <a href="{{route('viewfile')}}">Retour</a>
 </form>
     </div>
   </div>
@@ -59,7 +59,7 @@
          <table class='table table-responsive table-striped table-sm  align-middle' >
              <tr>
                  <td style='width:90%'> {{ $file ->description}}</td>
-                 <td><button class="btn text-sm text-gray-700 dark:text-gray-500 underline"><a href="{{route('downloadfile', $file->id)}}">Telecharge</a></button></td>
+                 <td><button class="btn text-sm text-gray-700 dark:text-gray-500 underline"><a href="{{route('downloadfile', $file->id)}}">Télécharger</a></button></td>
              </tr>
          </table>
 

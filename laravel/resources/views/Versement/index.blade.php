@@ -69,7 +69,7 @@
               <input type="text" name="cNom_client" id="cNom_client" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="cPrenom_client" style="color:blue">Prenom client</label>
+              <label for="cPrenom_client" style="color:blue">Prénom client</label>
               <input type="text" name="cPrenom_client" id="cPrenom_client" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">

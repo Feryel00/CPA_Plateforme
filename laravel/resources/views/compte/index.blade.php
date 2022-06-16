@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRUD App Laravel 8 & Ajax</title>
+  <title>Création d'un compte</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css' />
   <link rel='stylesheet'
     href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css' />
@@ -19,7 +19,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Crer nouveau compte</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Créer nouveau compte</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
@@ -31,11 +31,11 @@
               <input type="text" name="cNom_client" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="cPrenom_client" style='color:blue'>Prenom Client</label>
+              <label for="cPrenom_client" style='color:blue'>Prénom Client</label>
               <input type="text" name="cPrenom_client" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="cPrenom_client" style='color:blue'>Numero de Compte</label>
+              <label for="cPrenom_client" style='color:blue'>Numéro de Compte</label>
               <input type="text" name="cPrenom_client" class="form-control" placeholder="First Name" required>
             </div>
 
@@ -55,7 +55,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="submit" id="add_employee_btn" class="btn btn-primary">Crer compte</button>
+          <button type="submit" id="add_employee_btn" class="btn btn-primary">Créer le compte</button>
         </div>
       </form>
     </div>
@@ -79,11 +79,11 @@
         <div class="modal-body p-4 bg-light">
 
         <div class="col-lg">
-              <label for="cNom_client" style="color:blue">Nom_client</label>
+              <label for="cNom_client" style="color:blue">Nom client</label>
               <input type="text" name="cNom_client" id="cNom_client" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="cPrenom_client" style="color:blue">Prenom client</label>
+              <label for="cPrenom_client" style="color:blue">Prénom client</label>
               <input type="text" name="cPrenom_client" id="cPrenom_client" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
@@ -104,7 +104,7 @@
         </div>
         <div class="modal-footer" id="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="submit" id="edit_employee_btn" class="btn btn-success">Modifier Compte</button>
+          <button type="submit" id="edit_employee_btn" class="btn btn-success">Modifier le Compte</button>
         </div>
       </form>
     </div>
@@ -119,7 +119,7 @@
           <div class="card-header  d-flex justify-content-between align-items-center" style='background-color:blue'>
             <h3 class="text-light "style='background-color:blue'>Gestion des comptes</h3>
             <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
-                class="bi-plus-circle me-2"></i>Crer nouveau compte</button>
+                class="bi-plus-circle me-2"></i>Créer nouveau compte</button>
           </div>
           <div>
 

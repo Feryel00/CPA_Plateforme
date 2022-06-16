@@ -39,20 +39,20 @@
 
 
 
- <label for="" >Prenom:</label> <strong>{{$score->prenom}}</strong>
+ <label for="" >Prénom:</label> <strong>{{$score->prenom}}</strong>
  <br>
  <label for="" >Age: </label> <strong>{{$score->age}} ans</strong>
  <br>
  <label for="" >Adresse:  </label><strong>{{$score->adresse}}</strong>
  <br>
- <label for="" >Sex:  </label><strong>{{$score->sex}}</strong>
+ <label for="" >Sexe:  </label><strong>{{$score->sex}}</strong>
  <br>
  <label for="" >Prix: </label><strong>{{$score->prix}} DA</strong>
  <br>
  <label for="" >Revenu Postulant: </label> <strong>{{$score->revenu_postulant}}</strong>
 
  <br>
- <label for="" >Dure de credit:</label> <strong>{{$dure}} ans</strong>
+ <label for="" >Durée de crédit:</label> <strong>{{$dure}} ans</strong>
 
  <br>
  <label for="" >Montant Apport:</label> <strong>{{$montant_apport}} DA</strong>

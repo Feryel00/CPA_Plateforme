@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestion des employes</title>
+  <title>Gestion des employées</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css' />
   <link rel='stylesheet'
     href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css' />
@@ -49,9 +49,9 @@
                 <x-jet-label for="role" style='color:blue' value="{{ __('Role') }}" />
                 <select name="role" x-model="role" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
                     <option value="1">Directeur</option>
-                    <option value="2">Charge Clientele</option>
-                    <option value="3">Charge Caisse</option>
-                    <option value="4">Charge Credit</option>
+                    <option value="2">Chargé Clientèle</option>
+                    <option value="3">Chargé Caisse</option>
+                    <option value="4">Chargé Crédit</option>
                 </select>
             </div>
 
@@ -125,7 +125,7 @@
         </div>
         <div class="modal-footer" id="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="submit" id="edit_employee_btn" class="btn btn-success">Modifier employee</button>
+          <button type="submit" id="edit_employee_btn" class="btn btn-success">Modifier employée</button>
         </div>
       </form>
     </div>
@@ -144,7 +144,7 @@
                 class="bi-plus-circle me-2"></i>Ajouter nouveau employé</button>
           </div>
           <div class="card-body" id="show_all_employees">
-            <h1 class="text-center text-secondary my-5">Loading...</h1>
+            <h1 class="text-center text-secondary my-5">Chargement...</h1>
           </div>
         </div>
       </div>

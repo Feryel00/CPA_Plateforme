@@ -21,7 +21,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add New Employee</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouvel employé</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="my-2">
-            <label for="email">Prenom</label>
+            <label for="email">Prénom</label>
             <input type="text" name="prenom" class="form-control" placeholder="E-mail" required>
           </div>
 
@@ -46,8 +46,8 @@
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" id="add_employee_btn" class="btn btn-primary">Add Employee</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fermer</button>
+          <button type="submit" id="add_employee_btn" class="btn btn-primary">Ajouter un employé</button>
         </div>
       </form>
     </div>
@@ -61,7 +61,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Edittttt Employee</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Modifier l'employé</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data">
@@ -80,15 +80,15 @@
             </div>
           </div>
           <div class="my-2">
-            <label for="prenom">Prenom</label>
+            <label for="prenom">Prénom</label>
             <input type="text" name="prenom" id="prenom" class="form-control" placeholder="E-mail" required>
           </div>
 
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="submit" id="edit_employee_btn" class="btn btn-success">Update Employee</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fermer</button>
+          <button type="submit" id="edit_employee_btn" class="btn btn-success">Mettre à jour l'employé</button>
         </div>
       </form>
     </div>
@@ -102,12 +102,12 @@
       <div class="col-lg-12">
         <div class="card shadow">
           <div class="card-header bg-danger d-flex justify-content-between align-items-center">
-            <h3 class="text-light">Manage Employees</h3>
+            <h3 class="text-light">Gérer les employés</h3>
             <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
-                class="bi-plus-circle me-2"></i>Add New Employee</button>
+                class="bi-plus-circle me-2"></i>Ajouter un nouvel employé</button>
           </div>
           <div class="card-body" id="show_all_employees">
-            <h1 class="text-center text-secondary my-5">Loading...</h1>
+            <h1 class="text-center text-secondary my-5">Chargement...</h1>
           </div>
         </div>
       </div>

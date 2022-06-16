@@ -25,13 +25,13 @@
     <p> <label>Nom   <span class="text-danger"> * </span> </label>
         <input type="text" id="nom" name="nom" placeholder="" onblur="validate(1)"/> </p>
 
-    <p> <label>Prenom   <span class="text-danger"> * </span></label>
+    <p> <label>Prénom   <span class="text-danger"> * </span></label>
     <input type="text" id="prenom" name="prenom" placeholder="" onblur="validate(1)"/> </p>
 
     <p> <label>Adresse <span class="text-danger"> * </span> </label>
           <input type="text" id="nom" name="nom" placeholder="" onblur="validate(3)"/> </p>
 
-    <p> <label>Sex <span class="text-danger"> * </span> </label>
+    <p> <label>Sexe <span class="text-danger"> * </span> </label>
           <input type="text" id="prenom" name="prenom" placeholder="" onblur="validate(4)"/> </p>
 
 
@@ -56,7 +56,7 @@
 
     <p> <label>P/Mensualite</label>  <input type="text"name="passport_numero" />
         <label>ORIGINE APPORT PERSONNEL</label>     <input type="date" name="validite_pss"/>  </p>
-    <p> <label>Duree Credit </label>     <input type="text" name="delivre_a"/>
+    <p> <label>Durée Crédit </label>     <input type="text" name="delivre_a"/>
         <label>Apport PERSONNEL </label>     <input type="text" name="le_pass"/> </p>
 
 </br>

@@ -42,21 +42,21 @@
 
     <h3>Identification</h3>
     <label for="" >Nom de client </label> <label for=""><strong>Bouchachia</strong></label>   </div>
- <label for="" >Prenom de client</label> <strong>{{$client->prenom}}</strong>
+ <label for="" >Prénom de client</label> <strong>{{$client->prenom}}</strong>
  <br>
 
- <label for="" >Numero de téléphone </label> <strong>{{$client->numero_tel}} </strong>
+ <label for="" >Numéro de téléphone </label> <strong>{{$client->numero_tel}} </strong>
  <br>
  <label for="" >Type de client </label><strong>{{$client->type}}</strong>
  <br>
- <label for="" >Numero de passport  </label><strong>{{$client->passport_numero}}</strong>
+ <label for="" >Numéro de passport  </label><strong>{{$client->passport_numero}}</strong>
 
  <br>
  <h3>Titulaire</h3>
  <label for="" >Date de naissance </label><strong>{{$client->date_de_naissance_titulaire}}</strong>
 
  <br>
- <label for="" >Departement de naissance  </label><strong>Tlemcen</strong>
+ <label for="" >Département de naissance  </label><strong>Tlemcen</strong>
  <br>
  <label for="" >Profession  </label><strong>{{$client->profession}}</strong>
  <br>
@@ -67,11 +67,11 @@
  <h3>Conjoint</h3>
  <label for="" >Nom de conjoint </label><strong>{{$client->nom_de_conjoint}}</strong>
  <br>
- <label for="" >Prenom de conjoint </label><strong>{{$client->prenom_de_conjoint}}</strong>
+ <label for="" >Prénom de conjoint </label><strong>{{$client->prenom_de_conjoint}}</strong>
  <br>
  <label for="" >Date de naissance  Conjoint  </label><strong>{{$client->date_de_naissance_conjoint}}</strong>
  <br>
- <label for="" >Sex conjoint  </label><strong>{{$client->sexe_conjoint}}</strong>
+ <label for="" >Sexe conjoint  </label><strong>{{$client->sexe_conjoint}}</strong>
  <br>
  <label for="" >Profession conjoint  </label><strong>{{$client->profession_conjoint}}</strong>
  <br>

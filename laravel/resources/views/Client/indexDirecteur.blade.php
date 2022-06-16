@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRUD App Laravel 8 & Ajax</title>
+  <title>L'ajout d'un client</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css' />
   <link rel='stylesheet'
     href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css' />
@@ -42,7 +42,7 @@
               <input type="text" name="tname" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="tprenom" style='color:blue'>Prenom</label>
+              <label for="tprenom" style='color:blue'>Prénom</label>
               <input type="text" name="tprenom" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
@@ -70,7 +70,7 @@
               <input type="text" name="tdep_nais" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="tsex" style='color:blue'>Sex</label>
+              <label for="tsex" style='color:blue'>Sexe</label>
               <input type="text" name="tsex" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
@@ -82,7 +82,7 @@
               <input type="text" name="trevenu" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="tsituation" style='color:blue'>Situation familaile</label>
+              <label for="tsituation" style='color:blue'>Situation familiale</label>
               <input type="text" name="tsituation" class="form-control" placeholder="Last Name" required>
             </div>
             <span class="previous button">Précédent</span>
@@ -95,7 +95,7 @@
               <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="lprenom" style='color:blue'>Prenom</label>
+              <label for="lprenom" style='color:blue'>Prénom</label>
               <input type="text" name="lprenom" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
@@ -103,7 +103,7 @@
               <input type="date" name="ldate_nais" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="lsex" style='color:blue'>Sex</label>
+              <label for="lsex" style='color:blue'>Sexe</label>
               <input type="text" name="lsex" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
@@ -115,7 +115,7 @@
               <input type="text" name="lrevenu" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="lsituation" style='color:blue'>Situation familaile</label>
+              <label for="lsituation" style='color:blue'>Situation familiale</label>
               <input type="text" name="lsituation" class="form-control" placeholder="Last Name" required>
             </div>
             <span class="previous button">Précédent</span>
@@ -167,7 +167,7 @@
       <input type="text" name="tname" id="tname" class="form-control" placeholder="First Name" required>
     </div>
     <div class="col-lg">
-      <label for="tprenom" style='color:blue'>Prenom</label>
+      <label for="tprenom" style='color:blue'>Prénom</label>
       <input type="text" name="tprenom" id="tprenom" class="form-control" placeholder="Last Name" required>
     </div>
     <div class="col-lg">
@@ -195,7 +195,7 @@
       <input type="text" name="tdep_nais" id="tdep_nais" class="form-control" placeholder="Last Name" required>
     </div>
     <div class="col-lg">
-      <label for="tsex" style='color:blue'>Sex</label>
+      <label for="tsex" style='color:blue'>Sexe</label>
       <input type="text" name="tsex" id="tsex" class="form-control" placeholder="Last Name" required>
     </div>
     <div class="col-lg">
@@ -207,7 +207,7 @@
       <input type="text" name="trevenu" id="trevenu"  class="form-control" placeholder="Last Name" required>
     </div>
     <div class="col-lg">
-      <label for="tsituation" style='color:blue'>Situation familaile</label>
+      <label for="tsituation" style='color:blue'>Situation familiale</label>
       <input type="text" name="tsituation" id="tsituation" class="form-control" placeholder="Last Name" required>
     </div>
     <span class="previous button">Précédent</span>
@@ -220,7 +220,7 @@
       <input type="date" name="lname" id="lname" class="form-control" placeholder="Last Name" required>
     </div>
     <div class="col-lg">
-      <label for="lprenom" style='color:blue'>Prenom</label>
+      <label for="lprenom" style='color:blue'>Prénom</label>
       <input type="text" name="lprenom" id="lprenom" class="form-control" placeholder="Last Name" required>
     </div>
     <div class="col-lg">
@@ -228,7 +228,7 @@
       <input type="date" name="ldate_nais" id="ldate_nais" class="form-control" placeholder="Last Name" required>
     </div>
     <div class="col-lg">
-      <label for="lsex" style='color:blue'>Sex</label>
+      <label for="lsex" style='color:blue'>Sexe</label>
       <input type="text" name="lsex" id="lsex" class="form-control" placeholder="Last Name" required>
     </div>
     <div class="col-lg">
@@ -240,7 +240,7 @@
       <input type="text" name="lrevenu" class="form-control" placeholder="Last Name" required>
     </div>
     <div class="col-lg">
-      <label for="lsituation" style='color:blue'>Situation familaile</label>
+      <label for="lsituation" style='color:blue'>Situation familiale</label>
       <input type="text" name="lsituation" class="form-control" placeholder="Last Name" required>
     </div>
     <span class="previous button">Précédent</span>

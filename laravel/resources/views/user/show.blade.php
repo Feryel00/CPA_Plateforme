@@ -64,7 +64,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
     </table>
 
-  <div class="container1" style="background-color:#3498DB">
+  <div class="container1" style="background-color:#D6EAF8">
 
 
 

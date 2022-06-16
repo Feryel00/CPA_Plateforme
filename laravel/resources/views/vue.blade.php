@@ -47,7 +47,7 @@ function horloge(el) {
     <li>Titulaire</li>
     <li>Conjoint</li>
     <li>Services Annexes</li>
-    <li>Memo</li>
+    <li>Mémo</li>
   </ul>
   <!-- fieldsets -->
   <fieldset>
@@ -69,7 +69,7 @@ function horloge(el) {
 
     <p> <label>Prénom: <span class="text-danger"> * </span> </label>
           <input type="text" id="prenom" name="prenom" placeholder="" onblur="validate(4)"/> </p>
-          <button  type='submit' > Submit</button>
+          <button  type='submit' > Soumettre</button>
 
 
 </form>

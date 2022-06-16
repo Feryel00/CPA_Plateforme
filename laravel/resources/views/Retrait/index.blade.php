@@ -19,7 +19,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Retérer</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Retirer</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#"  id="add_employee_form" enctype="multipart/form-data">
@@ -30,7 +30,7 @@
     <div class="form-group">
          <label for="cNom_client" style="color:blue">Compte ID</label>
          <input type="text" name='q' class="form-control" style='color:blue'>
-         <label for="cNom_client" style="color:blue">Montant retéré</label>
+         <label for="cNom_client" style="color:blue">Montant retiré</label>
          <input type="text" name='fmontant' class="form-control" style='color:blue'>
     </div>
 
@@ -69,7 +69,7 @@
               <input type="text" name="cNom_client" id="cNom_client" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="cPrenom_client" style="color:blue">Prenom client</label>
+              <label for="cPrenom_client" style="color:blue">Prénom client</label>
               <input type="text" name="cPrenom_client" id="cPrenom_client" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
@@ -105,7 +105,7 @@
           <div class="card-header  d-flex justify-content-between align-items-center" style='background-color:blue'>
             <h3 class="text-light "style='background-color:blue'>Gestion des retraits</h3>
             <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
-                class="bi-plus-circle me-2"></i>Retérer</button>
+                class="bi-plus-circle me-2"></i>Retirer</button>
           </div>
           <div>
 

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="card">
-                <h5>File Upload</h5>
+                <h5>Téléchargement de fichiers</h5>
 <div class="card-body">
 <form action="{{route('uploadfile')}}" method="post" enctype="multipart/form-data">
     @csrf
@@ -10,8 +10,8 @@
         <input type="file" name="file" >
         <input type="text" name="fdescription" >Description
     </div>
-    <button type="submit">Upload</button>
-    <a href="{{route('viewfile')}}">Back</a>
+    <button type="submit">Télécharger</button>
+    <a href="{{route('viewfile')}}">Retour</a>
 </form>
 </div>
 </div>
