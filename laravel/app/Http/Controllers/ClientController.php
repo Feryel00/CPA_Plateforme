@@ -123,9 +123,41 @@ class ClientController extends Controller
 		$emp = Client::find($request->emp_id);
 
 
-		$empData = ['nom' => $request->fname,
-                    'prenom' => $request->lname,
-                    'compte_id' => $request->lcompte_id];
+		 $empData = [
+            // 'nom' => $request->fname,
+        //             'prenom' => $request->lname,
+        //             'numero_tel' => $request->lcompte_id,
+        //             'type' => $request->,
+        //             'passport_numero' => $request->,
+        //             'date_de_naissance_titulaire' => $request->,
+        //             'departement_de_naissance' => $request->,
+        //             'profession' => $request->,
+        //             'revenus' => $request->,
+        //             'situation_famille' => $request->,
+        //             'nom_de_conjoint' => $request->,
+        //             'prenom_de_conjoint' => $request->,
+        //             'date_de_naissance_conjoint' => $request->,
+        'nom' => $request->tname,
+        'prenom' => $request->tprenom,
+        'numero_tel' => $request->tnum_id,
+        'type' => $request->ttype,
+        'nom' => $request->tpass_port,
+        'passport_numero' => $request->tdate_nais,
+        'date_de_naissance_titulaire' => $request->tdep_nais,
+        'departement_de_naissance' => $request->tsex,
+        'profession' => $request->tprofession,
+        'revenus' => $request->trevenu,
+        'situation_famille' => $request->tsituation,
+        'nom_de_conjoint' => $request->lname,
+        'prenom_de_conjoint' => $request->lprenom,
+        'date_de_naissance_conjoint' => $request->ldate_nais,
+        'sexe_conjoint' => $request->lsex,
+        'profession_conjoint' => $request->lprofession,
+        'revenus_conjoint' => $request->lrevenu,
+        'situation_famille_conjoint' => $request->lsituation
+    ];
+        //             'sexe_conjoint' => $request->,
+
 
 		$emp->update($empData);
 		return response()->json([

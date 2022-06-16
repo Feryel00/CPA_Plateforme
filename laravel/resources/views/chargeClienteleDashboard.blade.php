@@ -45,13 +45,10 @@ Charge Clientele
       </a>
     </li>
     <li>
-<<<<<<< HEAD
-      <a href="{{route('compte.index')}}" >
-           <i class="zmdi zmdi-book"></i> <span>Documents du service</span>
-=======
+
     <a href="file" >
            <i class="zmdi zmdi-book"></i> <span>Documents du services</span>
->>>>>>> b28c09eef4c7f3b01e56d383f0859ee4dc5dbf31
+
 
 </a>
 
