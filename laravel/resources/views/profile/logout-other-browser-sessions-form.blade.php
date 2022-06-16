@@ -4,7 +4,7 @@
     </x-slot>
 
     <x-slot name="description">
-        {{ __('Gérez et déconnectez-vous de vos sessions actives sur d'autres navigateurs et appareils.') }}
+        {{ __('Gérez et déconnectez-vous de vos sessions actives sur d\'autres navigateurs et appareils.') }}
     </x-slot>
 
     <x-slot name="content">

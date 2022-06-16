@@ -28,11 +28,11 @@
     <thead class="thead-dark">
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Title</th>
+        <th scope="col">Titre</th>
         <th scope="col">Description</th>
-        <th scope="col">Show</th>
-        <th scope="col">Edit</th>
-        <th scope="col">Delete</th>
+        <th scope="col">Voir</th>
+        <th scope="col">Modifier</th>
+        <th scope="col">Supprimer</th>
 
       </tr>
     </thead>
@@ -42,9 +42,9 @@
         <th scope="row">{{ $post->id }}</th>
         <td>{{$post->title  }}</td>
         <td>{{$post->body  }}</td>
-        <td><a href="singlepost/{{  $post->id  }}" class="btn btn-success"> View</a></td>
-        <td><a href="editepost/{{  $post->id  }}" class="btn btn-info"> Edit</a></td>
-        <td><a href="deletepost/{{  $post->id  }}" class="btn btn-danger"> Delete</a></td>
+        <td><a href="singlepost/{{  $post->id  }}" class="btn btn-success"> Voir</a></td>
+        <td><a href="editepost/{{  $post->id  }}" class="btn btn-info">Modifier</a></td>
+        <td><a href="deletepost/{{  $post->id  }}" class="btn btn-danger"> Supprimer</a></td>
       </tr>
       @endforeach
     </tbody>
