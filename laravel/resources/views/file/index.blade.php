@@ -45,8 +45,8 @@
     <div class="row my-5">
       <div class="col-lg-12">
         <div class="card shadow position" id="pos">
-          <div class="card-header  d-flex justify-content-between align-items-center" style='background-color:blue'>
-            <h3 class="text-light "style='background-color:blue'>Documents </h3>
+          <div class="card-header  d-flex justify-content-between align-items-center bg-b" >
+            <h3 class="text-light ">Documents </h3>
             <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
                 class="bi-plus-circle me-2"></i>Ajouter Fichier</button>
           </div>

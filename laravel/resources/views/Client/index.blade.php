@@ -22,8 +22,8 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouveau client</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="exampleModalLabel" style="color:white">Ajouter un nouveau client</h5>
+        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data" class='msform'>
         @csrf
@@ -38,7 +38,7 @@
     <!-- <li>Memo</li> -->
   </ul>
   <fieldset >
-    <h2 class="fs-title">Identification</h2><br>
+    <h2 class="fs-title"><b>Identification</b></h2><br>
             <div class="col-lg">
               <label for="tname" style='color:blue'>Nom</label>
               <input type="text" name="tname" class="form-control" placeholder="First Name" required>
@@ -52,17 +52,22 @@
               <input type="date" name="tnum_id" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="ttype" style='color:blue'>Type</label>
-              <input type="text" name="ttype" class="form-control" placeholder="Last Name" required>
+            <label for="ttype" style='color:blue'>Type</label>
+            <select id="ttype" name="ttype" placeholder="" onblur="validate(2)">
+            <option value="Agence1" selected="">Physique  </option>
+            <option value="Agence2" selected="selected">Morale </option>
+            <option value="Agence3" selected="">Salarié</option>
+          </select>
+              <!-- <input type="text" name="ttype" class="form-control" placeholder="Last Name" required> -->
             </div>
             <div class="col-lg">
-              <label for="tpass_port" style='color:blue'>Passport numéro</label>
+              <label for="tpass_port" style='color:blue'>Numéro d'ID</label>
               <input type="text" name="tpass_port" class="form-control" placeholder="Last Name" required>
             </div>
             <span class="next button">Suivant</span>
 </fieldset>
 <fieldset>
-<h2 class="fs-title">Titulaire</h2><br>
+<h2 class="fs-title"><b>Titulaire </b></h2><br>
             <div class="col-lg">
               <label for="tdate_nais" style='color:blue'>Date de naissance</label>
               <input type="date" name="tdate_nais" class="form-control" placeholder="Last Name" required>
@@ -91,7 +96,7 @@
     <span class="next button">Suivant</span>
 </fieldset>
 <fieldset>
-<h2 class="fs-title">Conjoint</h2><br>
+<h2 class="fs-title"><b>Conjoint </b></h2><br>
             <div class="col-lg">
               <label for="lname" style='color:blue'>Nom</label>
               <input type="date" name="lname" class="form-control" placeholder="Last Name" required>
@@ -189,8 +194,8 @@
     <div class="row my-5">
       <div class="col-lg-12">
         <div class="card shadow position" id="pos">
-          <div class="card-header  d-flex justify-content-between align-items-center" style='background-color:blue'>
-            <h3 class="text-light "style='background-color:blue'>Gestion des clients</h3>
+          <div class="card-header  d-flex justify-content-between align-items-center bg-b" >
+            <h3 class="text-light ">Gestion des clients</h3>
             <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
                 class="bi-plus-circle me-2"></i>Ajouter nouveau client</button>
           </div>
@@ -299,7 +304,7 @@
         let id = $(this).attr('id');
         let csrf = '{{ csrf_token() }}';
         Swal.fire({
-          title: 'Vous êtes sûre?',
+          title: 'Etes vous sûr?',
           text: "Vous ne pourrez pas revenir en arrière !",
           icon: 'warning',
           showCancelButton: true,

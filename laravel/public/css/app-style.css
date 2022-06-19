@@ -101,7 +101,7 @@ select option {
 .h3, h3 {
 	font-size: 30px;
     line-height: 34px;
-    
+
 }
 .h4, h4 {
 	font-size: 24px;
@@ -287,7 +287,9 @@ hr {
 }
 
 #sidebar-wrapper {
-  background-color: rgba(0,0,0,.2);
+  /* background-color: rgba(0,0,0,.2); */
+  background-color: rgb(3, 0, 42);
+  /* background-color:rgb(0,0,55); */
   position: fixed;
   top: -20px;
   left: 0px;
@@ -524,9 +526,9 @@ body.bg-theme7 {
   background-image: linear-gradient(45deg, #0c675e, #069e90);
 }
 body.bg-theme8 {
-  /* background-image: linear-gradient(567deg, rgba(165, 42, 4, 0.89), rgba(113, 102, 8, 0.89), rgba(13, 95, 16, 0.93), rgba(4, 79, 88, 0.94), rgba(19, 56, 86, 0.9), rgba(24, 32, 78, 0.94), rgba(100, 8, 115, 0.95)); */
+   /* background-image: linear-gradient(567deg, rgba(165, 42, 4, 0.89), rgba(113, 102, 8, 0.89), rgba(13, 95, 16, 0.93), rgba(4, 79, 88, 0.94), rgba(19, 56, 86, 0.9), rgba(24, 32, 78, 0.94), rgba(100, 8, 115, 0.95)); */
   background-image: linear-gradient(587deg,rgba(30, 14, 250, 0.4), rgba(62, 167, 247, 0.9), rgba(145, 223, 244, 0.93), rgba(116, 172, 250, 0.94), rgba(231, 245, 169, 0.94), rgba(220, 247, 10, 0.95));
-
+  /* background-image: linear-gradient(45deg, #d3ce3a, rgb(18 3 54 / 89%), rgb(37 4 110 / 89%), rgb(229 243 123)); */
 }
 body.bg-theme9 {
   background-image: linear-gradient(45deg, #29323c, #485563);
@@ -782,13 +784,15 @@ body.bg-theme15 {
 .card-header {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
-    background: transparent;
+   
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     font-weight: 600;
 	 font-size: 14px;
 	 color: #ffffff;
 }
-
+.bg-b{
+    background: rgb(3,0,43)!important;
+}
 .card-title {
 	margin-bottom: .75rem;
 	font-weight: 600;
@@ -3685,18 +3689,22 @@ table.grid td {
     /* color:red; */
 }
 #modal-content {
-    background-image:linear-gradient(45deg, #fff707, rgb(18 3 54 / 89%), rgb(95 48 201 / 89%), rgb(234 255 76 / 89%));
-
+    /* background-image:linear-gradient(45deg, #fff707, rgb(18 3 54 / 89%), rgb(95 48 201 / 89%), rgb(234 255 76 / 89%)); */
+    background-image:linear-gradient(to top right,rgb(236, 243, 115),rgb(121, 172, 234));
     color:white;
     width:850px;
 }
 #modal-footer{
-    background-image:linear-gradient(45deg, #fff707, rgb(18 3 54 / 89%), rgb(95 48 201 / 89%), rgb(234 255 76 / 89%));
+    /* background-image:linear-gradient(45deg, #fff707, rgb(18 3 54 / 89%), rgb(95 48 201 / 89%), rgb(234 255 76 / 89%)); */
     color:white;
 }
 #form-control{
     color:black;
 }
-.download {
-
+.modal-header {
+    background-color:rgb(3, 0, 43);
+}
+ .modal-footer{
+    /* background-color:rgb(3, 0, 43); */
+    background-color:linear-gradient(to top right,rgb(236, 243, 115),rgb(121, 172, 234));
 }

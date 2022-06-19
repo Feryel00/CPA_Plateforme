@@ -11,7 +11,7 @@
            margin:auto  ;
            padding:20px;
            text-align:20px;
-           background-color:rgb(41 41 243 / 43%);
+           background-color:rgb(69 151 217 / 69%);
            height:100%;
            width:70%;
 
@@ -41,7 +41,7 @@
 
  <label for="" >Prénom:</label> <strong>{{$score->prenom}}</strong>
  <br>
- <label for="" >Age: </label> <strong>{{$score->age}} ans</strong>
+ <label for="" >Age: </label> <strong>34 ans</strong>
  <br>
  <label for="" >Adresse:  </label><strong>{{$score->adresse}}</strong>
  <br>

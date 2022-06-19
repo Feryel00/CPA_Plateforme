@@ -20,7 +20,7 @@ Charge Caisse
 
     <li>
       <a href="/CaisselistClient" >
-           <i class="zmdi zmdi-account-circle"></i> <span>Liste des Clients</span>
+      <i class="zmdi zmdi-accounts"></i> <span>Liste des Clients</span>
       </a>
     </li>
      <!-- <li>
@@ -32,33 +32,38 @@ Charge Caisse
     </li> -->
     <li>
       <a href="/gestion_virement" >
-           <i class="zmdi zmdi-account-circle"></i> <span>Virement</span>
+      <!-- <i class="fa-solid fa-money-bill-transfer"></i>
+      <i class="zmdi zmdi-case-check"></i> -->
+      <i class="zmdi money-bill-transfer"></i>
+      <span>Virement</span>
       </a>
     </li>
 
     <li>
       <a href="/gestion_retrait" >
-           <i class="zmdi zmdi-account-circle"></i> <span>Retrait</span>
+      <i class="zmdi zmdi-money-off"></i> <span>Retrait</span>
       </a>
     </li>
     <li>
       <a href="/gestion_versement" >
-           <i class="zmdi zmdi-account-circle"></i> <span>Versement</span>
+           <i class="zmdi zmdi-money-box"></i>
+           <!-- <i class="zmdi zmdi-money-box"></i> money-bill-transfer -->
+           <span>Versement</span>
       </a>
     </li>
 
 
-<<<<<<< HEAD
+<!-- <<<<<<< HEAD
     <li class="sidebar-header">Étiquettes</li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-coffee text-danger"></i> <span>Important</span></a></li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-chart-donut text-success"></i> <span>Avertissement</span></a></li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li>
 =======
-    <!-- <li class="sidebar-header">LABELS</li>
+     <li class="sidebar-header">LABELS</li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-coffee text-danger"></i> <span>Important</span></a></li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-chart-donut text-success"></i> <span>Warning</span></a></li>
     <li><a href="javaScript:void();"><i class="zmdi zmdi-share text-info"></i> <span>Information</span></a></li> -->
->>>>>>> b28c09eef4c7f3b01e56d383f0859ee4dc5dbf31
+
 
   </ul>
 

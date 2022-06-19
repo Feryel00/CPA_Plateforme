@@ -117,7 +117,8 @@ label
 
 
 .msform fieldset {
-	background: 	linear-gradient(#cff3b7,#fafafa);
+	/* background: 	linear-gradient(#cff3b7,#fafafa); */
+    background-color:white;
 	border: 0 none;
 	border-radius: 3px;
 	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
@@ -182,10 +183,12 @@ label
 }
 /*headings*/
 .fs-title {
-	font-size: 15px;
+	font-size: 25px;
 	text-transform: uppercase;
 	color: #2C3E50;
+    
 	margin-bottom: 10px;
+    font-weight: bold;
 }
 .fs-subtitle {
 	font-weight: normal;
@@ -250,7 +253,7 @@ label
 	padding: 15px 45px;
 	margin: 10px 4px;
 	color: #eee;
-	background: #2f32f3;
+	background: rgb(3,0, 43);
 	font-family: sans-serif;
 	text-transform: uppercase;
 	text-align: center;

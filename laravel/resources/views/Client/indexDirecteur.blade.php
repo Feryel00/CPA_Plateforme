@@ -54,7 +54,7 @@
               <input type="text" name="ttype" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="tpass_port" style='color:blue'>Passport numéro</label>
+              <label for="tpass_port" style='color:blue'>Numéro d'ID</label>
               <input type="text" name="tpass_port" class="form-control" placeholder="Last Name" required>
             </div>
             <span class="next button">Suivant</span>
@@ -146,7 +146,7 @@
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modifier client</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button " class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data" class='msform'>
         @csrf
@@ -179,7 +179,7 @@
       <input type="text" name="ttype" id="ttype" class="form-control" placeholder="Last Name" required>
     </div>
     <div class="col-lg">
-      <label for="tpass_port" style='color:blue'>Passport numéro</label>
+      <label for="tpass_port" style='color:blue'>Numéro d'ID</label>
       <input type="text" name="tpass_port" id="tpass_port" class="form-control" placeholder="Last Name" required>
     </div>
     <span class="next button">Suivant</span>
@@ -268,8 +268,8 @@
     <div class="row my-5">
       <div class="col-lg-12">
         <div class="card shadow position" id="pos">
-          <div class="card-header  d-flex justify-content-between align-items-center" style='background-color:blue'>
-            <h3 class="text-light "style='background-color:blue'>Gestion des clients</h3>
+          <div class="card-header  d-flex justify-content-between align-items-center bg-b" >
+            <h3 class="text-light ">Gestion des clients</h3>
             <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
                 class="bi-plus-circle me-2"></i>Ajouter nouveau client</button>
           </div>

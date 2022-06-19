@@ -20,9 +20,9 @@ use App\http\Controllers\VirementController;
 | contains the "web" middleware group. Now create something great!
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/ct/{id}', function(){
     return view('categorie');
@@ -38,7 +38,7 @@ Route::get('/Acceuil', function(){
     return view('pageAcceuil');
 });
 
-Route::get('/A', function(){
+Route::get('/', function(){
     return view('acceuil');
 });
 

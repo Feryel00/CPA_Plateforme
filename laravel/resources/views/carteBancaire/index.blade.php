@@ -24,7 +24,7 @@ $categories=App\Models\CategoryCarte::all();
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Ajouter une nouvelle carte</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
         @csrf
@@ -63,14 +63,14 @@ $categories=App\Models\CategoryCarte::all();
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Renouvler carte</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button " class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data">
         @csrf
         <input type="hidden" name="emp_id" id="emp_id">
         <input type="hidden" name="emp_avatar" id="emp_avatar">
         <div class="modal-body p-4 bg-light">
-          <div class="row">
+          
             <div class="col-lg">
               <label for="fnum_carte" style="color:blue">Numéro de carte</label>
               <input type="text" name="fnum_carte" id="fnum_carte" class="form-control" placeholder="First Name" required>
@@ -79,7 +79,17 @@ $categories=App\Models\CategoryCarte::all();
               <label for="ldate_expiration" style="color:blue">Date Expiration</label>
               <input type="text" name="ldate_expiration" id="ldate_expiration" class="form-control" placeholder="Last Name" required>
             </div>
-          </div>
+            <div class="col-lg">
+              <label for="lcategory_id" style='color:blue'>ID de catégorie</label>
+              <select id="lcategory_id" name="lcategory_id" placeholder="" onblur="validate(2)">
+            <option value="Agence1" selected="">CIB </option>
+            <option value="Agence2" selected="selected">CIB GOLd </option>
+            <option value="Agence3" selected="">CIB Corporate</option>
+          </select>
+
+              <!-- <input type="text" name="lcategory_id" id="lcategory_id" class="form-control" placeholder="Last Name" required> -->
+            </div>
+          
 
 
           <div class="mt-2" id="avatar">

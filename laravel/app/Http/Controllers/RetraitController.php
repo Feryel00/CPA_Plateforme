@@ -20,12 +20,12 @@ class RetraitController extends Controller
 		$emps = Retrait::all();
 		$output = '';
 		if ($emps->count() > 0) {
-			$output .= '<table class="table table-responsive table-striped table-sm text-center align-middle">
+			$output .= '<table class="table  table-striped table-sm text-center align-middle">
             <thead>
               <tr>
                 <th>ID</th>
                 <th>Montant</th>
-                <th>Compte ID</th>
+                <th>Numéro de compte</th>
                 <th>Date de retrait</th>
                 <th>Action</th>
               </tr>

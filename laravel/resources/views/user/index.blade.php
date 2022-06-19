@@ -21,7 +21,7 @@
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Ajouter un nouveau employé</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button " class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
         @csrf
@@ -100,14 +100,14 @@
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modifier employé</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data">
         @csrf
         <input type="hidden" name="emp_id" id="emp_id">
         <input type="hidden" name="emp_avatar" id="emp_avatar">
         <div class="modal-body p-4 bg-light">
-          <div class="row">
+          
             <div class="col-lg">
               <label for="fname" style="color:blue">Nom</label>
               <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name" required>
@@ -116,7 +116,15 @@
               <label for="lname" style="color:blue">Email</label>
               <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name" required>
             </div>
-          </div>
+            <div class="col-lg">
+            <label for="role" style="color:blue">Role</label>
+            <select name="role" id="role" class="form-control" placeholder="Last Name" required>
+                    <option value="1">Directeur</option>
+                    <option value="2">Chargé Clientèle</option>
+                    <option value="3">Chargé Caisse</option>
+                    <option value="4">Chargé Crédit</option>
+                </select>
+            </div>
 
 
           <div class="mt-2" id="avatar">

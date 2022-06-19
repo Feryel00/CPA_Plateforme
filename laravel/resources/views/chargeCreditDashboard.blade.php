@@ -19,14 +19,14 @@ Charge Credit
 
     <li>
       <a href="/listClient" >
-           <i class="zmdi zmdi-account-circle"></i> <span>Liste des clients</span>
+      <i class="zmdi zmdi-accounts"></i> <span>Liste des clients</span>
 
 
       </a>
     </li>
     <li>
       <a href="/Score" >
-           <i class="zmdi zmdi-account-circle"></i> <span>Fiche de scoring</span>
+           <i class="zmdi zmdi-group"></i> <span>Fiche de scoring</span>
       </a>
     </li>
      <li>

@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="  navbar navbar-expand fixed-top"style='background-color:rgb(0,0,55)'>
+<nav x-data="{ open: false }" class="  navbar navbar-expand fixed-top"style='background-color:rgb(3, 0, 42)'>
 
   <ul class="navbar-nav mr-auto align-items-center">
     <li class="nav-item">

@@ -12791,7 +12791,9 @@ File: app-style
   background-image: url(../flags/1x1/un.svg);
 }
 
-
+.money-bill-transfer::before{
+    content:"\f246";
+}
 
 
 
