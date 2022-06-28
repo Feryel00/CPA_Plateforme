@@ -1,4 +1,4 @@
-@extends('chargeClienteledashboard')
+@extends('chargeCreditdashboard')
 @section('contentDash')
 
 <head>
@@ -19,13 +19,17 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Crer nouveau compte</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Affecter un crédit</h5>
         <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
         @csrf
         <div class="modal-body p-4 bg-light">
 
+        <div class="col-lg">
+              <label for="cClient_id" style='color:blue'>Client_id</label>
+              <input type="text" name="cClient_id" class="form-control" placeholder="Last Name" >
+            </div>
         <div class="col-lg">
               <label for="cNom_client" style='color:blue'>Nom Client</label>
               <input type="text" name="cNom_client" class="form-control" placeholder="First Name" required>
@@ -35,20 +39,19 @@
               <input type="text" name="cPrenom_client" class="form-control" placeholder="First Name" required>
             </div>
 
-            <div class="col-lg">
-              <label for="cSolde" style='color:blue'>Solde</label>
-              <input type="text" name="cSolde" class="form-control" placeholder="First Name" required>
-            </div>
+
             <div class="col-lg">
               <label for="cNum" style='color:blue'>Numero de compte</label>
               <input type="text" name="cNum" class="form-control" placeholder="First Name" required>
-            </div>
+</div>
+<div class="col-lg">
+              <label for="tCredit" style='color:blue'>Type de crédit</label>
+              <select  name="tCredit" placeholder="" onblur="validate(2)">
+            <option value="Immobiliere" selected="">Immobiliere  </option>
 
+          </select>
+</div>
 
-            <div class="col-lg">
-              <label for="cClient_id" style='color:blue'>Client_id</label>
-              <input type="text" name="cClient_id" class="form-control" placeholder="Last Name" >
-            </div>
 
 
 
@@ -56,7 +59,7 @@
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
           <button type="submit" id="add_employee_btn" class="btn btn-primary">
-           Crer  compte</button>
+           Valider</button>
         </div>
       </form>
     </div>
@@ -123,9 +126,9 @@
       <div class="col-lg-12">
         <div class="card shadow position" id="pos">
           <div class="card-header  d-flex justify-content-between align-items-center bg-b" >
-            <h3 class="text-light ">Gestion des comptes</h3>
+            <h3 class="text-light ">Gestion des credits immobiliere</h3>
             <button class="btn btn-light " data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
-                class="bi-plus-circle me-2"></i>Crer nouveau compte</button>
+                class="bi-plus-circle me-2"></i>Affecter un crédit</button>
           </div>
           <div>
 

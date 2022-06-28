@@ -11,6 +11,6 @@ class Retrait extends Model
     protected $fillable = [
         'create_at',
         'montant',
-        'compte_id'
+        'num_compte'
     ];
 }

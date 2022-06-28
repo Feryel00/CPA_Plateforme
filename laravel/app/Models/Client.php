@@ -18,6 +18,7 @@ class Client extends Model
     'passport_numero',
     'date_de_naissance_titulaire',
     'departement_de_naissance',
+    'sex',
     'profession',
     'revenus',
     'situation_famille',
@@ -28,8 +29,6 @@ class Client extends Model
     'profession_conjoint',
     'revenus_conjoint',
     'situation_famille_conjoint',
-    'memo'
-
 ];
     public function compte(){
         return $this->hasOne(Compte::class,'client_id');

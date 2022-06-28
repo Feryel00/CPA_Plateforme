@@ -25,8 +25,8 @@ class VirementController extends Controller
               <tr>
                 <th>ID</th>
                 <th>Montant</th>
-                <th>Compte ID</th>
-                <th>Compte ID Destinataire</th>
+                <th>Numéro de compte</th>
+                <th>Numéro de compte destinataire</th>
                 <th>Date de retrait</th>
                 <th>Action</th>
               </tr>
@@ -38,7 +38,7 @@ class VirementController extends Controller
                 <td>' . $emp->montant . '</td>
                 <td>' . $emp->compte_id . '</td>
                 <td>' . $emp->compte_destinataire_id . '</td>
-                <td>' . $emp->created_at . '</td>
+
                 <td>' . $emp->created_at . '</td>
                 <td>
 
@@ -72,7 +72,7 @@ class VirementController extends Controller
            'montant' => $request->fmontant,
            'compte_id' => $request->q,
            'compte_destinataire_id' => $request->compte_destinataire];
-           Virement::create($empData);
+         //  Virement::create($empData);
             }
          foreach($comptes2 as $compte){
             $compte->solde=$compte->solde-$montant;
@@ -101,28 +101,28 @@ class VirementController extends Controller
         $comptes= Compte::where('id','like',"$cp")->get();
        return view('virement.show',compact('virement','comptes'));
     }
-    public function retrait(Request $request){
+    // public function retrait(Request $request){
 
-         //Page::where('id', $id)->update(array('image' => 'asdasd'));
-         $compte=Compte::where('id',$request->Rclient_id)->get();
-        //$soldes=Compte::where('id',$request->id)->get();
-        dd($compte);
-	}
+    //      //Page::where('id', $id)->update(array('image' => 'asdasd'));
+    //      $compte=Compte::where('id',$request->Rclient_id)->get();
+    //     //$soldes=Compte::where('id',$request->id)->get();
+    //     dd($compte);
+	// }
 
-    public function rechercher(){
-         $q=request()->input('q');
-         $erreur=null;
-         $password='$2y$10$m44hBRYw9xZPXAhAPXzgDeIa2QtDA0wCr.psDEWrHn3jl.ROq77l6';
-         $montant=request()->input('montant');
-         $comptes= Compte::where('id','like',"$q")->get();
-         print($montant);
-         foreach($comptes as $compte)
-                $compte->solde=$compte->solde-$montant;
+    // public function rechercher(){
+    //      $q=request()->input('q');
+    //      $erreur=null;
+    //      $password='$2y$10$m44hBRYw9xZPXAhAPXzgDeIa2QtDA0wCr.psDEWrHn3jl.ROq77l6';
+    //      $montant=request()->input('montant');
+    //      $comptes= Compte::where('id','like',"$q")->get();
+    //      print($montant);
+    //      foreach($comptes as $compte)
+    //             $compte->solde=$compte->solde-$montant;
 
 
-             $empData = ['solde' => $compte->solde];
-             $compte->update($empData);
+    //          $empData = ['solde' => $compte->solde];
+    //          $compte->update($empData);
 
-         return view('resultatRecherche',compact('comptes'));
-    }
+    //      return view('resultatRecherche',compact('comptes'));
+    // }
 }

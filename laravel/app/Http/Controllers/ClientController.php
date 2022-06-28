@@ -28,9 +28,10 @@ class ClientController extends Controller
                 <th>Prenom</th>
                 <th>Numero Tel</th>
                 <th>type</th>
-                <th>Numero de passport</th>
+                <th>Numero d\'ID</th>
                 <th>Date naissance</th>
                 <th>Département naissance</th>
+                <th>Sex</th>
                 <th>Profession</th>
                 <th>Revenus</th>
                 <th>Situation familiale</th>
@@ -56,6 +57,7 @@ class ClientController extends Controller
                 <td>' . $emp->passport_numero . '</td>
                 <td>' . $emp->date_de_naissance_titulaire . '</td>
                 <td>' . $emp->departement_de_naissance . '</td>
+                <td>' . $emp->sex . '</td>
                 <td>' . $emp->profession . '</td>
                 <td>' . $emp->revenus . '</td>
                 <td>' . $emp->situation_famille . '</td>
@@ -90,10 +92,10 @@ class ClientController extends Controller
          'prenom' => $request->tprenom,
          'numero_tel' => $request->tnum_id,
          'type' => $request->ttype,
-         'nom' => $request->tpass_port,
-         'passport_numero' => $request->tdate_nais,
-         'date_de_naissance_titulaire' => $request->tdep_nais,
-         'departement_de_naissance' => $request->tsex,
+         'passport_numero' => $request->tpass_port,
+         'date_de_naissance_titulaire' => $request->tdate_nais,
+         'departement_de_naissance' => $request->tdep_nais,
+         'sex'=>$request->tsex,
          'profession' => $request->tprofession,
          'revenus' => $request->trevenu,
          'situation_famille' => $request->tsituation,
@@ -104,7 +106,8 @@ class ClientController extends Controller
          'profession_conjoint' => $request->lprofession,
          'revenus_conjoint' => $request->lrevenu,
          'situation_famille_conjoint' => $request->lsituation];
-		Client::create($empData);
+
+         Client::create($empData);
 		return response()->json([
 			'status' => 200,
 		]);
@@ -118,33 +121,21 @@ class ClientController extends Controller
 	}
 
 	// handle update an employee ajax request
+
 	public function update(Request $request) {
 		$fileName = '';
 		$emp = Client::find($request->emp_id);
 
 
 		 $empData = [
-            // 'nom' => $request->fname,
-        //             'prenom' => $request->lname,
-        //             'numero_tel' => $request->lcompte_id,
-        //             'type' => $request->,
-        //             'passport_numero' => $request->,
-        //             'date_de_naissance_titulaire' => $request->,
-        //             'departement_de_naissance' => $request->,
-        //             'profession' => $request->,
-        //             'revenus' => $request->,
-        //             'situation_famille' => $request->,
-        //             'nom_de_conjoint' => $request->,
-        //             'prenom_de_conjoint' => $request->,
-        //             'date_de_naissance_conjoint' => $request->,
         'nom' => $request->tname,
         'prenom' => $request->tprenom,
         'numero_tel' => $request->tnum_id,
         'type' => $request->ttype,
-        'nom' => $request->tpass_port,
-        'passport_numero' => $request->tdate_nais,
-        'date_de_naissance_titulaire' => $request->tdep_nais,
-        'departement_de_naissance' => $request->tsex,
+        'passport_numero' => $request->tpass_port,
+        'date_de_naissance_titulaire' => $request->tdate_nais,
+        'departement_de_naissance' => $request->tdep_nais,
+        'sex'=>$request->tsex,
         'profession' => $request->tprofession,
         'revenus' => $request->trevenu,
         'situation_famille' => $request->tsituation,
@@ -154,24 +145,21 @@ class ClientController extends Controller
         'sexe_conjoint' => $request->lsex,
         'profession_conjoint' => $request->lprofession,
         'revenus_conjoint' => $request->lrevenu,
-        'situation_famille_conjoint' => $request->lsituation
-    ];
-        //             'sexe_conjoint' => $request->,
-
+        'situation_famille_conjoint' => $request->lsituation ];
 
 		$emp->update($empData);
-		return response()->json([
-			'status' => 200,
-		]);
+		 return response()->json([
+		 	'status' => 200,
+		 ]);
 	}
 
 	// handle delete an employee ajax request
 	public function delete(Request $request) {
 		$id = $request->id;
 		$emp = Client::find($id);
-		//if (Storage::delete('public/images/' . $emp->avatar)) {
+
 			Client::destroy($id);
-		//}
+
 	}
 
     public function show($id){

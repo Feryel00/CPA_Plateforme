@@ -26,7 +26,22 @@ class listClientController extends Controller
 
                 <th>Nom</th>
                 <th>Prenom</th>
-                <th>Compte_id</th>
+                <th>Numero Tel</th>
+                <th>type</th>
+                <th>Numero d\'ID</th>
+                <th>Date naissance</th>
+                <th>Département naissance</th>
+                <th>Sex</th>
+                <th>Profession</th>
+                <th>Revenus</th>
+                <th>Situation familiale</th>
+                <th>Nom Conjoint</th>
+                <th>Prenom_conjoint</th>
+                <th>Date de naissance </th>
+                <th>Sex Conjoint</th>
+                <th>Profession Conjoint</th>
+                <th>Revenu conjoint</th>
+                <th>Situation familaile </th>
                 <th>Action</th>
               </tr>
             </thead>
@@ -37,10 +52,25 @@ class listClientController extends Controller
 
                 <td>' . $emp->nom . '</td>
                 <td>' . $emp->prenom . '</td>
-                <td>' . $emp->compte_id . '</td>
+                <td>' . $emp->numero_tel . '</td>
+                <td>' . $emp->type . '</td>
+                <td>' . $emp->passport_numero . '</td>
+                <td>' . $emp->date_de_naissance_titulaire . '</td>
+                <td>' . $emp->departement_de_naissance . '</td>
+                <td>' . $emp->sex . '</td>
+                <td>' . $emp->profession . '</td>
+                <td>' . $emp->revenus . '</td>
+                <td>' . $emp->situation_famille . '</td>
+                <td>' . $emp->nom_de_conjoint . '</td>
+                <td>' . $emp->prenom_de_conjoint . '</td>
+                <td>' . $emp->date_de_naissance_conjoint . '</td>
+                <td>' . $emp->sexe_conjoint . '</td>
+                <td>' . $emp->profession_conjoint. '</td>
+                <td>' . $emp->revenus_conjoint. '</td>
+                <td>' . $emp->situation_famille_conjoint . '</td>
+
 
                 <td>
-
                 <a href="/show/'. $emp->id .'"  class=""><i class="bi bi-eye-fill"></i></a>
 
                 </td>

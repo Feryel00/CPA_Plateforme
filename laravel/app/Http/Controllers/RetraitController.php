@@ -24,7 +24,7 @@ class RetraitController extends Controller
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Montant</th>
+                <th>Montant retiré</th>
                 <th>Numéro de compte</th>
                 <th>Date de retrait</th>
                 <th>Action</th>
@@ -35,7 +35,7 @@ class RetraitController extends Controller
 				$output .= '<tr>
                 <td>' . $emp->id . '</td>
                 <td>' . $emp->montant . '</td>
-                <td>' . $emp->compte_id . '</td
+                <td>' . $emp->num_compte . '</td
                 <td>' . $emp->created_at . '</td>
                 <td>' . $emp->created_at . '</td>
                 <td>
@@ -58,7 +58,7 @@ class RetraitController extends Controller
         $q=request()->input('q');
 
          $montant=request()->input('fmontant');
-         $comptes= Compte::where('id','like',"$q")->get();
+         $comptes= Compte::where('num_compte','like',"$q")->get();
          print($montant);
          foreach($comptes as $compte)
                 $compte->solde=$compte->solde-$montant;
@@ -68,7 +68,7 @@ class RetraitController extends Controller
              $compte->update($empData);
 		$empData = [
         'montant' => $request->fmontant,
-        'compte_id' => $request->q];
+        'num_compte' => $request->q];
 		Retrait::create($empData);
 
 		// return response()->json([

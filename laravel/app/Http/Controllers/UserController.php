@@ -19,7 +19,7 @@ class UserController extends Controller
 		$emps = User::all();
 		$output = '';
 		if ($emps->count() > 0) {
-			$output .= '<table class="table table-responsive table-striped table-sm text-center align-middle">
+			$output .= '<table class="table  table-striped table-sm text-center align-middle">
             <thead>
               <tr>
                 <th>ID</th>
@@ -57,7 +57,7 @@ class UserController extends Controller
 	public function storeEm(Request $request) {
 
 		$empData = ['name' => $request->name,
-         'email' => $request->name,
+         'email' => $request->email,
          'password' => $request->password,
          'role' => $request->role];
 
@@ -80,7 +80,9 @@ class UserController extends Controller
 		$emp = User::find($request->emp_id);
 
 
-		$empData = ['name' => $request->fname, 'email' => $request->lname];
+		$empData = ['name' => $request->fname,
+                   'email' => $request->lname,
+                   'role' => $request->role];
 
 		$emp->update($empData);
 		return response()->json([

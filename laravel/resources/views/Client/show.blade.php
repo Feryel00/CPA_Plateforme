@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fiche Scoring</title>
+    <title>Fiche client</title>
+    <link rel="icon" type="image/png" href="{{URL::to('/images/icons/bank-logo.jpg')}}">
+
     <style>
        .card{
            color:black;
@@ -41,7 +43,7 @@
 
 
     <h3>Identification</h3>
-    <label for="" >Nom de client </label> <label for=""><strong>Bouchachia</strong></label>   </div>
+    <label for="" >Nom de client </label> <label for=""><strong>{{$client->nom}}</strong></label>   </div>
  <label for="" >Prénom de client</label> <strong>{{$client->prenom}}</strong>
  <br>
 

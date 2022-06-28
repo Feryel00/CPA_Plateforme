@@ -69,7 +69,7 @@ class ScoreController extends Controller
            'sex' => $request->lsex,
            'prix' => $request->lprix,
            'revenu_postulant' => $request->lrevenu,
-            'age' => 12];
+            'age' => $request->lage ];
            Score::create($empData);
 	 return response()->json([
 			'status' => 200,

@@ -24,6 +24,7 @@
         <button type="button " class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
+      <!-- <form method="POST" action="{{ route('register') }}"> -->
         @csrf
         <div class="modal-body p-4 bg-light">
             <div>
@@ -31,9 +32,14 @@
                 <x-jet-input id="name" style='color:black' class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             </div>
 
-            <div class="mt-4">
+            <!-- <div class="mt-4">
                 <x-jet-label for="email" style='color:blue' value="{{ __('Email') }}" />
                 <x-jet-input id="email" style='color:black' class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+            </div> -->
+
+            <div class="col-lg">
+              <label for="email" style="color:blue">Email</label>
+              <input type="email" name="email" id="email" class="form-control" placeholder="Last Name" required>
             </div>
 
             <div class="mt-4">
@@ -47,11 +53,11 @@
             </div>
             <div class="mt-4">
                 <x-jet-label for="role" style='color:blue' value="{{ __('Role') }}" />
-                <select name="role" x-model="role" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-                    <option value="1">Directeur</option>
-                    <option value="2">Chargé Clientèle</option>
-                    <option value="3">Chargé Caisse</option>
-                    <option value="4">Chargé Crédit</option>
+                <select name="role" x-model="role"  style='color:black' class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                    <option value="Directeur">Directeur</option>
+                    <option value="Charge clientèle">Chargé Clientèle</option>
+                    <option value="Charge Caisse">Chargé Caisse</option>
+                    <option value="Chargé Crédit">Chargé Crédit</option>
                 </select>
             </div>
 
@@ -107,22 +113,22 @@
         <input type="hidden" name="emp_id" id="emp_id">
         <input type="hidden" name="emp_avatar" id="emp_avatar">
         <div class="modal-body p-4 bg-light">
-          
+
             <div class="col-lg">
               <label for="fname" style="color:blue">Nom</label>
               <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
               <label for="lname" style="color:blue">Email</label>
-              <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name" required>
+              <input type="email" name="lname" id="lname" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
             <label for="role" style="color:blue">Role</label>
             <select name="role" id="role" class="form-control" placeholder="Last Name" required>
-                    <option value="1">Directeur</option>
-                    <option value="2">Chargé Clientèle</option>
-                    <option value="3">Chargé Caisse</option>
-                    <option value="4">Chargé Crédit</option>
+                    <option value="Directeur">Directeur</option>
+                    <option value="Chargé clientele">Chargé Clientèle</option>
+                    <option value="Chargé caisse">Chargé Caisse</option>
+                    <option value="Charge Crédit">Chargé Crédit</option>
                 </select>
             </div>
 
@@ -146,8 +152,8 @@
     <div class="row my-5">
       <div class="col-lg-12">
         <div class="card shadow position" id="pos">
-          <div class="card-header  d-flex justify-content-between align-items-center" style='background-color:blue'>
-            <h3 class="text-light "style='background-color:blue'>Gestion des employés</h3>
+          <div class="card-header  d-flex justify-content-between align-items-center bg-b" >
+            <h3 class="text-light ">Gestion des employés</h3>
             <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
                 class="bi-plus-circle me-2"></i>Ajouter nouveau employé</button>
           </div>
@@ -182,8 +188,8 @@
           success: function(response) {
             if (response.status == 200) {
               Swal.fire(
-                'Added!',
-                'Employee Added Successfully!',
+                'Ajouté!',
+                'Employé Ajouté Avec Succès!',
                 'success'
               )
               fetchAllEmployees();
@@ -234,8 +240,8 @@
           success: function(response) {
             if (response.status == 200) {
               Swal.fire(
-                'Updated!',
-                'Employee Updated Successfully!',
+                'Modifié!',
+                'Employé modifié Avec Succès!',
                 'success'
               )
               fetchAllEmployees();
@@ -253,8 +259,8 @@
         let id = $(this).attr('id');
         let csrf = '{{ csrf_token() }}';
         Swal.fire({
-          title: 'Are you sure?',
-          text: "You won't be able to revert this!",
+          title: 'Etes vous sûr?',
+          text: "Vous ne pourrez pas revenir en arrière !",
           icon: 'warning',
           showCancelButton: true,
           confirmButtonColor: '#3085d6',

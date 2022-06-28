@@ -19,8 +19,8 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Retirer</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="exampleModalLabel">Nouveau retrait</h5>
+        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#"  id="add_employee_form" enctype="multipart/form-data">
 
@@ -30,7 +30,7 @@
     <div class="form-group">
          <label for="cNom_client" style="color:blue">Compte ID</label>
          <input type="text" name='q' class="form-control" style='color:blue'>
-         <label for="cNom_client" style="color:blue">Montant retiré</label>
+         <label for="cNom_client" style="color:blue">Montant </label>
          <input type="text" name='fmontant' class="form-control" style='color:blue'>
     </div>
 
@@ -105,7 +105,7 @@
           <div class="card-header  d-flex justify-content-between align-items-center bg-b" >
             <h3 class="text-light ">Gestion des retraits</h3>
             <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
-                class="bi-plus-circle me-2"></i>Retirer</button>
+                class="bi-plus-circle me-2"></i>Nouveau retrait</button>
           </div>
           <div>
 

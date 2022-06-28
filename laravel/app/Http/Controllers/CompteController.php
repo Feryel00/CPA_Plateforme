@@ -26,6 +26,7 @@ class CompteController extends Controller
                 <th>Nom client</th>
                 <th>Prenom client</th>
                 <th>solde</th>
+                <th>Numero de compte</th>
                 <th>client_id</th>
                 <th>Date de creation</th>
                 <th>Action</th>
@@ -39,6 +40,8 @@ class CompteController extends Controller
                 <td>' . $emp->prenom_client . '</td>
 
                 <td>' . $emp->solde . '</td>
+
+                <td>' . $emp->num_compte . '</td>
                 <td>' . $emp->client_id . '</td>
                 <td>' . $emp->created_at . '</td>
 
@@ -64,8 +67,8 @@ class CompteController extends Controller
         'nom_client' => $request->cNom_client,
         'prenom_client' => $request->cPrenom_client,
         'solde' => $request->cSolde,
-
-         'client_id' => $request->cClient_id];
+        'num_compte' => $request->cNum,
+        'client_id' => $request->cClient_id];
 		Compte::create($empData);
 		return response()->json([
 			'status' => 200,
@@ -88,7 +91,8 @@ class CompteController extends Controller
 		$empData = ['solde' => $request->cSolde,
                     'nom_client' => $request->cNom_client,
                     'prenom_client' => $request->cPrenom_client,
-                     'client_id' => $request->cClient_id];
+                    'num_compte' => $request->cNum,
+                    'client_id' => $request->cClient_id];
 
 		$emp->update($empData);
 		return response()->json([

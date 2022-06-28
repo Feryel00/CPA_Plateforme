@@ -6,15 +6,20 @@ use Illuminate\Http\Request;
 
 use App\Models\Carte;
 use App\Models\CategoryCarte;
-
+use App\Models\Client;
+use Illuminate\Support\Facades\DB;
 
 class CarteController extends Controller
 {
     //
     public function viewCategory(Request $request){
-        $categories= CategoryCarte::where('is_online',1)->get();
+        // $carte=Carte::find($id);
+         $categories= CategoryCarte::where('is_online',1)->get();
         //dd($categories);
-        $cartes=Carte::where('category_id',$request->id)->get();
+
+         $cartes=Carte::where('category_id',$request->id)->get();
+        // $num=$cartes->num_carte;
+     //   $clients= Client::where('passport_numero','like',"$num")->get();
         //dd($cartes);
         return view('categorie',compact('categories','cartes'));
     }
@@ -49,7 +54,7 @@ class CarteController extends Controller
                 <td>
                 <a href="#" id="' . $emp->id . '" class="text-success mx-1 editIcon" data-bs-toggle="modal" data-bs-target="#editEmployeeModal"><i class="bi-pencil-square  color-green h4"></i></a>
                 <a href="#" id="' . $emp->id . '" class="text-danger mx-1 deleteIcon"><i class="bi-trash color-red h4"></i></a>
-                <a href="/showEm/'. $emp->id .'"  class=""><i class="bi bi-eye-fill"></i></a>
+                <a href="/showCarte/'. $emp->id .'"  class=""><i class="bi bi-eye-fill"></i></a>
 
                 </td>
               </tr>';
@@ -108,9 +113,16 @@ class CarteController extends Controller
 		//}
 	}
 
-    public function showEm($id){
-        $user=User::find($id);
-       return view('user.show',compact('user'));
+    public function showCarte($id){
+        $carte=Carte::find($id);
+
+        $num=$carte->num_carte;
+        $clients= Client::where('passport_numero','like',"$num")->get();
+       // $client= Client::where('nom','like',"nom")->get();
+        //$clients=DB::table('clients')->where('passport_numero', "$num")->get();
+
+       // dd($client);
+       return view('carteBancaire.show',compact('carte','clients'));
     }
 
 	}

@@ -48,15 +48,15 @@
               <input type="text" name="tprenom" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="tnum_id" style='color:blue'>Numéro</label>
-              <input type="date" name="tnum_id" class="form-control" placeholder="Last Name" required>
+              <label for="tnum_id" style='color:blue'>Numéro de téléphone</label>
+              <input type="text" name="tnum_id" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
             <label for="ttype" style='color:blue'>Type</label>
-            <select id="ttype" name="ttype" placeholder="" onblur="validate(2)">
-            <option value="Agence1" selected="">Physique  </option>
-            <option value="Agence2" selected="selected">Morale </option>
-            <option value="Agence3" selected="">Salarié</option>
+            <select  name="ttype" placeholder="" onblur="validate(2)">
+            <option value="Physique" selected="">Physique  </option>
+            <option value="Morale" selected="selected">Morale </option>
+            <option value="Salarié" selected="">Salarié</option>
           </select>
               <!-- <input type="text" name="ttype" class="form-control" placeholder="Last Name" required> -->
             </div>
@@ -77,8 +77,11 @@
               <input type="text" name="tdep_nais" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="tsex" style='color:blue'>Sexe</label>
-              <input type="text" name="tsex" class="form-control" placeholder="Last Name" required>
+              <label for="tsex" style='color:blue'>Sex</label>
+              <select  name="tsex" placeholder="" onblur="validate(2)">
+            <option value="Féminin" selected="">Féminin  </option>
+            <option value="Masculin" selected="selected">Masculin </option>
+          </select>
             </div>
             <div class="col-lg">
               <label for="tprofession" style='color:blue'>Profession</label>
@@ -99,7 +102,7 @@
 <h2 class="fs-title"><b>Conjoint </b></h2><br>
             <div class="col-lg">
               <label for="lname" style='color:blue'>Nom</label>
-              <input type="date" name="lname" class="form-control" placeholder="Last Name" required>
+              <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
               <label for="lprenom" style='color:blue'>Prénom</label>
@@ -107,11 +110,14 @@
             </div>
             <div class="col-lg">
               <label for="ldate_nais" style='color:blue'>Date de naissance</label>
-              <input type="date" name="ldate_nais" class="form-control" placeholder="Last Name" required>
+              <input type="date" name="ldate_nais"  class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
-              <label for="lsex" style='color:blue'>Sexe</label>
-              <input type="text" name="lsex" class="form-control" placeholder="Last Name" required>
+              <label for="lsex" style='color:blue'>Sex</label>
+              <select  name="lsex"  placeholder="" onblur="validate(2)">
+            <option value="Féminin" selected="">Féminin  </option>
+            <option value="Masculin" selected="selected">Masculin </option>
+          </select>
             </div>
             <div class="col-lg">
               <label for="lprofession" style='color:blue'>Profession</label>
@@ -119,11 +125,11 @@
             </div>
             <div class="col-lg">
               <label for="lrevenu" style='color:blue'>Revenu</label>
-              <input type="text" name="lrevenu" class="form-control" placeholder="Last Name" required>
+              <input type="text" name="lrevenu"  class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
               <label for="lsituation" style='color:blue'>Situation familiale</label>
-              <input type="text" name="lsituation" class="form-control" placeholder="Last Name" required>
+              <input type="text" name="lsituation"  class="form-control" placeholder="Last Name" required>
             </div>
             <span class="previous button">Précédent</span>
 
@@ -153,32 +159,120 @@
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modifier client</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data" class='msform'>
+
         @csrf
         <input type="hidden" name="emp_id" id="emp_id">
         <input type="hidden" name="emp_avatar" id="emp_avatar">
-        <div class="modal-body p-4 bg-light">
+        <div class="modal-body p-4 ">
 
-            <!-- <div class="col-lg">
-              <label for="fname" style="color:blue">Nom</label>
-              <input type="text" name="fname" id="fname" class="form-control" placeholder="First Name" required>
+        <ul id="progressbar">
+    <li class="active" >Identification</li>
+    <!-- <li>Informations</li> -->
+    <li>Titulaire</li>
+    <li>Conjoint</li>
+    <!-- <li>Services Annexes</li> -->
+    <!-- <li>Memo</li> -->
+  </ul>
+  <fieldset >
+    <h2 class="fs-title"><b>Identification</b></h2><br>
+            <div class="col-lg">
+              <label for="tname" style='color:blue'>Nom</label>
+              <input type="text" name="tname"  id="tname" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
-              <label for="lname" style="color:blue">Prenm</label>
+              <label for="tprenom" style='color:blue'>Prénom</label>
+              <input type="text" name="tprenom" id="tprenom" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tnum_id" style='color:blue'>Numéro de téléphone</label>
+              <input type="text" name="tnum_id" id="tnum_id" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+            <label for="ttype" style='color:blue'>Type</label>
+            <select  name="ttype"  id="ttype" placeholder="" onblur="validate(2)">
+            <option value="Physique" selected="">Physique  </option>
+            <option value="Morale" selected="selected">Morale </option>
+            <option value="Salarié" selected="">Salarié</option>
+          </select>
+              <!-- <input type="text" name="ttype" class="form-control" placeholder="Last Name" required> -->
+            </div>
+            <div class="col-lg">
+              <label for="tpass_port" style='color:blue'>Numéro d'ID</label>
+              <input type="text" name="tpass_port" id="tpass_port" class="form-control" placeholder="Last Name" required>
+            </div>
+            <span class="next button">Suivant</span>
+</fieldset>
+<fieldset>
+<h2 class="fs-title"><b>Titulaire </b></h2><br>
+            <div class="col-lg">
+              <label for="tdate_nais" style='color:blue'>Date de naissance</label>
+              <input type="date" name="tdate_nais" id="tdate_nais" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tdep_nais" style='color:blue'>Département de naissance</label>
+              <input type="text" name="tdep_nais" id="tdep_nais" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tsex" style='color:blue'>Sex</label>
+              <select  name="tsex"  id="tsex" placeholder="" onblur="validate(2)">
+            <option value="Féminin" selected="">Féminin  </option>
+            <option value="Masculin" selected="selected">Masculin </option>
+          </select>
+            </div>
+            <div class="col-lg">
+              <label for="tprofession" style='color:blue'>Profession</label>
+              <input type="text" name="tprofession" id="tprofession" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="trevenu" style='color:blue'>Revenu</label>
+              <input type="text" name="trevenu" id="trevenu" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="tsituation" style='color:blue'>Situation familiale</label>
+              <input type="text" name="tsituation" id="tsituation" class="form-control" placeholder="Last Name" required>
+            </div>
+            <span class="previous button">Précédent</span>
+    <span class="next button">Suivant</span>
+</fieldset>
+<fieldset>
+<h2 class="fs-title"><b>Conjoint </b></h2><br>
+            <div class="col-lg">
+              <label for="lname" style='color:blue'>Nom</label>
               <input type="text" name="lname" id="lname" class="form-control" placeholder="Last Name" required>
-            </div> -->
-            <!-- <div class="col-lg">
-              <label for="lcompte_id" style="color:blue">compte_id</label>
-              <input type="text" name="lcompte_id" id="lcompte_id" class="form-control" placeholder="Last Name" required>
-            </div> -->
+            </div>
+            <div class="col-lg">
+              <label for="lprenom" style='color:blue'>Prénom</label>
+              <input type="text" name="lprenom"  id="lprenom" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="ldate_nais" style='color:blue'>Date de naissance</label>
+              <input type="date" name="ldate_nais" id="ldate_nais" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="lsex" style='color:blue'>Sex</label>
+              <select  name="lsex" id="lsex"  placeholder="" onblur="validate(2)">
+            <option value="Féminin" selected="">Féminin  </option>
+            <option value="Masculin" selected="selected">Masculin </option>
+          </select>
+            </div>
+            <div class="col-lg">
+              <label for="lprofession" style='color:blue'>Profession</label>
+              <input type="text" name="lprofession"  id="lprofession" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="lrevenu" style='color:blue'>Revenu</label>
+              <input type="text" name="lrevenu" id="lrevenu" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="lsituation" style='color:blue'>Situation familiale</label>
+              <input type="text" name="lsituation" id="lsituation" class="form-control" placeholder="Last Name" required>
+            </div>
+            <span class="previous button">Précédent</span>
 
-
-
-          <div class="mt-2" id="avatar">
-
-          </div>
+</fieldset>
         </div>
         <div class="modal-footer" id="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
@@ -258,11 +352,24 @@
             _token: '{{ csrf_token() }}'
           },
           success: function(response) {
-            $("#fname").val(response.nom);
-            $("#lname").val(response.prenom);
-            // $("#lcompte_id").val(response.compte_id);
-
-
+            $("#tname").val(response.nom);
+            $("#tprenom").val(response.prenom);
+            $("#tnum_id").val(response.numero_tel);
+            $("#ttype").val(response.type);
+            $("#tpass_port").val(response.passport_numero);
+            $("#tdate_nais").val(response.date_de_naissance_titulaire);
+            $("#tdep_nais").val(response.departement_de_naissance);
+            $("#tsex").val(response.sex);
+            $("#tprofession").val(response.profession);
+            $("#trevenu").val(response.revenus);
+            $("#tsituation").val(response.situation_famille);
+            $("#lname").val(response.nom_de_conjoint);
+            $("#lprenom").val(response.prenom_de_conjoint);
+            $("#ldate_nais").val(response.date_de_naissance_conjoint);
+            $("#lsex").val(response.sexe_conjoint);
+            $("#lprofession").val(response.profession_conjoint);
+            $("#lrevenu").val(response.revenus_conjoint);
+            $("#lsituation").val(response.situation_famille_conjoint);
             $("#emp_id").val(response.id);
 
           }
@@ -286,11 +393,12 @@
             if (response.status == 200) {
               Swal.fire(
                 'Modifié!',
-                'Client modifié Avec Succès!',
+                'Client Modifié Avec Succès!',
                 'success'
               )
               fetchAllEmployees();
             }
+
             $("#edit_employee_btn").text('Update Employee');
             $("#edit_employee_form")[0].reset();
             $("#editEmployeeModal").modal('hide');

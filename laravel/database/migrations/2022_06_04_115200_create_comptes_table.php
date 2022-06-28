@@ -18,8 +18,8 @@ class CreateComptesTable extends Migration
             $table->string('nom_client');
             $table->string('prenom_client');
             $table->string('solde');
-
-            $table->foreignId('client_id')->constrained();
+            $table->string('num_compte');
+            $table->foreignId('client_id')->unique()->constrained();
             $table->timestamps();
         });
     }

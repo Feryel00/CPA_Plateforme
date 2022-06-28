@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<link rel="icon" type="image/png" href="{{URL::to('/images/icons/bank-logo.jpg')}}">
 <html>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -42,16 +43,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
         <tr><td><div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Rôle</strong>
-                @if($user->role =='1')
-                <strong> Directeur</strong>
-                @elseif($user->role =='2')
-                <strong> Charge clientele</strong>
-                @elseif($user->role =='3')
-                <strong> Charge caisse</strong>
-                @elseif($user->rôle =='4')
-                <strong> Charge credit</strong>
-                @endif
+                <strong>Rôle :</strong>
+
+                <strong>{{ $user->role }}</strong>
+
+            </div>
+            <div class="form-group">
+                <strong>Date de creation :</strong>
+
+                <strong>{{ $user->created_at }}</strong>
+
             </div>
         </div></td>
 
@@ -64,7 +65,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
     </table>
 
-  <div class="container1" style="background-color:#D6EAF8">
+
 
 
 

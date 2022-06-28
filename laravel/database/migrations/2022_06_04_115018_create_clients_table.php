@@ -20,21 +20,21 @@ class CreateClientsTable extends Migration
             $table->string("prenom");
             $table->string("numero_tel");
             $table->string("type");
-            $table->string("passport_numero");
-            $table->string("date_de_naissance_titulaire");
+            $table->string("passport_numero")->unique();
+            $table->date("date_de_naissance_titulaire");
             $table->string("departement_de_naissance");
+            $table->string("sex");
             $table->string("profession");
             $table->string("revenus");
             $table->string("situation_famille");
             $table->string("nom_de_conjoint")->nullable();
             $table->string("prenom_de_conjoint")->nullable();
-            $table->string("date_de_naissance_conjoint")->nullable();
+            $table->date("date_de_naissance_conjoint")->nullable();
             $table->string("sexe_conjoint")->nullable();
             $table->string("profession_conjoint")->nullable();
             $table->string("revenus_conjoint")->nullable();
             $table->string("situation_famille_conjoint")->nullable();
 
-            $table->string("memo")->nullable();
 
             $table->timestamps();
 

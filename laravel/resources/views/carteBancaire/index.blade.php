@@ -15,7 +15,7 @@ $categories=App\Models\CategoryCarte::all();
   <link rel='stylesheet'
     href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css' />
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.10.25/datatables.min.css" />
-
+  <link rel="stylesheet" href="css/templatemo-chain-app-dev.css">
 </head>
 {{-- add new employee modal start --}}
 <div class="modal fade" id="addEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -36,7 +36,7 @@ $categories=App\Models\CategoryCarte::all();
             </div>
             <div class="col-lg">
               <label for="ldate_expiration" style='color:blue'>Date d'expiration</label>
-              <input type="text" name="ldate_expiration" class="form-control" placeholder="Last Name" required>
+              <input type="date" name="ldate_expiration" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
               <label for="lcategory_id" style='color:blue'>ID de catégorie</label>
@@ -70,26 +70,22 @@ $categories=App\Models\CategoryCarte::all();
         <input type="hidden" name="emp_id" id="emp_id">
         <input type="hidden" name="emp_avatar" id="emp_avatar">
         <div class="modal-body p-4 bg-light">
-          
+
             <div class="col-lg">
               <label for="fnum_carte" style="color:blue">Numéro de carte</label>
               <input type="text" name="fnum_carte" id="fnum_carte" class="form-control" placeholder="First Name" required>
             </div>
             <div class="col-lg">
               <label for="ldate_expiration" style="color:blue">Date Expiration</label>
-              <input type="text" name="ldate_expiration" id="ldate_expiration" class="form-control" placeholder="Last Name" required>
+              <input type="date" name="ldate_expiration" id="ldate_expiration" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
               <label for="lcategory_id" style='color:blue'>ID de catégorie</label>
-              <select id="lcategory_id" name="lcategory_id" placeholder="" onblur="validate(2)">
-            <option value="Agence1" selected="">CIB </option>
-            <option value="Agence2" selected="selected">CIB GOLd </option>
-            <option value="Agence3" selected="">CIB Corporate</option>
-          </select>
 
-              <!-- <input type="text" name="lcategory_id" id="lcategory_id" class="form-control" placeholder="Last Name" required> -->
+
+              <input type="text" name="lcategory_id" id="lcategory_id" class="form-control" placeholder="Last Name" required>
             </div>
-          
+
 
 
           <div class="mt-2" id="avatar">
@@ -111,16 +107,16 @@ $categories=App\Models\CategoryCarte::all();
     <div class="row my-5">
       <div class="col-lg-12">
         <div class="card shadow position" id="pos">
-          <div class="card-header  d-flex justify-content-between align-items-center" style='background-color:blue'>
-            <h3 class="text-light "style='background-color:blue'>Gestion des cartes</h3>
+          <div class="card-header  d-flex justify-content-between align-items-center bg-b" >
+            <h3 class="text-light ">Gestion des cartes</h3>
 
-            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
+            <button class="btn  bg-white" style="color:black" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
                 class="bi-plus-circle me-2"></i>Ajouter une nouvelle carte</button>
           </div>
-          <div class="col-lg-12">
-            <ul>
+          <div class="col-lg-12 ">
+            <ul class="flex" style="justify-content: center;">
         @foreach($categories as $category)
-        <li class="nav-item"> <a href="{{route('viewCategory',['id'=>$category->id])}}">{{$category->name}}</a>
+        <li class="nav-item gradient-button" style="margin:10px;"> <a href="{{route('viewCategory',['id'=>$category->id])}}"> <i class="fa fa-sign-in-alt"></i>{{$category->name}}</a>
             </li>
 @endforeach
 </ul>
@@ -159,8 +155,8 @@ $categories=App\Models\CategoryCarte::all();
           success: function(response) {
             if (response.status == 200) {
               Swal.fire(
-                'Added!',
-                'Employee Added Successfully!',
+                'Creé!',
+                'Carte Creé Avec Succès!',
                 'success'
               )
               fetchAllEmployees();
@@ -186,7 +182,7 @@ $categories=App\Models\CategoryCarte::all();
           success: function(response) {
             $("#fnum_carte").val(response.num_carte);
             $("#ldate_expiration").val(response.date_expiration);
-
+            $("#lcategory_id").val(response.category_id);
 
 
             $("#emp_id").val(response.id);
@@ -211,8 +207,8 @@ $categories=App\Models\CategoryCarte::all();
           success: function(response) {
             if (response.status == 200) {
               Swal.fire(
-                'Updated!',
-                'Employee Updated Successfully!',
+                'Renouvelé!',
+                'Carte Renouvlé Avec Succès!',
                 'success'
               )
               fetchAllEmployees();

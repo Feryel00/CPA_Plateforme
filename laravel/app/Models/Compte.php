@@ -13,7 +13,7 @@ class Compte extends Model
         'nom_client',
         'prenom_client',
         'solde',
-
+        'num_compte',
         'client_id'
 
     ];

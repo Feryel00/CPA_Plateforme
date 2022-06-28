@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fiche Scoring</title>
+    <link rel="icon" type="image/png" href="{{URL::to('/images/icons/bank-logo.jpg')}}">
     <style>
        .card{
            color:black;
@@ -41,7 +42,7 @@
 
  <label for="" >Prénom:</label> <strong>{{$score->prenom}}</strong>
  <br>
- <label for="" >Age: </label> <strong>34 ans</strong>
+ <label for="" >Age: </label> <strong>{{$score->age}}</strong>
  <br>
  <label for="" >Adresse:  </label><strong>{{$score->adresse}}</strong>
  <br>

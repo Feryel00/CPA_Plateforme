@@ -10,17 +10,18 @@ class HomeController extends Controller
     public function index()
     {
         $role=Auth::user()->role;
-        if($role=='1')
+
+        if($role=='Directeur')
         {
             return view('dashboardDirecteur');
         }
-         else if($role=='2'){
+         else if($role=='Chargé clientele'){
              return view('chargeClienteleDashboard');
          }
-         else if($role=='3'){
+         else if($role=='Chargé caisse'){
             return view('chargeCaisseDashboard');
         }
-        else if($role=='4'){
+        else if($role=='Charge Crédit'){
             return view('chargeCreditDashboard');
         }
     }

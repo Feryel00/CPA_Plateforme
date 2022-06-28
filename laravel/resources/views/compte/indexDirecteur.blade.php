@@ -20,7 +20,7 @@
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Crer nouveau compte</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
         @csrf
@@ -39,6 +39,10 @@
               <label for="cSolde" style='color:blue'>Solde</label>
               <input type="text" name="cSolde" class="form-control" placeholder="First Name" required>
             </div>
+            <div class="col-lg">
+              <label for="cNum" style='color:blue'>Numero de compte</label>
+              <input type="text" name="cNum" class="form-control" placeholder="First Name" required>
+            </div>
 
 
             <div class="col-lg">
@@ -51,7 +55,8 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="submit" id="add_employee_btn" class="btn btn-primary">Crer compte</button>
+          <button type="submit" id="add_employee_btn" class="btn btn-primary">
+           Crer  compte</button>
         </div>
       </form>
     </div>
@@ -66,7 +71,7 @@
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modifier compte</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="edit_employee_form" enctype="multipart/form-data">
         @csrf
@@ -85,6 +90,11 @@
             <div class="col-lg">
               <label for="cSolde" style="color:blue">Solde</label>
               <input type="text" name="cSolde" id="cSolde" class="form-control" placeholder="First Name" required>
+            </div>
+
+            <div class="col-lg">
+              <label for="cNum" style='color:blue'>Numero de compte</label>
+              <input type="text" name="cNum" id="cNum" class="form-control" placeholder="First Name" required>
             </div>
 
             <div class="col-lg">
@@ -112,9 +122,9 @@
     <div class="row my-5">
       <div class="col-lg-12">
         <div class="card shadow position" id="pos">
-          <div class="card-header  d-flex justify-content-between align-items-center" style='background-color:blue'>
-            <h3 class="text-light "style='background-color:blue'>Gestion des comptes</h3>
-            <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
+          <div class="card-header  d-flex justify-content-between align-items-center bg-b" >
+            <h3 class="text-light ">Gestion des comptes</h3>
+            <button class="btn btn-light " data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
                 class="bi-plus-circle me-2"></i>Crer nouveau compte</button>
           </div>
           <div>
@@ -179,7 +189,7 @@
             $("#cNom_client").val(response.nom_client);
             $("#cPrenom_client").val(response.prenom_client);
             $("#cSolde").val(response.solde);
-
+            $("#cNum").val(response.num_compte);
             $("#cClient_id").val(response.client_id);
 
 
@@ -206,7 +216,7 @@
             if (response.status == 200) {
               Swal.fire(
                 'Modifié!',
-                'Client modifié Avec Succès!',
+                'Compte modifié Avec Succès!',
                 'success'
               )
               fetchAllEmployees();
@@ -224,7 +234,7 @@
         let id = $(this).attr('id');
         let csrf = '{{ csrf_token() }}';
         Swal.fire({
-          title: 'Vous êtes sûre?',
+          title: 'Etes vous sûr?',
           text: "Vous ne pourrez pas revenir en arrière !",
           icon: 'warning',
           showCancelButton: true,
@@ -244,7 +254,7 @@
                 console.log(response);
                 Swal.fire(
                   'Supprimé!',
-                  'Ce client a été supprimé',
+                  'Ce compte a été supprimé',
                   'success'
                 )
                 fetchAllEmployees();

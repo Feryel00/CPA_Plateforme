@@ -20,10 +20,12 @@ use App\http\Controllers\VirementController;
 | contains the "web" middleware group. Now create something great!
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/w', function () {
+    return view('welcomeOld');
+});
 Route::get('/ct/{id}', function(){
     return view('categorie');
 });
@@ -38,9 +40,9 @@ Route::get('/Acceuil', function(){
     return view('pageAcceuil');
 });
 
-Route::get('/', function(){
-    return view('acceuil');
-});
+// Route::get('/', function(){
+//     return view('acceuil');
+// });
 
 Route::view('ajouterClient','ajouterClient');
 Route::post('ajouterClient',[ClientController::class,'ajouterClient']);
@@ -75,6 +77,8 @@ Route::get('/gestion_clients_directeur', function(){return view ('Client.indexDi
 
 Route::get('/gestion_comptes', function(){return view ('Compte.index');});
 
+Route::get('/gestion_comptes_credit', function(){return view ('Credit.gererCompteCredit');});
+
 Route::get('/gestion_comptes_directeur', function(){return view ('Compte.indexDirecteur');});
 
 Route::get('/gestion_employe', function(){return view ('user.index');});
@@ -93,6 +97,7 @@ Route::post('/storeCarte', [CarteController::class, 'storeCarte'])->name('storeC
 Route::get('/fetchallCarte', [CarteController::class, 'fetchAllCarte'])->name('fetchAllCarte');
 Route::get('/editCarte', [CarteController::class, 'editCarte'])->name('editCarte');
 Route::post('/updateCarte', [CarteController::class, 'updateCarte'])->name('updateCarte');
+Route::get('/showCarte/{id}', [CarteController::class, 'showCarte'])->name('carteBancaire.showCarte');
 //----------------------------------Les employes--------------------------------
 Route::post('/storeEm', [UserController::class, 'storeEm'])->name('storeEm');
 Route::get('/fetchallEm', [UserController::class, 'fetchAllEm'])->name('fetchAllEm');

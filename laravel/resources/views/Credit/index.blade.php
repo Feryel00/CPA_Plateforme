@@ -20,7 +20,7 @@
     <div class="modal-content" id="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Nouveau Score</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="#" method="POST" id="add_employee_form" enctype="multipart/form-data">
         @csrf
@@ -33,6 +33,10 @@
             <div class="col-lg">
               <label for="lname" style='color:blue'>Prénom</label>
               <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
+            </div>
+            <div class="col-lg">
+              <label for="lads" style='color:blue'>Age</label>
+              <input type="text" name="lage" class="form-control" placeholder="Last Name" required>
             </div>
             <div class="col-lg">
               <label for="lads" style='color:blue'>Adresse</label>
@@ -58,7 +62,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-          <button type="submit" id="add_employee_btn" class="btn btn-primary">Ajouter client</button>
+          <button type="submit" id="add_employee_btn" class="btn btn-primary">Envoyer</button>
         </div>
       </form>
     </div>
@@ -72,8 +76,8 @@
     <div class="row my-5">
       <div class="col-lg-12">
         <div class="card shadow position" id="pos">
-          <div class="card-header  d-flex justify-content-between align-items-center" style='background-color:blue'>
-            <h3 class="text-light "style='background-color:blue'>Score Credit Immobilière</h3>
+          <div class="card-header  d-flex justify-content-between align-items-center bg-b" >
+            <h3 class="text-light ">Score Credit Immobilière</h3>
             <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#addEmployeeModal"><i
                 class="bi-plus-circle me-2"></i>Ajouter nouveau client</button>
           </div>

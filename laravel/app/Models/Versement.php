@@ -11,6 +11,6 @@ class Versement extends Model
     protected $fillable = [
 
         'montant',
-        'compte_id'
+        'num_compte'
     ];
 }

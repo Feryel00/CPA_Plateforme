@@ -30,7 +30,7 @@ Charge Credit
       </a>
     </li>
      <li>
-      <a href="/lister" >
+      <a href="/gestion_comptes_credit" >
            <i class="zmdi zmdi-account-circle"></i> <span>Gestion des comptes credit</span>
 
 

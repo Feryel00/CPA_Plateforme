@@ -20,12 +20,12 @@ class VersementController extends Controller
 		$emps =Versement::all();
 		$output = '';
 		if ($emps->count() > 0) {
-			$output .= '<table class="table table-responsive  table-striped table-sm text-center align-middle">
+			$output .= '<table class="table   table-striped table-sm text-center align-middle">
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Montant</th>
-                <th>Compte ID</th>
+                <th>Montant Versé</th>
+                <th>Numéro de compte</th>
                 <th>Date de retrait</th>
                 <th>Action</th>
               </tr>
@@ -35,7 +35,7 @@ class VersementController extends Controller
 				$output .= '<tr>
                 <td>' . $emp->id . '</td>
                 <td>' . $emp->montant . '</td>
-                <td>' . $emp->compte_id . '</td
+                <td>' . $emp->num_compte . '</td
                 <td>' . $emp->created_at . '</td>
                 <td>' . $emp->created_at . '</td>
                 <td>
@@ -58,7 +58,7 @@ class VersementController extends Controller
         $q=request()->input('q');
 
          $montant=request()->input('fmontant');
-         $comptes= Compte::where('id','like',"$q")->get();
+         $comptes= Compte::where('num_compte','like',"$q")->get();
          print($montant);
          foreach($comptes as $compte)
                 $compte->solde=$compte->solde+$montant;
@@ -68,7 +68,7 @@ class VersementController extends Controller
              $compte->update($empData);
 		$empData = [
         'montant' => $request->fmontant,
-        'compte_id' => $request->q];
+        'num_compte' => $request->q];
 		Versement::create($empData);
 
 		// return response()->json([
@@ -80,8 +80,8 @@ class VersementController extends Controller
 
     public function showVer($id){
         $versement=Versement::find($id);
-        $cp=$versement->compte_id;
-        $comptes= Compte::where('id','like',"$cp")->get();
+        $cp=$versement->num_compte;
+        $comptes= Compte::where('num_compte','like',"$cp")->get();
        return view('versement.show',compact('versement','comptes'));
     }
     public function retrait(Request $request){

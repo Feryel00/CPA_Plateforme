@@ -9,7 +9,7 @@
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
-            
+
             <div>
                 <x-jet-label for="name" value="{{ __('Nom') }}" />
                 <x-jet-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
@@ -31,11 +31,11 @@
             </div>
             <div class="mt-4">
                 <x-jet-label for="role" value="{{ __('Rôle') }}" />
-                <select name="role" x-model="role" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
-                    <option value="1">Directeur</option>
-                    <option value="2">Chargé De Clientèle</option>
-                    <option value="3">Chargé De Caisse</option>
-                    <option value="4">Chargé De Crédit</option>
+                <select name="role" id="role" x-model="role" class="block mt-1 w-full border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm">
+                    <option value="Directeur">Directeur</option>
+                    <option value="Chargé clientele">Chargé De Clientèle</option>
+                    <option value="Chargé caisse">Chargé De Caisse</option>
+                    <option value="Charge Crédit">Chargé De Crédit</option>
                 </select>
             </div>
 
